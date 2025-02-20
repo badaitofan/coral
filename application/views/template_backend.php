@@ -166,7 +166,7 @@
               </li>
               <li class="profile-nav onhover-dropdown pe-0 py-0">
                 <div class="d-flex align-items-center profile-media"><img class="b-r-25" src="<?=base_url()?>assets/images/dashboard/bias.png" alt="">
-                  <div class="flex-grow-1 user"><span>Login Portal</span>
+                  <div class="flex-grow-1 user"><span><?= $this->fungsi->user_login()->auth_uname; ?></span>
                     <p class="mb-0 font-nunito">Pilih 
                       <svg>
                         <use href="<?=base_url()?>assets/svg/icon-sprite.svg#header-arrow-down"></use>
@@ -177,7 +177,7 @@
                 <ul class="profile-dropdown onhover-show-div">
                   <li><a href="javascript:void(0)"><i data-feather="settings"></i><span>Version</span></a></li>
                   <li><a href="javascript:void(0)"><i data-feather="user"></i><span>Developers </span></a></li>
-                  <li><a href="<?= site_url('Auth')?>"> <i data-feather="log-in"></i><span>Log In</span></a></li>
+                  <li><a href="<?= site_url('Dashboard_Backend/logout')?>"> <i data-feather="log-out"></i><span>Log Out</span></a></li>
                 </ul>
               </li>
             </ul>

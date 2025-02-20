@@ -12,4 +12,12 @@ class Dashboard_Backend extends CI_Controller {
 		// $this->load->view('dashboard_view');
 	}
 
+	// Proses Logout start
+	function logout()
+	{
+		$this->session->sess_destroy();
+		//$url=base_url('');
+		redirect('Auth');
+	}
+
 }

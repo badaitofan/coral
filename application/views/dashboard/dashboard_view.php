@@ -113,24 +113,20 @@
               <thead>
                 <tr>
                   <th>Name </th>
-                  <th>Position</th>
-                  <th>Office</th>
-                  <th>Ext.</th>
+                  <th>Group</th>
+                  <th>Floor</th>
+                  <th>Ext. No.</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td> <img class="img-fluid table-avtar" src="<?=base_url()?>assets/images/user/1.jpg" alt="">Tiger Nixon</td>
-                  <td>System Architect</td>
-                  <td>Edinburgh</td>
-                  <td>61</td>
-                </tr>
-                <tr>
-                  <td> <img class="img-fluid table-avtar" src="<?=base_url()?>assets/images/user/2.png" alt="">Garrett Winters</td>
-                  <td>Accountant</td>
-                  <td>Tokyo</td>
-                  <td>63</td>
-                </tr>
+                <?php foreach ($rowTelp as $dataTelp) { ?>
+                  <tr <?= $dataTelp['telp_status'] == "Digital" ? "class='text-success'" : null ?>>
+                    <td><img class="img-fluid table-avtar" src="<?=base_url()?>assets/images/user/1.jpg" alt=""><?= $dataTelp['telp_name'] ?></td>
+                    <td><?= $dataTelp['telp_group'] ?></td>
+                    <td><?= $dataTelp['telp_floor'] ?></td>
+                    <td><?= $dataTelp['telp_number'] ?></td>
+                  </tr>
+                <?php }?>
               </tbody>
             </table>
           </div>
@@ -138,179 +134,6 @@
       </div>
 
      
-    </div>
-    <div class="col-xl-6 col-sm-12 proorder-md-9 box-col-6">
-      <div class="card">
-        <div class="card-header"> 
-          <div class="header-top"> 
-            <h4>Project Summary </h4>
-            <div class="dropdown icon-dropdown setting-menu">
-              <button class="btn dropdown-toggle" id="userdropdown22" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <svg>
-                  <use href="<?=base_url()?>assets/svg/icon-sprite.svg#setting"> </use>
-                </svg>
-              </button>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdown22"><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly</a><a class="dropdown-item" href="#">Yearly </a></div>
-            </div>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="table-responsive custom-scrollbar"> 
-            <table class="project-summary table" id="project-summary">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Project Name</th>
-                  <th>Team</th>
-                  <th>Project Cost</th>
-                  <th>Project Status</th>
-                  <th>Payment</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="f-w-600">A908</td>
-                  <td> <a href="projects.html">Amazon Website</a></td>
-                  <td class="team-avtar">
-                    <div class="customers d-inline-block avatar-group">
-                      <ul>
-                        <li class="d-inline-block"><img class="img-40 rounded-circle" src="<?=base_url()?>assets/images/dashboard/avtar/8.jpg" alt=""></li>
-                        <li class="d-inline-block"><img class="img-40 rounded-circle" src="<?=base_url()?>assets/images/dashboard/avtar/10.jpg" alt=""></li>
-                        <li class="d-inline-block"><img class="img-40 rounded-circle" src="<?=base_url()?>assets/images/dashboard/avtar/2.jpg" alt=""></li>
-                        <li class="d-inline-block">
-                          <p>26+</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                  <td>$23,490</td>
-                  <td>Completed</td>
-                  <td class="txt-success">Done </td>
-                </tr>
-                <tr>
-                  <td>R840</td>
-                  <td> <a href="projects.html">Paytm bank app</a></td>
-                  <td class="team-avtar">
-                    <div class="customers d-inline-block avatar-group">
-                      <ul>
-                        <li class="d-inline-block"><img class="img-40 rounded-circle" src="<?=base_url()?>assets/images/dashboard/avtar/2.jpg" alt=""></li>
-                        <li class="d-inline-block"><img class="img-40 rounded-circle" src="<?=base_url()?>assets/images/dashboard/avtar/20.jpg" alt=""></li>
-                        <li class="d-inline-block"><img class="img-40 rounded-circle" src="<?=base_url()?>assets/images/dashboard/avtar/12.jpg" alt=""></li>
-                        <li class="d-inline-block">
-                          <p>6+</p>
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                  <td>$45,459</td>
-                  <td>In Progress</td>
-                  <td class="txt-danger">Pending</td>
-                </tr>
-                <tr>
-                  <td class="f-w-600">V908</td>
-                  <td class="f-w-600"> <a href="projects.html">Cytrust Dashboard</a></td>
-                  <td class="team-avtar"> 
-                    <div class="customers d-inline-block avatar-group">
-                      <ul>
-                        <li class="d-inline-block"><img class="img-40 rounded-circle" src="<?=base_url()?>assets/images/dashboard/avtar/14.jpg" alt=""></li>
-                        <li class="d-inline-block"><img class="img-40 rounded-circle" src="<?=base_url()?>assets/images/dashboard/avtar/13.jpg" alt=""></li>
-                      </ul>
-                    </div>
-                  </td>
-                  <td class="f-w-600">$78,748 </td>
-                  <td class="f-w-600">Completed</td>
-                  <td class="txt-success f-w-600">Done</td>
-                </tr>
-                <tr>
-                  <td class="f-w-600">K450</td>
-                  <td> <a href="projects.html">Project Mecha</a></td>
-                  <td class="team-avtar">
-                    <div class="customers d-inline-block avatar-group">
-                      <ul> 
-                        <li class="d-inline-block"><img class="img-40 rounded-circle" src="<?=base_url()?>assets/images/dashboard/avtar/22.jpg" alt=""></li>
-                        <li class="d-inline-block"><img class="img-40 rounded-circle" src="<?=base_url()?>assets/images/dashboard/avtar/15.jpg" alt=""></li>
-                        <li class="d-inline-block"><img class="img-40 rounded-circle" src="<?=base_url()?>assets/images/dashboard/avtar/2.jpg" alt=""></li>
-                      </ul>
-                    </div>
-                  </td>
-                  <td class="f-w-600">	$98,878</td>
-                  <td class="f-w-600">In Progress</td>
-                  <td class="txt-danger f-w-600">Pending</td>
-                </tr>
-                <tr>
-                  <td class="f-w-600">D480</td>
-                  <td class="f-w-600"><a href="projects.html">Dynamic Program</a></td>
-                  <td class="team-avtar">
-                    <div class="customers d-inline-block avatar-group">
-                      <ul>
-                        <li class="d-inline-block"><img class="img-40 rounded-circle" src="<?=base_url()?>assets/images/dashboard/avtar/21.jpg" alt=""></li>
-                        <li class="d-inline-block"><img class="img-40 rounded-circle" src="<?=base_url()?>assets/images/dashboard/avtar/23.jpg" alt=""></li>
-                        <li class="d-inline-block"><img class="img-40 rounded-circle" src="<?=base_url()?>assets/images/dashboard/avtar/24.jpg" alt=""></li>
-                        <li class="d-inline-block"> 
-                          <p>5+                           </p>
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                  <td class="f-w-600">$23,490</td>
-                  <td class="f-w-600">In Progress</td>
-                  <td class="txt-danger f-w-600">Pending</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-6 proorder-md-10 box-col-12">
-      <div class="card">
-        <div class="card-header custom-border-bottom">
-          <div class="header-top">
-            <h4>Sales Statistic</h4>
-            <div class="dropdown icon-dropdown setting-menu">
-              <button class="btn dropdown-toggle" id="userdropdown9" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <svg>
-                  <use href="<?=base_url()?>assets/svg/icon-sprite.svg#setting"> </use>
-                </svg>
-              </button>
-              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdown9"><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly</a><a class="dropdown-item" href="#">Yearly </a></div>
-            </div>
-          </div>
-        </div>
-        <div class="card-body">
-          <div id="groupBarChart"></div>
-          <div class="sales-data">
-            <ul>
-              <li> 
-                <div class="total-sales">
-                  <div>
-                    <h5>$4,875 </h5><span>Total Sales </span>
-                  </div>
-                  <div class="total-reached"><span>1,00,00</span><span>85% goal reached</span></div>
-                </div>
-                <div class="progress-data">
-                  <div class="progress sm-progress-bar progress-border-primary"> 
-                    <div class="progress-bar bg-primary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"> </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="total-sales"> 
-                  <div> 
-                    <h5>$7,560</h5><span>Total Income</span>
-                  </div>
-                  <div class="total-reached"> <span>1,00,00</span><span>45% goal reached   </span></div>
-                </div>
-                <div class="progress-data">
-                  <div class="progress sm-progress-bar progress-border-secondary">
-                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>

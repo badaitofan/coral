@@ -3,6 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Chairman extends CI_Controller {
 
+	function __construct()
+	{
+		parent::__construct();
+		// cek_nologin();
+		$this->load->model('Chairman_Model');
+	}
+
 	public function unit_ict()
 	{
 		$data = array(
@@ -26,5 +33,25 @@ class Chairman extends CI_Controller {
 			'title' => 'Coral - Asset ICT'
 		);
 		$this->template->load('template','chairman/asset_ict_view',$data);
+	}
+
+	// Page Helpdesk ICT
+	public function helpdesc_ict()
+	{
+		$data = array(
+			'title' => 'Coral - Helpdesk ICT',
+			'row'	=> $this->Chairman_Model->get_helpdesc()
+		);
+		$this->template->load('template','chairman/helpdesc_ict_view',$data);
+	}
+
+	// Page Helpdesk ICT
+	public function helpdesc_ict_filter()
+	{
+		$data = array(
+			'title' => 'Coral - Helpdesk ICT',
+			// 'row'	=> $this->Chairman_Model->get_helpdesc()
+		);
+		$this->template->load('template','chairman/helpdesc_ict_view_filter',$data);
 	}
 }

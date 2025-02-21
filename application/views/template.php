@@ -302,6 +302,7 @@
                                 <li><a href="<?=site_url('Chairman/unit_ict')?>">General</a></li>
                                 <li><a href="<?=site_url('Chairman/jobdesc_ict')?>">Job Desc</a></li>
                                 <li><a href="<?=site_url('Chairman/asset_ict')?>">Aset ICT</a></li>
+                                <li><a href="<?=site_url('Chairman/helpdesc_ict')?>">ICT Helpdesk</a></li>
                               </ul>
                             </div>
                           </div>

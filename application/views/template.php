@@ -247,7 +247,7 @@
                       </svg><span>Berita</span></a>
                     
                   </li>
-                  <li class="sidebar-list"> <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <!-- <li class="sidebar-list"> <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                       <svg class="stroke-icon">
                         <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-layout"></use>
                       </svg>
@@ -258,8 +258,8 @@
                       <li><a href="<?= site_url('Peraturan/pemerintah')?>">Pemerintah</a></li>
                       <li><a href="<?= site_url('Peraturan/perusahaan')?>">Perusahaan</a></li>
                     </ul>
-                  </li>
-                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav"  href="<?= site_url('Struktur')?>">
+                  </li> -->
+                  <!-- <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav"  href="<?= site_url('Struktur')?>">
                       <svg class="stroke-icon">
                         <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-blog"></use>
                       </svg>
@@ -267,7 +267,7 @@
                         <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-blog"></use>
                       </svg><span>Struktur Perusahaan</span></a>
                     
-                  </li>
+                  </li> -->
                   <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav"  href="<?= site_url('Kontak')?>">
                       <svg class="stroke-icon">
                         <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-blog"></use>
@@ -410,6 +410,28 @@
                     </div>
                   </li>
                   <!-- .end Direktorat Admin & Keuangan -->
+
+                   <!-- Direktorat BDP -->
+                   <li class="mega-menu sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                      <svg class="stroke-icon">
+                        <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-others"></use>
+                      </svg>
+                      <svg class="fill-icon">
+                        <use href="<?=base_url()?>assets/svg/icon-sprite.svg#fill-others"></use>
+                      </svg><span>Dir. BDP</span></a>
+                  </li>
+                  <!-- .end Direktorat BDP -->
+
+                   <!-- Direktorat BSG -->
+                   <li class="mega-menu sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                      <svg class="stroke-icon">
+                        <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-others"></use>
+                      </svg>
+                      <svg class="fill-icon">
+                        <use href="<?=base_url()?>assets/svg/icon-sprite.svg#fill-others"></use>
+                      </svg><span>Dir. BS Group</span></a>
+                  </li>
+                  <!-- .end Direktorat BSG -->
                   
                   <li class="sidebar-main-title">
                     <div>
@@ -505,6 +527,8 @@
     <script src="<?= base_url()?>assets/js/bookmark/jquery.validate.min.js"></script>
     <script src="<?= base_url()?>assets/js/bookmark/custom.js"></script>
     <script src="<?= base_url()?>assets/js/contacts/custom.js"></script>
+    <script src="<?= base_url()?>assets/js/tooltip-init.js"></script>
+    <script src="<?= base_url()?>assets/js/modalpage/validation-modal.js"></script>
     <!-- Plugins JS Ends-->
     <!-- Theme js-->
     <script src="<?=base_url()?>assets/js/script.js"></script>

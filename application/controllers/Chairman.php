@@ -22,7 +22,8 @@ class Chairman extends CI_Controller {
 	public function jobdesc_ict()
 	{
 		$data = array(
-			'title' => 'Coral - Jobdesk ICT'
+			'title' => 'Coral - Jobdesk ICT',
+			'row_jd_ict'=> $this->Chairman_Model->get_jobdesc_ict()//Get data jobdesc Unit ICT
 		);
 		$this->template->load('template','chairman/jobdesk_ict_view',$data);
 		// $this->load->view('dashboard_view');

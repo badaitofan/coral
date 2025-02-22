@@ -14,7 +14,7 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">
               <svg class="stroke-icon">
-                <use href="../assets/svg/icon-sprite.svg#stroke-home"></use>
+                <use href="<?= base_url()?>assets/svg/icon-sprite.svg#stroke-home"></use>
               </svg></a>
           </li>
           <li class="breadcrumb-item">Dir. Chairman</li>
@@ -32,11 +32,11 @@
       <div class="card">
         <div class="card-header card-no-border">
           <div class="header-top">
-            <h4>Last Orders </h4>
+            <h4>Daftar File Job Description Personel ICT </h4>
             <div class="dropdown icon-dropdown setting-menu">
               <button class="btn dropdown-toggle" id="userdropdown3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <svg>
-                  <use href="../assets/svg/icon-sprite.svg#setting"></use>
+                  <use href="<?= base_url()?>assets/svg/icon-sprite.svg#setting"></use>
                 </svg>
               </button>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdown3"><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly </a><a class="dropdown-item" href="#">Yearly</a></div>
@@ -48,99 +48,34 @@
             <table class="last-orders-table table" id="last-orders">
               <thead>
                 <tr>
-                  <th>Name </th>
-                  <th>Order No.  </th>
-                  <th>Amount</th>
-                  <th>Payment Type </th>
-                  <th>Date</th>
+                  <th>Nama PIC</th>
+                  <th>Nama Dokumen  </th>
+                  <th>Download</th>
+                  <th>Upload Tgl</th>
+                  <th></th>
                   <th>Action </th>
                 </tr>
               </thead>
               <tbody>
-                <tr> 
-                  <td>
-                    <div class="user-data">
-                      <div><img src="../assets/images/dashboard/avtar/2.jpg" alt="avatar"></div>
-                      <div> <a href="user-profile.html"> 
-                          <h4>Dmitriy Groshev</h4></a><span>Switzerland</span></div>
-                    </div>
-                  </td>
-                  <td>#790841</td>
-                  <td>$2.499</td>
-                  <td>Credit Card</td>
-                  <td>1 Oct, 14:43</td>
-                  <td> 
-                    <div class="dropdown icon-dropdown">
-                      <button class="btn dropdown-toggle" id="userdropdownes4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <div class="drop-menu"><i class="icon-more-alt"></i></div>
-                      </button>
-                      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdownes4"><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly</a><a class="dropdown-item" href="#">Yearly</a></div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="user-data">
-                      <div><img src="../assets/images/dashboard/avtar/17.jpg" alt="avatar"></div>
-                      <div><a href="user-profile.html">
-                          <h4>Patrick Beverley</h4></a><span> Germany</span></div>
-                    </div>
-                  </td>
-                  <td>#454489</td>
-                  <td>$2.499</td>
-                  <td>Paypal</td>
-                  <td>30 Sep, 23:01</td>
-                  <td>
-                    <div class="dropdown icon-dropdown">
-                      <button class="btn dropdown-toggle" id="userdropdownes1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <div class="drop-menu"><i class="icon-more-alt"></i></div>
-                      </button>
-                      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdownes1"><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly</a><a class="dropdown-item" href="#">Yearly</a></div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="user-data">
-                      <div><img src="../assets/images/avtar/18.jpg" alt="avatar"></div>
-                      <div><a href="user-profile.html">
-                          <h4>Kevin Greem</h4></a><span> Canada</span></div>
-                    </div>
-                  </td>
-                  <td>#594579</td>
-                  <td>$2.499</td>
-                  <td>Credit Card</td>
-                  <td>29 Sep,09:31</td>
-                  <td>
-                    <div class="dropdown icon-dropdown">
-                      <button class="btn dropdown-toggle" id="userdropdownes2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <div class="drop-menu"><i class="icon-more-alt"></i></div>
-                      </button>
-                      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdownes2"><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly</a><a class="dropdown-item" href="#">Yearly</a></div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="user-data">
-                      <div><img src="../assets/images/dashboard/avtar/19.jpg" alt="avatar"></div>
-                      <div><a href="user-profile.html">
-                          <h4>William Barton</h4></a><span>United States</span></div>
-                    </div>
-                  </td>
-                  <td>#478495</td>
-                  <td>$2.499</td>
-                  <td>Credit Card</td>
-                  <td>28 Sep, 04:34</td>
-                  <td>
-                    <div class="dropdown icon-dropdown">
-                      <button class="btn dropdown-toggle" id="userdropdownes3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <div class="drop-menu"><i class="icon-more-alt"></i></div>
-                      </button>
-                      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdownes3"><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly</a><a class="dropdown-item" href="#">Yearly      </a></div>
-                    </div>
-                  </td>
-                </tr>
+                <?php foreach ($row_jd_ict as $dataJobdesc) {?>
+                  <tr> 
+                    <td>
+                      <div class="user-data">
+                        <div><img src="<?= base_url()?>assets/images/dashboard/avtar/2.jpg" alt="avatar"></div>
+                        <div> <a href="javascript:void(0)"> 
+                            <h4><?= $dataJobdesc['pic_name']?></h4></a><span><?= $dataJobdesc['pic_email']?></span></div>
+                      </div>
+                    </td>
+                    <td><?= $dataJobdesc['jobdesc_name']?></td>
+                    <td><?= $dataJobdesc['counter_download']?></td>
+                    <td><?= date("Y-m-d",strtotime($dataJobdesc['date_creation'])) ?></td>
+                    <td></td>
+                    <td> 
+                    <!-- <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#exampleModallogin" id="linkDwl" data-link="<?=$dataJobdesc['file_link']?>" ><i data-feather="download-cloud"></i></a> -->
+                    <a href="<?= $dataJobdesc['file_link']?>" target="_blank"><i data-feather="download-cloud"></i></a>
+                    </td>
+                  </tr>
+                <?php } ?>
               </tbody>
             </table>
           </div>
@@ -150,4 +85,43 @@
   </div>
 </div>
 <!-- Container-fluid Ends-->
+
+<div class="modal fade" id="exampleModallogin" tabindex="-1" role="dialog" aria-labelledby="exampleModallogin" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content dark-sign-up">
+      <div class="modal-body social-profile text-start">
+        <div class="modal-toggle-wrapper">
+          <h3 class="txt-dark">Informasi Pengguna</h3>
+          <p class="txt-dark">
+              Dibutuhkan informasi akses kedalam aplikasi.</p>
+          <form class="row g-3" id="formAkses">
+            <input class="form-control" id="linkAkses" type="text" >
+            <div class="col-md-12">
+              <label class="form-label txt-dark" for="inputEmailEnter">Email</label>
+              <input class="form-control" id="inputEmailEnter" type="email" placeholder="Masukkan Email">
+            </div>
+            <div class="col-md-12">
+              <label class="form-label txt-dark" for="inputPasswordEnter">Password</label>
+              <input class="form-control" id="inputPasswordEnter" type="password" placeholder="*********">
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit" data-bs-dismiss="modal">Submit </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <script src="<?=base_url()?>assets/js/jquery-3.5.1.min.js"></script>
+
+<script>
+  $("#linkDwl").on("click",function(){
+    var link = $(this).data('link');
+    console.log(link);
+
+    $("#formAkses #linkAkses").val(link);
+
+  })
+</script> -->
 

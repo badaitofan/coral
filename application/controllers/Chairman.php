@@ -13,7 +13,8 @@ class Chairman extends CI_Controller {
 	public function unit_ict()
 	{
 		$data = array(
-			'title' => 'Coral - Unit Kerja ICT'
+			'title' => 'Coral - Unit Kerja ICT',
+			'row'	=> $this->Chairman_Model->get_Personil_ICT()
 		);
 		$this->template->load('template','chairman/ict_view',$data);
 		// $this->load->view('dashboard_view');

@@ -28,12 +28,22 @@ class Chairman_Model extends CI_Model
     }
 
     // Get data Jobdesc ICT
-
     public function get_jobdesc_ict()
     {
         $this->db->select('*');
         $this->db->where('jobdesc_unit',"ICT");
         $data = $this->db->get('tb_jobdesc');
+        return $data->result_array();
+    }
+
+    // Get Personil ICT Member
+    public function get_Personil_ICT()
+    {
+        $this->db->select('*');
+        $this->db->where('personil_group',"ICT");
+        $this->db->where('personil_email !=',"null");
+        $this->db->order_by('personil_code',"ASC");
+        $data = $this->db->get('tb_personil');
         return $data->result_array();
     }
 }

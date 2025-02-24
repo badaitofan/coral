@@ -6,11 +6,13 @@ class Chairman_Model extends CI_Model
     // Penamaan DB selain Database Utama
     // Datbase Helpdesk
     private $db_helpdesk;
+    private $db_assets;
 
     public function __construct()
     {
         parent::__construct();
         $this->db_helpdesk = $this->load->database('helpdesk',TRUE);
+        $this->db_assets = $this->load->database('asset_ict',TRUE);
     }
 
     // Get data Helpdesk from database server 31.220.22.191
@@ -46,4 +48,20 @@ class Chairman_Model extends CI_Model
         $data = $this->db->get('tb_personil');
         return $data->result_array();
     }
+
+    // Get data Helpdesk from database server 10.10.10.23
+    // Aplication Asset BMG - ICT
+    public function get_asset_ict()
+    {
+        $this->db_assets->select('*');
+        $this->db_assets->from('asets');
+        $this->db_assets->join('barang','barang.id_barang=asets.id_barang','LEFT');
+        $this->db_assets->join('lokasi_aset','lokasi_aset.id_lokasi=asets.id_lokasi','LEFT');
+        $this->db_assets->join('users','users.id_user=asets.id_user','LEFT');
+        $this->db_assets->join('dept','dept.id_dept=asets.id_dept','LEFT');
+        $this->db_assets->order_by('users.nama_user',"ASC");
+        $data = $this->db_assets->get();
+        return $data->result_array();
+    }
+    
 }

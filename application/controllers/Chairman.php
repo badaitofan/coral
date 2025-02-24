@@ -32,7 +32,8 @@ class Chairman extends CI_Controller {
 	public function asset_ict()
 	{
 		$data = array(
-			'title' => 'Coral - Asset ICT'
+			'title' => 'Coral - Asset ICT',
+			'row'	=> $this->Chairman_Model->get_asset_ict()
 		);
 		$this->template->load('template','chairman/asset_ict_view',$data);
 	}

@@ -63,5 +63,18 @@ class Chairman_Model extends CI_Model
         $data = $this->db_assets->get();
         return $data->result_array();
     }
+
+    // LEGAL
+    // Get Personil Legal Member
+    public function get_Personil_Legal()
+    {
+        $this->db->select('*');
+        $this->db->where('personil_group',"LEGAL");
+        $this->db->where('personil_email !=',"null");
+        $this->db->order_by('personil_code',"ASC");
+        $data = $this->db->get('tb_personil');
+        return $data->result_array();
+    }
+
     
 }

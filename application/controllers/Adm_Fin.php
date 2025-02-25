@@ -59,6 +59,16 @@ class Adm_Fin extends CI_Controller {
 			// $this->load->view('dashboard_view');
 		}
 
+		// Get Jobdesk
+		public function asset_atk_ga()
+		{
+			$data = array(
+				'title' => 'Coral - Aset ATK GA',
+				// 'row'	=> $this->Adm_Fin_Model->get_aset_atk_GA()
+			);
+			$this->template->load('template','adm_fin/general_affair/aset_atk_ga_view',$data);
+		}
+
 	#=== .ENDGENERAL AFFAIR FUNCTIONS ===
 	
 	#=== PURCHASING FUNCTIONS ===

@@ -393,6 +393,7 @@
                               <li><a href="<?=site_url('Adm_Fin/unit_ga')?>">General</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/jobdesc_ga')?>">Job Desc</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/asset_furniture_ga')?>">Asset Furniture</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/asset_atk_ga')?>">Asset ATK</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/aset_kendaraan_ga')?>">Asset Kendaraan</a></li>
                               </ul>
                             </div>

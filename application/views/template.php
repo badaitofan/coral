@@ -364,9 +364,23 @@
                               <ul class="submenu-content opensubmegamenu">
                                 <li><a href="<?=site_url('Adm_Fin/keuangan_general')?>">General</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/keuangan_jobdesc')?>">Job Desc</a></li>
-                                <li><a href="<?=site_url('Adm_Fin/keuangan_laporan')?>">Lap. Keuangan</a></li>
-                                <li><a href="<?=site_url('Adm_Fin/keuangan_laporan_labarugi')?>">Lap. Laba Rugi</a></li>
-                                <li><a href="<?=site_url('Adm_Fin/keuangan_laporan_neraca')?>">Lap. Neraca</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col mega-box">
+                            <div class="link-section">
+                              <div class="submenu-title">
+                                <h5>Akuntansi</h5>
+                              </div>
+                              <ul class="submenu-content opensubmegamenu">
+                                <li><a href="<?=site_url('Adm_Fin/akuntansi_general')?>">General</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/akuntansi_jobdesc')?>">Job Desc</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan')?>">Lap. Keuangan</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_labarugi')?>">Lap. Laba Rugi</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_neraca')?>">Lap. Neraca</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_spt_bulanan')?>">Lap. SPT Bulanan</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_audit_tahunan')?>">Lap. Audit Tahunan</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_analisa_rasio')?>">Lap. Analisa Rasio</a></li>
                               </ul>
                             </div>
                           </div>
@@ -378,8 +392,8 @@
                               <ul class="submenu-content opensubmegamenu">
                               <li><a href="<?=site_url('Adm_Fin/unit_ga')?>">General</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/jobdesc_ga')?>">Job Desc</a></li>
-                                <li><a href="<?=site_url('Adm_Fin/asset_ga')?>">Asset GA</a></li>
-                                <li><a href="<?=site_url('Adm_Fin/mobil_ga')?>">Asset Mobil</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/asset_furniture_ga')?>">Asset Furniture</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/aset_kendaraan_ga')?>">Asset Kendaraan</a></li>
                               </ul>
                             </div>
                           </div>
@@ -391,6 +405,8 @@
                               <ul class="submenu-content opensubmegamenu">
                                 <li><a href="<?=site_url('Adm_Fin/unit_purchasing')?>">General</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/jobdesc_purchasing')?>">Job Desc</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/vendor_purchasing')?>">Vendor</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/purchasing_laporan_pembelian')?>">Laporan Pembelian</a></li>
                               </ul>
                             </div>
                           </div>
@@ -402,6 +418,12 @@
                               <ul class="submenu-content opensubmegamenu">
                                 <li><a href="<?=site_url('Adm_Fin/unit_hrd')?>">General</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/jobdesc_hrd')?>">Job Desc</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/perautan_perusahaan_hrd')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Peraturan Perusahaan">Peraturan Perusahaan</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/sk_perusahaan_hrd')?>">SK Perusahaan</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/data_karyawan_hrd')?>">Data Karyawan</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/jabatan_fungsional_hrd')?>">Jabatan Fungsional</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/bpjs_karyawan_hrd')?>">BPJS Karyawan</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/data_pelamar_hrd')?>">Data Pelamar</a></li>
                               </ul>
                             </div>
                           </div>

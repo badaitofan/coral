@@ -58,14 +58,39 @@ class Chairman extends CI_Controller {
 		$this->template->load('template','chairman/helpdesc_ict_view_filter',$data);
 	}
 
-	// LEGAL
+	#===LEGAL====
 	public function unit_legal()
 	{
 		$data = array(
-			'title' => 'Coral - Unit Kerja Legal',
+			'title' => 'Coral - Unit Kerja Corporate Legal',
 			'row'	=> $this->Chairman_Model->get_Personil_Legal()
 		);
 		$this->template->load('template','chairman/legal_view',$data);
+		// $this->load->view('dashboard_view');
+	}
+
+	#===== QHSE =====
+	// General
+	public function unit_qhse()
+	{
+		$data = array(
+			'title' => 'Coral - Unit Kerja QHSE',
+			'row'	=> $this->Chairman_Model->get_Personil_QHSE()
+		);
+		$this->template->load('template','chairman/qhse_view',$data);
+		// $this->load->view('dashboard_view');
+	}
+
+
+	#===== Secretary =====
+	// General
+	public function unit_secretary()
+	{
+		$data = array(
+			'title' => 'Coral - Unit Kerja Corporate Secretary',
+			'row'	=> $this->Chairman_Model->get_Personil_Secretary()
+		);
+		$this->template->load('template','chairman/secretary_view',$data);
 		// $this->load->view('dashboard_view');
 	}
 

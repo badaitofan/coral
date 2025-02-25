@@ -77,9 +77,10 @@
                 <tr>
                   <th>No</th>
                   <th>Kode</th>
+                  <th style="width:10%">Kategori</th>
                   <th>Pengguna</th>
+                  <th>Test</th> <!-- Kolom yg Hilang -->
                   <th>Spesifikasi</th>
-                  <th>Test</th>
                   <th>Dokumen </th>
                 </tr>
               </thead>
@@ -105,14 +106,15 @@
                         </div>
                       </div>
                     </td>
+                    <td><a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="<?= $dataAsset['nama_kategori']?>"><?= $dataAsset['kode_kategori']?></a></td>
                     <td>
                       <div> 
                         <h5><?= $dataAsset['nama_user']?></h5>
                         <span><?= $dataAsset['nama_lokasi']?></span>
                       </div>  
                     </td>
-                    <td class="text-muted"><?= $dataAsset['spesifikasi'] ?></td>
                     <td></td>
+                    <td class="text-muted"><?= $dataAsset['spesifikasi'] ?></td>
                     <td>
                       <a href="javascript:void(0)" target="_blank"><i data-feather="download-cloud"></i></a>
                     </td>

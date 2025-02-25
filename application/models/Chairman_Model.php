@@ -56,6 +56,7 @@ class Chairman_Model extends CI_Model
         $this->db_assets->select('*');
         $this->db_assets->from('asets');
         $this->db_assets->join('barang','barang.id_barang=asets.id_barang','LEFT');
+        $this->db_assets->join('kategori_barang','kategori_barang.id_kategori=barang.id_kategori','LEFT');
         $this->db_assets->join('lokasi_aset','lokasi_aset.id_lokasi=asets.id_lokasi','LEFT');
         $this->db_assets->join('users','users.id_user=asets.id_user','LEFT');
         $this->db_assets->join('dept','dept.id_dept=asets.id_dept','LEFT');
@@ -75,6 +76,28 @@ class Chairman_Model extends CI_Model
         $data = $this->db->get('tb_personil');
         return $data->result_array();
     }
-
     
+    #==== QHSE ====
+    // Get Personil QHSE Member
+    public function get_Personil_QHSE()
+    {
+        $this->db->select('*');
+        $this->db->where('personil_group',"QHSE");
+        $this->db->where('personil_email !=',"null");
+        $this->db->order_by('personil_code',"ASC");
+        $data = $this->db->get('tb_personil');
+        return $data->result_array();
+    }
+
+    #==== Secretary ====
+    // Get Personil Secretary Member
+    public function get_Personil_Secretary()
+    {
+        $this->db->select('*');
+        $this->db->where('personil_group',"SECRETARY");
+        $this->db->where('personil_email !=',"null");
+        $this->db->order_by('personil_code',"ASC");
+        $data = $this->db->get('tb_personil');
+        return $data->result_array();
+    }
 }

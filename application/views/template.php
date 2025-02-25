@@ -40,6 +40,8 @@
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/responsive.css">
   </head>
+
+  <!-- test -->
   <body> 
     <!-- loader starts-->
     <div class="loader-wrapper">

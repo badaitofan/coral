@@ -3,6 +3,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Adm_Fin_Model extends CI_Model
 {
+    private $db_ims_ga;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->db_ims_ga = $this->load->database('IMS_GA',TRUE);
+    }
     #=== KEUANGAN FUNCTIONS ===
     // Get Personil Member Keuangan
         public function get_Personil_Keuangan()
@@ -44,6 +51,18 @@ class Adm_Fin_Model extends CI_Model
             $data = $this->db->get('tb_personil');
             return $data->result_array();
         }
+
+    //Get asset ATK dari tabel barang IMS
+        public function get_Aset_Atk()
+        {
+            $this->db_ims_ga->select('*');
+            $this->db_ims_ga->join('tbl_jenis', 'tbl_jenis.id_jenis=tbl_barang.jenis','left');
+            $this->db_ims_ga->order_by('tbl_barang.id_barang',"ASC");
+            $data = $this->db_ims_ga->get('tbl_barang');
+            
+            return $data->result_array();
+        }
+
     #=== .END GENERAL AFFAIR FUNCTIONS ===
 
     #=== GENERAL PURCHASING FUNCTIONS ===

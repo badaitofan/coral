@@ -64,7 +64,7 @@ class Adm_Fin extends CI_Controller {
 		{
 			$data = array(
 				'title' => 'Coral - Aset ATK GA',
-				// 'row'	=> $this->Adm_Fin_Model->get_aset_atk_GA()
+				'row'	=> $this->Adm_Fin_Model->get_Aset_Atk()
 			);
 			$this->template->load('template','adm_fin/general_affair/aset_atk_ga_view',$data);
 		}
@@ -83,7 +83,7 @@ class Adm_Fin extends CI_Controller {
 			// $this->load->view('dashboard_view');
 		}
 
-	#=== .ENDPURCHASING FUNCTIONS ===
+	#=== .END PURCHASING FUNCTIONS ===
 	
 	#=== HRD FUNCTIONS ===
 		// Get General

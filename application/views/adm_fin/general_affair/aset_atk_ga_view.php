@@ -22,9 +22,56 @@
     </div>
     </div>
     <!-- Container-fluid starts-->
-    <div class="container-fluid">
-        <div class="row">
-            
+    <div class="container-fluid default-dashboard2">
+  <div class="row">              
+    <!-- Complex headers (rowspan and colspan) Starts-->
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header pb-0 card-no-border">
+          <div class="header-top">
+            <h4>Daftar ATK GA</h4>
+            <div class="dropdown icon-dropdown setting-menu">
+              <button class="btn dropdown-toggle" id="userdropdown60" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <svg>
+                  <use href="../assets/svg/icon-sprite.svg#setting"> </use>
+                </svg>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdown60"><a class="dropdown-item" href="#">Weekly </a><a class="dropdown-item" href="#">Monthly</a><a class="dropdown-item" href="#">Yearly</a></div>
+            </div>
+          </div>
         </div>
+        <div class="card-body">
+          <div class="table-responsive"> 
+            <table class="last-orders-table table" id="last-orders">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>ID Barang</th>
+                  <th>Nama Barang </th>
+                  <th>Jenis Barang</th>
+                  <th>Stok Saat Ini</th> 
+                </tr>
+              </thead>
+              <tbody>
+                <?php $no=1; foreach ($row as $dataAsset) 
+                  
+                {?>
+                  <tr> 
+                    <td><?= $no++ ?></td>
+                    <td> <?= $dataAsset['id_barang']; ?> </td>
+                    <td> <?= $dataAsset['nama_barang']; ?> </td>
+                    <td> <?= $dataAsset['nama_jenis']; ?> </td>
+                    <td> <?= $dataAsset['stok']; ?> </td>           
+                  </tr>
+             
+                <?php } ?>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Container-fluid Ends-->
+    <!-- Complex headers (rowspan and colspan) Ends-->
+  </div>
+</div>
+<!-- Container-fluid Ends-->

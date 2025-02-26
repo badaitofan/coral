@@ -41,7 +41,7 @@
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/responsive.css">
   </head>
   <!-- test commit using tofanwbakti -->
-
+  <!-- test commit using bmgict -->
   <!-- test -->
   <body> 
     <!-- loader starts-->

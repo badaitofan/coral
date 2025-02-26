@@ -87,7 +87,7 @@
                 </div>
                 <div class="form-group search-form">
                   <input type="text" placeholder="Search here...">
-                </div>
+                </div> 
               </li>
               <li class="onhover-dropdown"> 
                 <div class="notification-box">

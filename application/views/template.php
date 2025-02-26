@@ -97,7 +97,7 @@
                 </div>
                 <div class="onhover-show-div notification-dropdown"> 
                   <h6 class="f-18 mb-0 dropdown-title">Notifications</h6>
-                  <div class="notification-card">
+                  <div class="notification-card"> 
                     <ul>
                       <li> 
                         <div class="user-notification">

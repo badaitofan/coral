@@ -9,6 +9,7 @@ class Adm_Fin_Model extends CI_Model
     {
         parent::__construct();
         $this->db_ims_ga = $this->load->database('IMS_GA',TRUE);
+        $this->asset_ga = $this->load->database('asset_ga',TRUE);
     }
     #=== KEUANGAN FUNCTIONS ===
     // Get Personil Member Keuangan
@@ -62,6 +63,24 @@ class Adm_Fin_Model extends CI_Model
             
             return $data->result_array();
         }
+
+            //Get Asset Ga dari tabel Aset
+        public function getAsetDetail()
+        {
+            $this->asset_ga->select('*');
+            $this->asset_ga->from('asets');
+            $this->asset_ga->join('barang','barang.id_barang=asets.id_barang','LEFT');
+            $this->asset_ga->join('kategori_barang','kategori_barang.id_kategori=barang.id_kategori','LEFT');
+            $this->asset_ga->join('lokasi_aset','lokasi_aset.id_lokasi=asets.id_lokasi','LEFT');
+            $this->asset_ga->join('users','users.id_user=asets.id_user','LEFT');
+            $this->asset_ga->join('dept','dept.id_dept=asets.id_dept','LEFT');
+            $this->asset_ga->order_by('users.nama_user',"ASC");
+            $data = $this->asset_ga->get();
+            return $data->result_array();
+        }
+
+        
+
 
     #=== .END GENERAL AFFAIR FUNCTIONS ===
 

@@ -69,6 +69,15 @@ class Adm_Fin extends CI_Controller {
 			$this->template->load('template','adm_fin/general_affair/aset_atk_ga_view',$data);
 		}
 
+		public function aset_kendaraan_ga()
+		{
+			$data = array(
+				'title' => 'Coral - Aset Kendaraan',
+				'row'	=> $this->Adm_Fin_Model->getAsetDetail()
+			);
+			$this->template->load('template','adm_fin/general_affair/aset_kendaraan_view',$data);
+		}
+
 	#=== .ENDGENERAL AFFAIR FUNCTIONS ===
 	
 	#=== PURCHASING FUNCTIONS ===

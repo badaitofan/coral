@@ -42,7 +42,6 @@
   </head>
   <!-- test commit using tofanwbakti -->
   <!-- test commit using bmgict -->
-  <!-- test -->
   <body> 
     <!-- loader starts-->
     <div class="loader-wrapper">

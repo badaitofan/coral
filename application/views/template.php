@@ -40,9 +40,6 @@
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/responsive.css">
   </head>
-  <!-- test commit using tofanwbakti -->
-  <!-- test commit using bmgict -->
-  <!-- test commit using Gabriella -->
   <body> 
     <!-- loader starts-->
     <div class="loader-wrapper">

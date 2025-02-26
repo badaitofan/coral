@@ -99,7 +99,7 @@
                   <h6 class="f-18 mb-0 dropdown-title">Notifications</h6>
                   <div class="notification-card">
                     <ul>
-                      <li>
+                      <li> 
                         <div class="user-notification">
                           <div><img src="<?=base_url()?>assets/images/avtar/2.jpg" alt="avatar"></div>
                           <div class="user-description"><a href="letter-box.html">

@@ -32,7 +32,6 @@ class Kontak extends CI_Controller {
 		foreach ($row as $data) {
 			# code...
 			echo "<div class='d-flex'><img class='img-100 img-fluid m-r-20 rounded-circle update_img_0' src='".base_url('assets/images/user/').$data['cp_photo']."' alt=''>
-                <input class='updateimg' type='file' name='img'>
                 <div class='flex-grow-1 mt-0'>
                   <h3><span class='first_name_0 f-w-600'>".$data['cp_name']."</span></h3>
                   <p class='email_add_0'>".$data['cp_email']."</p>
@@ -42,10 +41,10 @@ class Kontak extends CI_Controller {
                 <h3 class='mb-3'>General</h3>
                 <ul>
                   <li>Name <span class='font-primary first_name_0'>".$data['cp_name']."</span></li>
-                  <li>Gender <span class='font-primary'>".$data['cp_gender']."</span></li>
+                  <li>Gender <span class='font-primary'>".ucfirst($data['cp_gender'])."</span></li>
                   <li>Birthday<span class='font-primary'> <span class='birth_day_0'>".$data['cp_birthday']."</span></li>
                   <li>Personality<span class='font-primary personality_0'>".$data['cp_personality']."</span></li>
-                  <li>City<span class='font-primary city_0'>".$data['cp_address']."</span></li>
+                  <li>Address<span class='font-primary city_0'>".$data['cp_address']."</span></li>
                   <li>City<span class='font-primary city_0'>".$data['cp_city']."</span></li>
                   <li>Mobile No<span class='font-primary mobile_num_0'>".$data['cp_phone']."</span></li>
                   <li>Email Address <span class='font-primary email_add_0'>".$data['cp_email']." </span></li>

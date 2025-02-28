@@ -31,7 +31,10 @@
       <div class="card">
         <div class="card-header"> 
           <h4>Daftar Kontak </h4>
-          <span>43 Anggota</span>
+          <span><?php
+            // $this->db->from();
+            echo $this->db->count_all_results('tb_contact_personil')." Anggota";
+          ?></span>
           <div class="header-top"> 
             <!-- <div class="dropdown icon-dropdown setting-menu">
               <button class="btn dropdown-toggle" id="userdropdown22" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -69,7 +72,7 @@
                       <p class="email_add_0 text-muted"><?= $dataKontak['cp_email'] ?></p>
                     </td>
                     
-                    <td class="txt-success"><a href="#" class="seqid" data-seqid="<?= $dataKontak['cp_seq']?> "><i data-feather="arrow-right-circle" class="mt-n1"></i></a> </td>
+                    <td class="txt-success"><a href="javascript:;" class="seqid" data-seqid="<?= $dataKontak['cp_seq']?> "><i data-feather="arrow-right-circle" class="mt-n1"></i></a> </td>
                   </tr>
                   <?php } ?>
                 </tbody>
@@ -80,7 +83,7 @@
       </div>
     </div>
     <div class="col-xl-6 col-sm-12 proorder-md-9 box-col-6 fade hide" id="tabDetailKontak">
-      <div class="card mb-0">
+      <div class="card mb-3 sticky-top">
         <div class="card-header">
           <h4>Detail Kontak</h4>
           <!-- <span class="f-14 pull-right mt-0">5 Contacts</span> -->
@@ -88,27 +91,6 @@
         <div class="card-body list-persons">
           <div class="tab-pane contact-tab-0 tab-content-child" role="tabpanel" aria-labelledby="v-pills-user-tab">
             <div class="profile-mail">
-              <!-- <div class="d-flex"><img class="img-100 img-fluid m-r-20 rounded-circle update_img_0" src="<?=base_url()?>assets/images/user/2.png" alt="">
-                <input class="updateimg" type="file" name="img">
-                <div class="flex-grow-1 mt-0">
-                  <h3><span class="first_name_0 f-w-600">Bucky </span><span class="last_name_0 f-w-600">Barnes</span></h3>
-                  <p class="email_add_0">barnes@gmail.com</p>
-                </div>
-              </div>
-              <div class="email-general">
-                <h3 class="mb-3">General</h3>
-                <ul>
-                  <li>Name <span class="font-primary first_name_0">Bucky</span></li>
-                  <li>Gender <span class="font-primary">Male</span></li>
-                  <li>Birthday<span class="font-primary"> <span class="birth_day_0">18</span><span class="birth_month_0 ms-1">May</span><span class="birth_year_0 ms-1">1994</span></span></li>
-                  <li>Personality<span class="font-primary personality_0">Cool</span></li>
-                  <li>City<span class="font-primary city_0">moline acres</span></li>
-                  <li>Mobile No<span class="font-primary mobile_num_0">+0 1800 76855</span></li>
-                  <li>Email Address <span class="font-primary email_add_0">barnes@gmail.com </span></li>
-                  <li>Website<span class="font-primary url_add_0">www.test.com</span></li>
-                  <li>Interest<span class="font-primary interest_0">photography</span></li>
-                </ul>
-              </div> -->
             </div>
           </div>
         </div>

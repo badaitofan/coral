@@ -46,9 +46,15 @@
               <thead>
                 <tr>
                   <th>No</th>
+                  <th>Nama Pengguna</th>
+                  <th>Merk Kendaraan</th>
+                  <th>Penempatan Lokasi</th>
                   <th>Nomor Polisi</th>
-                  <th>Kategori Mobil</th>
-                  <th>Spesifikasi</th>
+                  <th>Nomor Rangka</th>
+                  <th>Nomor Mesin</th>
+                  <th>Silinder CC</th>
+                  <th>Tahun Pembuatan</th>
+                  <th>Masa Berlaku STNK</th>
                   <th>Dokumen Kendaraan</th>
                 </tr>
               </thead>
@@ -58,35 +64,15 @@
                 {?>
                   <tr> 
                     <td><?= $no++ ?></td>
-                    <td>
-                      <div class="user-data">
-                        
-                        <div> <a href="javascript:void(0)"> 
-                            <h4><?= $dataAsset['kode_aset']?> <span><?php if($dataAsset['status_aset'] == "Aktif"){
-                              echo "<span class='badge rounded-pill badge-success text-white'>Aktif</span>";
-                            }else{
-                              echo"<span class='badge rounded-pill badge-danger text-white'>Non-Aktif</span>";
-                            } ?></span></h4></a><span><?= $dataAsset['nama_barang'] . ' - ' . $dataAsset['sn']?></span>
-                            <span>
-                            
-
-                            </span>
-                        </div>
-                      </div>
-                    </td>
-                    <td><a href="javascript:void(0)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="<?= $dataAsset['nama_kategori']?>"><?= $dataAsset['kode_kategori']?></a></td>
-                    <td>
-                      <div> 
-                        <h5><?= $dataAsset['nama_user']?></h5>
-                        <span><?= $dataAsset['nama_lokasi']?></span>
-                      </div>  
-                    </td>
-                    <td></td>
-                    <td class="text-muted"><?= $dataAsset['spesifikasi'] ?></td>
-                    <td>
-                      <a href="javascript:void(0)" target="_blank"><i data-feather="download-cloud"></i></a>
-                    </td>
-                    
+                    <td> <?= $dataAsset['nama_pengguna']; ?> </td>
+                    <td> <?= $dataAsset['merk']; ?> </td>
+                    <td> <?= $dataAsset['lokasi']; ?> </td>
+                    <td> <?= $dataAsset['no_polisi']; ?> </td>
+                    <td> <?= $dataAsset['no_rangka']; ?> </td> 
+                    <td> <?= $dataAsset['no_mesin']; ?> </td>
+                    <td> <?= $dataAsset['silinder']; ?> </td>
+                    <td> <?= $dataAsset['tahun_pembuatan']; ?> </td>
+                    <td> <?= $dataAsset['tgl_stnk']; ?> </td>               
                   </tr>
                 <?php } ?>
               </tbody>

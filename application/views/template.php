@@ -316,6 +316,7 @@
                                 <li><a href="<?=site_url('Chairman/unit_legal')?>">General</a></li>
                                 <li><a href="<?=site_url('Chairman/jobdesc_legal')?>">Job Desc</a></li>
                                 <li><a href="<?=site_url('Chairman/perjanjian_legal')?>">Daftar Perijinan</a></li>
+                                <li><a href="<?=site_url('Chairman/peraturan_pemerintah_legal')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Peraturan Pemerintah">Peraturan Pemerintah</a></li>
                               </ul>
                             </div>
                           </div>
@@ -327,6 +328,8 @@
                               <ul class="submenu-content opensubmegamenu">
                                 <li><a href="<?=site_url('Chairman/unit_qhse')?>">General</a></li>
                                 <li><a href="<?=site_url('Chairman/jobdesc_qhse')?>">Job Desc</a></li>
+                                <li><a href="<?=site_url('Chairman/sop_qhse')?>">SOP</a></li>
+                                <li><a href="<?=site_url('Chairman/certificate')?>">Sertifikat</a></li>
                               </ul>
                             </div>
                           </div>
@@ -553,6 +556,7 @@
     <script src="<?= base_url()?>assets/js/contacts/custom.js"></script>
     <script src="<?= base_url()?>assets/js/tooltip-init.js"></script>
     <script src="<?= base_url()?>assets/js/modalpage/validation-modal.js"></script>
+    <script src="<?= base_url()?>assets/js/contacts/custom.js"></script>
     <!-- Plugins JS Ends-->
     <!-- Theme js-->
     <script src="<?=base_url()?>assets/js/script.js"></script>

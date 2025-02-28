@@ -20,7 +20,7 @@
 		});
 		$("#project-summary").DataTable({
 			searchable: true,
-			paging: false,
+			paging: true,
 			info: false,
 		});
 		$("#last-orders").DataTable({

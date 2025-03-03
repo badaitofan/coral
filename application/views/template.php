@@ -341,6 +341,7 @@
                               <ul class="submenu-content opensubmegamenu">
                                 <li><a href="<?=site_url('Chairman/unit_secretary')?>">General</a></li>
                                 <li><a href="<?=site_url('Chairman/jobdesc_secretary')?>">Job Desc</a></li>
+                                <li><a href="<?=site_url('Chairman/perijinan_secretary')?>">Perijinan</a></li>
                               </ul>
                             </div>
                           </div>

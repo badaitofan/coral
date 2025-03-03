@@ -104,7 +104,17 @@ class Adm_Fin extends CI_Controller {
 				'row'	=> $this->Adm_Fin_Model->get_Personil_HRD()
 			);
 			$this->template->load('template','adm_fin/hrd/hrd_view',$data);
-			// $this->load->view('dashboard_view');
+			// $this->load->view('dashboard_view'); 
+		}
+		
+		public function data_pelamar_hrd()
+		{
+			$data = array(
+				'title' => 'Coral - Data Pelamar',
+				'row_pelamar'	=> $this->Adm_Fin_Model->get_Pelamar_HRD()
+			);
+			$this->template->load('template','adm_fin/hrd/hrd_data_pelamar',$data);
+			// $this->load->view('dashboard_view'); 
 		}
 
 	#=== .ENDPURCHASING HRD ===

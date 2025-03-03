@@ -102,5 +102,14 @@ class Adm_Fin_Model extends CI_Model
             $data = $this->db->get('tb_personil');
             return $data->result_array();
         }
+
+    // Get Data Pelamar
+        public function get_Pelamar_HRD()
+        {
+            $this->db->select('*');
+            $this->db->order_by('pelamar_seq',"ASC");
+            $data = $this->db->get('tb_pelamar_hrd');
+            return $data->result_array();
+        }
     #=== .END GENERAL HRD FUNCTIONS ===
 }

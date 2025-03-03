@@ -64,18 +64,12 @@ class Adm_Fin_Model extends CI_Model
             return $data->result_array();
         }
 
-            //Get Asset Ga dari tabel Aset
+            //Get Kendaraan GA dari tb_kendaraan_ga
         public function getAsetDetail()
         {
-            $this->asset_ga->select('*');
-            $this->asset_ga->from('asets');
-            $this->asset_ga->join('barang','barang.id_barang=asets.id_barang','LEFT');
-            $this->asset_ga->join('kategori_barang','kategori_barang.id_kategori=barang.id_kategori','LEFT');
-            $this->asset_ga->join('lokasi_aset','lokasi_aset.id_lokasi=asets.id_lokasi','LEFT');
-            $this->asset_ga->join('users','users.id_user=asets.id_user','LEFT');
-            $this->asset_ga->join('dept','dept.id_dept=asets.id_dept','LEFT');
-            $this->asset_ga->order_by('users.nama_user',"ASC");
-            $data = $this->asset_ga->get();
+            $this->db->select('*');
+            $this->db->order_by('tb_kendaraan_ga.id_kendaraan',"ASC");
+            $data = $this->db->get('tb_kendaraan_ga');
             return $data->result_array();
         }
 

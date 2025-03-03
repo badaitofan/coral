@@ -42,7 +42,7 @@
         </div>
         <div class="card-body">
           <div class="table-responsive"> 
-            <table class="last-orders-table table" id="last-orders">
+            <table class="display" id="basic-6">
               <thead>
                 <tr>
                   <th>No</th>

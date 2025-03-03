@@ -69,6 +69,7 @@ class Adm_Fin extends CI_Controller {
 			$this->template->load('template','adm_fin/general_affair/aset_atk_ga_view',$data);
 		}
 
+		//Get Data Kendaraan GA
 		public function aset_kendaraan_ga()
 		{
 			$data = array(

@@ -34,7 +34,7 @@
   <div class="page-title">
     <div class="row">
       <div class="col-xl-4 col-sm-7 box-col-3">
-        <h3>Secretaris - Dokumen Perijinan</h3>
+        <h3>Legal - Dokumen Perijinan</h3>
       </div>
       <div class="col-5 d-none d-xl-block">
       </div>
@@ -44,7 +44,7 @@
               <svg class="stroke-icon">
                 <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-home"></use>
               </svg></a></li>
-          <li class="breadcrumb-item">Secretary</li>
+          <li class="breadcrumb-item">Legal</li>
           <li class="breadcrumb-item active">Perijinan</li>
         </ol>
       </div>

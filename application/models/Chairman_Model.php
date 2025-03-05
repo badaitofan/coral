@@ -65,18 +65,31 @@ class Chairman_Model extends CI_Model
         return $data->result_array();
     }
 
-    // LEGAL
-    // Get Personil Legal Member
-    public function get_Personil_Legal()
-    {
-        $this->db->select('*');
-        $this->db->where('personil_group',"LEGAL");
-        $this->db->where('personil_email !=',"null");
-        $this->db->order_by('personil_code',"ASC");
-        $data = $this->db->get('tb_personil');
-        return $data->result_array();
-    }
+    #==== LEGAL ========
+        // Get Personil Legal Member
+        public function get_Personil_Legal()
+        {
+            $this->db->select('*');
+            $this->db->where('personil_group',"LEGAL");
+            $this->db->where('personil_email !=',"null");
+            $this->db->order_by('personil_code',"ASC");
+            $data = $this->db->get('tb_personil');
+            return $data->result_array();
+        }
     
+        // Get Document Permit
+        public function get_Doc_Permit()
+        {
+            $this->db->select('*');
+            $this->db->from('tb_document_permit');
+            $this->db->join('tb_company','tb_company.company_code=tb_document_permit.permit_company_code',"LEFT");
+            $this->db->order_by('permit_seq',"ASC");
+            $data = $this->db->get();
+            return $data->result_array();
+        }
+
+    #==== .END LEGAL ====
+
     #==== QHSE ====
     // Get Personil QHSE Member
     public function get_Personil_QHSE()
@@ -101,16 +114,6 @@ class Chairman_Model extends CI_Model
             return $data->result_array();
         }
 
-        // Get Document Permit
-        public function get_Doc_Permit()
-        {
-            $this->db->select('*');
-            $this->db->from('tb_document_permit');
-            $this->db->join('tb_company','tb_company.company_code=tb_document_permit.permit_company_code',"LEFT");
-            $this->db->order_by('permit_seq',"ASC");
-            $data = $this->db->get();
-            return $data->result_array();
-        }
 
 
     #==== .END Secretary ====

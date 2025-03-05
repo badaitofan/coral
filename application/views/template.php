@@ -315,7 +315,7 @@
                               <ul class="submenu-content opensubmegamenu">
                                 <li><a href="<?=site_url('Chairman/unit_legal')?>">General</a></li>
                                 <li><a href="<?=site_url('Chairman/jobdesc_legal')?>">Job Desc</a></li>
-                                <li><a href="<?=site_url('Chairman/perjanjian_legal')?>">Daftar Perijinan</a></li>
+                                <li><a href="<?=site_url('Chairman/perijinan_legal')?>">Daftar Perijinan</a></li>
                                 <li><a href="<?=site_url('Chairman/peraturan_pemerintah_legal')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Peraturan Pemerintah">Peraturan Pemerintah</a></li>
                               </ul>
                             </div>
@@ -341,7 +341,6 @@
                               <ul class="submenu-content opensubmegamenu">
                                 <li><a href="<?=site_url('Chairman/unit_secretary')?>">General</a></li>
                                 <li><a href="<?=site_url('Chairman/jobdesc_secretary')?>">Job Desc</a></li>
-                                <li><a href="<?=site_url('Chairman/perijinan_secretary')?>">Perijinan</a></li>
                               </ul>
                             </div>
                           </div>
@@ -397,9 +396,10 @@
                               <ul class="submenu-content opensubmegamenu">
                               <li><a href="<?=site_url('Adm_Fin/unit_ga')?>">General</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/jobdesc_ga')?>">Job Desc</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/aset_kendaraan_ga')?>">Asset Kendaraan</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/aset_trailer_ga')?>">Asset Ekor Trailer</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/asset_furniture_ga')?>">Asset Furniture</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/asset_atk_ga')?>">Asset ATK</a></li>
-                                <li><a href="<?=site_url('Adm_Fin/aset_kendaraan_ga')?>">Asset Kendaraan</a></li>
                               </ul>
                             </div>
                           </div>

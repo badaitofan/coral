@@ -73,6 +73,18 @@ class Chairman extends CI_Controller {
 			// $this->load->view('dashboard_view');
 		}
 
+
+		
+	// Load Page Permit  Document 
+		public function perijinan_legal()
+		{
+			$data = array(
+				'title' => 'Coral - Unit Kerja Corporate Legal',
+				'row'	=> $this->Chairman_Model->get_Doc_Permit()
+			);
+			$this->template->load('template','chairman/legal_permit_view',$data);
+		}
+
 	#=== .END LEGAL FUNCTIONS ====
 
 	#===== QHSE FUNCTIONS =====
@@ -101,16 +113,6 @@ class Chairman extends CI_Controller {
 		}
 
 	
-	// Load Page Permit  Document 
-		public function perijinan_secretary()
-		{
-			$data = array(
-				'title' => 'Coral - Unit Kerja Corporate Secretary',
-				'row'	=> $this->Chairman_Model->get_Doc_Permit()
-			);
-			$this->template->load('template','chairman/secretary_permit_view',$data);
-		}
-
 	#===== .END Secretary FUNCTIONS =====
 
 

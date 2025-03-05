@@ -25,7 +25,7 @@
 		});
 		$("#last-orders").DataTable({
 			searchable: true,
-			paging: false,
+			paging: true,
 			language: {
 				search: "Cari:",
 			},

@@ -69,7 +69,7 @@ class Chairman extends CI_Controller {
 				'title' => 'Coral - Unit Kerja Corporate Legal',
 				'row'	=> $this->Chairman_Model->get_Personil_Legal()
 			);
-			$this->template->load('template','chairman/legal_view',$data);
+			$this->template->load('template','chairman/legal/legal_view',$data);
 			// $this->load->view('dashboard_view');
 		}
 
@@ -82,7 +82,7 @@ class Chairman extends CI_Controller {
 				'title' => 'Coral - Unit Kerja Corporate Legal',
 				'row'	=> $this->Chairman_Model->get_Doc_Permit()
 			);
-			$this->template->load('template','chairman/legal_permit_view',$data);
+			$this->template->load('template','chairman/legal/legal_permit_view',$data);
 		}
 
 	#=== .END LEGAL FUNCTIONS ====
@@ -95,7 +95,7 @@ class Chairman extends CI_Controller {
 				'title' => 'Coral - Unit Kerja QHSE',
 				'row'	=> $this->Chairman_Model->get_Personil_QHSE()
 			);
-			$this->template->load('template','chairman/qhse_view',$data);
+			$this->template->load('template','chairman/qhse/qhse_view',$data);
 			// $this->load->view('dashboard_view');
 		}
 	#===== .END QHSE FUNCTIONS =====
@@ -108,7 +108,7 @@ class Chairman extends CI_Controller {
 				'title' => 'Coral - Unit Kerja Corporate Secretary',
 				'row'	=> $this->Chairman_Model->get_Personil_Secretary()
 			);
-			$this->template->load('template','chairman/secretary_view',$data);
+			$this->template->load('template','chairman/secretary/secretary_view',$data);
 			// $this->load->view('dashboard_view');
 		}
 

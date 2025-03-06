@@ -73,6 +73,16 @@ class Adm_Fin_Model extends CI_Model
             return $data->result_array();
         }
 
+
+          //Get data Trailer GA dari tb_trailer_ga
+          public function getAsetTrailerDetail()
+          {
+              $this->db->select('*');
+              $this->db->order_by('tb_trailer_ga.id_trailer',"ASC");
+              $data = $this->db->get('tb_trailer_ga');
+              return $data->result_array();
+          }
+
         
 
 

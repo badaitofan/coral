@@ -79,6 +79,16 @@ class Adm_Fin extends CI_Controller {
 			$this->template->load('template','adm_fin/general_affair/aset_kendaraan_view',$data);
 		}
 
+		//Get Data Trailer GA
+		public function aset_trailer_ga()
+		{
+			$data = array(
+				'title' => 'Coral - Aset Ekor Trailer',
+				'row'	=> $this->Adm_Fin_Model->getAsetTrailerDetail()
+			);
+			$this->template->load('template','adm_fin/general_affair/aset_trailer_view',$data);
+		}
+
 	#=== .ENDGENERAL AFFAIR FUNCTIONS ===
 	
 	#=== PURCHASING FUNCTIONS ===

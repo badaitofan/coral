@@ -122,7 +122,7 @@ class Adm_Fin extends CI_Controller {
 		{
 			$data = array(
 				'title' => 'Coral - Peraturan Perusahaan',
-				'row_peraturan'	=> $this->Adm_Fin_Model->get_Peraturan_Perusahaan_HRD()
+				'row_peraturan_peraturan'	=> $this->Adm_Fin_Model->get_Peraturan_Perusahaan_HRD()
 			);
 			$this->template->load('template','adm_fin/hrd/hrd_peraturan_perusahaan',$data);
 			// $this->load->view('dashboard_view'); 

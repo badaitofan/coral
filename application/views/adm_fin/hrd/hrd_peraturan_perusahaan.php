@@ -48,28 +48,25 @@
             <table class="last-orders-table table" id="last-orders">
               <thead>
                 <tr>
-                  <th>Nama Pelamar</th>
-                  <th>Posisi Lamaran  </th>
-                  <th></th>
+                  <th>No.</th>
+                  <th>Nama Dokumen</th>
+                  <th>Upload Tgl</th>
                   <th>Action </th>
                 </tr>
               </thead>
               <tbody>
+                <?php $no = 1;
+                foreach ($row_peraturan_peraturan as $data) {?>
                   <tr> 
-                    <td>
-                      <div class="user-data">
-                        <div><img src="<?= base_url()?>assets/images/dashboard/avtar/2.jpg" alt="avatar"></div>
-                        <div> <a href="javascript:void(0)"> 
-                            <h4></h4></a><span></span></div>
-                      </div>
-                    </td>
-                    <td></td>
-                    <td></td>
+                    <td><?= $no++ ?>.</td>
+                    <td><?= $data['pp_doc_name']?> </td>
+                    <td><?= date("Y-m-d",strtotime($data['pp_date_creation']))?></td>
                     <td> 
                     <!-- <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#exampleModallogin" id="linkDwl" data-link="<?=$dataJobdesc['file_link']?>" ><i data-feather="download-cloud"></i></a> -->
-                    <a href="" target="_blank"><i data-feather="download-cloud"></i></a>
+                    <a href="<?= $data['pp_file_link']?>" target="_blank"><i data-feather="download-cloud"></i></a>
                     </td>
                   </tr>
+                  <?php } ?>
               </tbody>
             </table>
           </div>

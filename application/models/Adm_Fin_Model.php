@@ -116,7 +116,10 @@ class Adm_Fin_Model extends CI_Model
     // Get Data Pelamar
         public function get_Peraturan_Perusahaan_HRD()
         {
-            
+            $this->db->select('*');
+            $this->db->order_by('pperusahaan_seq',"ASC");
+            $data = $this->db->get('tb_pperusahaan_hrd');
+            return $data->result_array();
         }
     
         // Get Data Pelamar

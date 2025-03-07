@@ -117,6 +117,18 @@ class Adm_Fin extends CI_Controller {
 			// $this->load->view('dashboard_view'); 
 		}
 		
+		// Get data Peraturan Perusahaan
+		public function perautan_perusahaan_hrd()
+		{
+			$data = array(
+				'title' => 'Coral - Peraturan Perusahaan',
+				'row_peraturan'	=> $this->Adm_Fin_Model->get_Peraturan_Perusahaan_HRD()
+			);
+			$this->template->load('template','adm_fin/hrd/hrd_peraturan_perusahaan',$data);
+			// $this->load->view('dashboard_view'); 
+		}
+		
+		// Get data Pelamar
 		public function data_pelamar_hrd()
 		{
 			$data = array(

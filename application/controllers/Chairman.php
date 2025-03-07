@@ -98,6 +98,17 @@ class Chairman extends CI_Controller {
 			$this->template->load('template','chairman/qhse/qhse_view',$data);
 			// $this->load->view('dashboard_view');
 		}
+
+		// SOP
+		public function sop_qhse()
+		{
+			$data = array(
+				'title' => 'Coral - SOP QHSE',
+				// 'row'	=> $this->Chairman_Model->get_Personil_QHSE()
+			);
+			$this->template->load('template','chairman/qhse/qhse_sop_view',$data);
+			// $this->load->view('dashboard_view');
+		}
 	#===== .END QHSE FUNCTIONS =====
 
 	#===== Secretary FUNCTIONS =====

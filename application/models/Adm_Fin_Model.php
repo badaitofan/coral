@@ -114,6 +114,12 @@ class Adm_Fin_Model extends CI_Model
         }
 
     // Get Data Pelamar
+        public function get_Peraturan_Perusahaan_HRD()
+        {
+            
+        }
+    
+        // Get Data Pelamar
         public function get_Pelamar_HRD()
         {
             $this->db->select('*');

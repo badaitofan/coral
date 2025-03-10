@@ -284,7 +284,7 @@
                     </div>
                   </li>
                   <!-- Direktorat Chairman -->
-                  <li class="mega-menu sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <li class="mega-menu sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="javascript:;">
                       <svg class="stroke-icon">
                         <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-others"></use>
                       </svg>
@@ -350,7 +350,7 @@
                   </li>
                   <!-- .end Direktorat Chairman -->
                   <!-- Direktorat Admin & Keuangan -->
-                  <li class="mega-menu sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <li class="mega-menu sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="javascript:;">
                       <svg class="stroke-icon">
                         <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-others"></use>
                       </svg>
@@ -440,7 +440,7 @@
                   <!-- .end Direktorat Admin & Keuangan -->
 
                    <!-- Direktorat BDP -->
-                   <li class="mega-menu sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                   <li class="mega-menu sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="javascript:;">
                       <svg class="stroke-icon">
                         <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-others"></use>
                       </svg>
@@ -451,7 +451,7 @@
                   <!-- .end Direktorat BDP -->
 
                    <!-- Direktorat BSG -->
-                   <li class="mega-menu sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                   <li class="mega-menu sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="javascript:;">
                       <svg class="stroke-icon">
                         <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-others"></use>
                       </svg>

@@ -103,6 +103,17 @@ class Adm_Fin extends CI_Controller {
 			// $this->load->view('dashboard_view');
 		}
 
+		//Get Data Vendor
+		public function data_vendor_purchasing()
+		{
+			$data = array(
+				'title' => 'Coral - Data Vendor',
+				'row'	=> $this->Adm_Fin_Model->getDataVendorDetail()
+			);
+			$this->template->load('template','adm_fin/purchasing/data_vendor_view',$data);
+		}
+
+
 	#=== .END PURCHASING FUNCTIONS ===
 	
 	#=== HRD FUNCTIONS ===

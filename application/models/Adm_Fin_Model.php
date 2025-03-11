@@ -99,6 +99,17 @@ class Adm_Fin_Model extends CI_Model
             $data = $this->db->get('tb_personil');
             return $data->result_array();
         }
+
+
+
+        // Get Data Vendor
+        public function getDataVendorDetail()
+        {
+            $this->db->select('*');
+            $this->db->order_by('tb_vendor_purchasing.kd_supplier',"ASC");
+            $data = $this->db->get('tb_vendor_purchasing');
+            return $data->result_array();
+        }
     #=== .END GENERAL PURCHASING FUNCTIONS ===
 
     #=== GENERAL HRD FUNCTIONS ===

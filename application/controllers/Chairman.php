@@ -99,16 +99,55 @@ class Chairman extends CI_Controller {
 			// $this->load->view('dashboard_view');
 		}
 
-		// SOP
+		// Get All Data SOP
 		public function sop_qhse()
 		{
+			$segmen = $this->uri->segment(3);
 			$data = array(
 				'title' => 'Coral - SOP QHSE',
-				// 'row'	=> $this->Chairman_Model->get_Personil_QHSE()
+				'row'	=> $this->Chairman_Model->get_SOP($segmen)
 			);
 			$this->template->load('template','chairman/qhse/qhse_sop_view',$data);
 			// $this->load->view('dashboard_view');
 		}
+		// Get All Data SOP
+		public function sop_qhse_K3L()
+		{
+			$data = array(
+				'title' => 'Coral - SOP QHSE',
+				'row'	=> $this->Chairman_Model->get_SOP_K3L()
+			);
+			$this->template->load('template','chairman/qhse/qhse_sop_k3l_view',$data);
+			// $this->load->view('dashboard_view');
+		}
+
+		// Get Filtered Data SOP
+		public function get_filtered_SOP()
+		{
+			$category = $this->input->post('category',TRUE);
+			if($category != "ALL"){
+				$this->db->select('*');
+				$this->db->from('tb_sop');
+				$this->db->where('sop_category',$category);
+				$this->db->order_by('sop_seq',"DESC");
+				$query =  $this->db->get();
+				$row = $query->result_array();
+				if($query->num_rows() > 0){
+					$no=1;
+                  foreach ($row as $dataSOP) {
+                    echo "<tr>
+                    <td>".$no++."</td>
+                    <td><div class='user-data'><div><a><h4>".$dataSOP['sop_name']."</h4></a><span>".$dataSOP['sop_code']." | Terbit tgl. ".$dataSOP['sop_release']."</span></div></div></td>
+                    <td>".$dataSOP['sop_category']."</td>
+                    <td>".$dataSOP['sop_rev']."</td>
+                    <td></td>
+                    <td>asd</td>
+                    </tr>";
+                  }
+				}
+			}
+		}
+
 	#===== .END QHSE FUNCTIONS =====
 
 	#===== Secretary FUNCTIONS =====

@@ -1,111 +1,173 @@
-        <div class="container-fluid">
-            <div class="page-title">
-              <div class="row">
-                <div class="col-xl-4 col-sm-7 box-col-3">
-                  <h3>QHSE - Standart Operating Procedure</h3>
-                </div>
-                <div class="col-5 d-none d-xl-block">
-                </div>
-                <div class="col-xl-3 col-sm-5 box-col-4">
-                  <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">
-                        <svg class="stroke-icon">
-                          <use href="../assets/svg/icon-sprite.svg#stroke-home"></use>
-                        </svg></a></li>
-                    <li class="breadcrumb-item">QHSE</li>
-                    <li class="breadcrumb-item active">SOP</li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Container-fluid starts-->
-          <div class="container-fluid">
-            <div class="email-wrap bookmark-wrap">
-              <div class="row">
-                <div class="col-xl-3 box-col-3">
-                  <div class="md-sidebar"><a class="btn btn-primary md-sidebar-toggle" href="javascript:void(0)">bookmark filter</a>
-                    <div class="md-sidebar-aside job-left-aside custom-scrollbar">
-                      <div class="email-left-aside">
-                        <div class="card">
-                          <div class="card-body">
-                            <div class="email-app-sidebar left-bookmark">
-                              <div class="d-flex align-items-center">
-                                <!-- <div class="media-size-email"><img class="me-3 rounded-circle" src="../assets/images/user/user.png" alt=""></div>
-                                <div class="flex-grow-1">
-                                  <h4>Standart Operating Procedure</h4>
-                                  <p><hr></p>
-                                </div> -->
-                              </div>
-                              <ul class="nav main-menu custom-scrollbar" role="tablist"> 
-                                <li class="nav-item">
-                                  <button class="badge-light-primary btn-block btn-mail txt-primary w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" disabled><i class="me-2" data-feather="filter"></i> Semua</button>
-                                </li>
-                                <li class="nav-item"><span class="main-title"> Kategori</span></li>
-                                <li><a href="javascript:;"><span class="title"> QHSE</span></a></li>
-                                <li><a href="javascript:;" ><span class="title"> HRD</span></a></li>
-                                <li><a  href="javascript:;" ><span class="title"> Purchasing</span></a></li>
-                                <li><a href="javascript:;" ><span class="title"> Marketing</span></a></li>                                                                
-                                <li><a href="javascript:;" ><span class="title"> Layup</span></a></li>                                                                
-                                <li><a href="javascript:;" ><span class="title"> Pemanduan</span></a></li>                                                                
-                                <li><a href="javascript:;" ><span class="title"> Ekspedisi</span></a></li>                                                                
-                                <li><a href="javascript:;" ><span class="title"> Bias Mandiri</span></a></li>                                                                
-                                <li><a href="javascript:;" ><span class="title"> Bias Samudra</span></a></li>                                                                
-                                <li><a href="javascript:;" ><span class="title"> Batam Samudra Jaya</span></a></li>                                                                
-                                <li><a href="javascript:;" ><span class="title"> Pelayaran Batam Samudra</span></a></li>                                                                
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
+<style>
+  .default-dashboard2 .last-orders-table thead tr
+    {
+      border-bottom:1px solid #f5f5f5
+    }
+  .default-dashboard2 .last-orders-table thead tr:first-child th
+    {
+      padding-left:0!important
+    }
+  .default-dashboard2 .last-orders-table thead tr:last-child th
+    {
+    padding-right:0!important
+    }
+  .default-dashboard2 .last-orders-table thead tr th
+    {color:#848789;padding:0 5px 11px}
+    .default-dashboard2 .last-orders-table thead tr th:first-child{padding-left:0}
+    .default-dashboard2 .last-orders-table thead tr th:first-child:after{display:none}
+    .default-dashboard2 .last-orders-table tbody tr:last-child td{border-bottom:none!important;padding-right:0!important}
+    .default-dashboard2 .last-orders-table tbody tr:hover td h4{color:var(--theme-default)}
+    .default-dashboard2 .last-orders-table tbody tr:last-child{border-bottom:none}
+    .default-dashboard2 .last-orders-table tbody tr:last-child td{padding-bottom:0}
+    .default-dashboard2 .last-orders-table tbody tr td{padding:18px 5px}
+    .default-dashboard2 .last-orders-table tbody tr td:first-child{padding-left:0!important}
+    .default-dashboard2 .last-orders-table tbody tr td:last-child{padding-right:0!important}
+    .default-dashboard2 .last-orders-table tbody tr td .user-data{align-items:center;display:flex;gap:9px}
+    .default-dashboard2 .last-orders-table tbody tr td .user-data img{border-radius:100%;height:42px;width:42px}
+    .default-dashboard2 .last-orders-table tbody tr td .user-data span{color:#848789}
+    .default-dashboard2 .last-orders-table tbody tr td a h4{font-size:14px;font-weight:600}
+    .default-dashboard2 .last-orders-table tbody tr td .drop-menu{background-color:#f5f5f5;border-radius:0;color:#1f2f3e;line-height:.7;padding:3px 5px}
+    .default-dashboard2 .last-orders-table tbody tr td:nth-child(2){color:#848789}
+</style>
+
+<div class="container-fluid">
+  <div class="page-title">
+    <div class="row">
+      <div class="col-xl-6 col-sm-7 box-col-3">
+        <h3>QHSE - Standart Operating Procedure</h3>
+      </div>
+      <div class="col-3 d-none d-xl-block">
+      </div>
+      <div class="col-xl-3 col-sm-5 box-col-4">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">
+              <svg class="stroke-icon">
+                <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-home"></use>
+              </svg></a></li>
+          <li class="breadcrumb-item">QHSE</li>
+          <li class="breadcrumb-item active">SOP</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Container-fluid starts-->
+<div class="container-fluid default-dashboard2">
+  <div class="row">
+    <div class="col-xl-3 box-col-3">
+        <div class="email-wrap bookmark-wrap">
+          <div class="md-sidebar"><a class="btn btn-primary md-sidebar-toggle" href="javascript:void(0)">bookmark filter</a>
+            <div class="md-sidebar-aside job-left-aside custom-scrollbar">
+              <div class="email-left-aside">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="email-app-sidebar left-bookmark">
+                      <div class="d-flex align-items-center">
+                        <!-- <div class="media-size-email"><img class="me-3 rounded-circle" src="../assets/images/user/user.png" alt=""></div>
+                        <div class="flex-grow-1">
+                          <h4>Standart Operating Procedure</h4>
+                          <p><hr></p>
+                        </div> -->
                       </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-xl-9 col-md-12 box-col-80">
-                  <div class="email-right-aside bookmark-tabcontent">
-                    <div class="card email-body radius-left">
-                      <div class="ps-0">
-                        <div class="tab-content">
-                          <div class="tab-pane fade active show" id="pills-created" role="tabpanel" aria-labelledby="pills-created-tab">
-                            <div class="card mb-0" id="cardTableSOP">
-                              <div class="card-header d-flex pb-0">
-                                <h4 class="mb-0">Created by me</h4>
-                                <!-- <ul>
-                                  <li><a class="grid-bookmark-view" href="javascript:void(0)"><i data-feather="grid"></i></a></li>
-                                  <li><a class="list-layout-view" href="javascript:void(0)"><i data-feather="list"></i></a></li>
-                                </ul> -->
-                              </div>
-
-                              <div class="card-body">
-                                <div class="table-responsive"> 
-                                  <table class="last-orders-table table" id="last-orders">
-                                    <thead>
-                                      <tr>
-                                        <th>No</th>
-                                        <th>Kode</th>
-                                        <th>Nama Dokumen</th>
-                                        <th style="width:10%">Kategori</th>
-                                        <th>Test</th> <!-- Kolom yg Hilang -->
-                                        <th>Revisi</th>
-                                        <th>Opt </th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-
-                                    </tbody>
-                                  </table>                                  
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <ul class="nav main-menu custom-scrollbar" role="tablist"> 
+                        <li class="nav-item">
+                          <a href="<?= site_url('Chairman/sop_qhse/all')?>" class="badge-light-primary btn-block btn-mail txt-primary w-100 catg" type="button" data-category="ALL"><i class="me-2" data-feather="filter"></i> Semua</a>
+                        </li>
+                        <li class="nav-item"><span class="main-title"> Kategori</span></li>
+                        <li><a href="<?= site_url('Chairman/sop_qhse/K3L')?>" class="catg" data-category="K3L"><span class="title"> K3L</span></a></li>
+                        <li><a href="<?= site_url('Chairman/sop_qhse/HRD')?>" class="catg" data-category="HRD"><span class="title"> HRD</span></a></li>
+                        <li><a href="<?= site_url('Chairman/sop_qhse/Quality')?>" class="catg" data-category="Quality"><span class="title"> Quality</span></a></li>
+                        <li><a  href="<?= site_url('Chairman/sop_qhse/Purchasing')?>" class="catg" data-category="Purchasing"><span class="title"> Purchasing</span></a></li>
+                        <li><a href="<?= site_url('Chairman/sop_qhse/Marketing')?>" class="catg" data-category="Marketing"><span class="title"> Marketing</span></a></li>                                                                
+                        <li><a href="<?= site_url('Chairman/sop_qhse/Galang')?>" class="catg" data-category="Galang"><span class="title"> Galang</span></a></li>                                                                
+                        <li><a href="<?= site_url('Chairman/sop_qhse/Pemanduan')?>" class="catg" data-category="Pemanduan"><span class="title"> Pemanduan</span></a></li>                                                          
+                        <li><a href="<?= site_url('Chairman/sop_qhse/Bisam')?>" class="catg" data-category="Bisam"><span class="title"> Bias Samudra</span></a></li>                                                                
+                        <li><a href="<?= site_url('Chairman/sop_qhse/BS')?>" class="catg" data-category="BS"><span class="title"> Batam Samudra</span></a></li>                                                                
+                        <li><a href="<?= site_url('Chairman/sop_qhse/BSJ')?>" class="catg" data-category="BSJ"><span class="title"> Batam Samudra Jaya</span></a></li>                                                                
+                        <li><a href="<?= site_url('Chairman/sop_qhse/PBS')?>" class="catg" data-category="PBS"><span class="title"> Pelayaran Batam Samudra</span></a></li>                                                                
+                        <li><a href="<?= site_url('Chairman/sop_qhse/ESA')?>" class="catg" data-category="ESA"><span class="title"> Energi Samudra Indonesia</span></a></li>                                                                
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
-          <!-- Container-fluid Ends-->
+        </div>
+    </div>
+
+    <div class="col-xl-9 col-md-12 box-col-80">
+      <div class="card ">
+        <div class="card-header card-no-header">
+          <div class="header-top">
+            <h4 class="mb-0">Daftar Dokumen SOP</h4>
+            <!-- <div class="dropdown icon-dropdown setting-menu ms-2">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div class="text-center">
+            <div class="spinner-border d-none" role="status" style="width: 3rem; height: 3rem; color:2b5f60" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+          <div class="table-responsive"> 
+            <table class="last-orders-table table display" id="data-source-1">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama Dokumen</th>
+                  <th style="width:10%">Kategori</th>
+                  <th>Revisi</th>
+                  <th>Test</th> <!-- Kolom yg Hilang -->
+                  <th>Opt </th>
+                </tr>
+              </thead>
+              <tbody  class="cardTableSOP">
+              
+                <?php
+                  $no=1;
+                  foreach ($row as $dataSOP) {
+                    echo "<tr>
+                    <td>".$no++."</td>
+                    <td><div class='user-data'><div><a><h4>".$dataSOP['sop_name']."</h4></a><span>".$dataSOP['sop_code']." | Terbit tgl. ".$dataSOP['sop_release']."</span></div></div></td>
+                    <td>".$dataSOP['sop_category']."</td>
+                    <td>".$dataSOP['sop_rev']."</td>
+                    <td></td>
+                    <td><a href=".$dataSOP['sop_link']." target='_blank'><i data-feather='download-cloud'></i></a></td>
+                    </tr>";
+                  }
+                ?>
+              </tbody>
+            </table>                                  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Container-fluid Ends-->
+ <script src="<?=base_url()?>assets/js/jquery-3.5.1.min.js"></script>
+ <script>
+  // $(document).on("click",".catg",function(){
+  //   var ctg = $(this).data('category');
+  //   $(".spinner-border").removeClass('d-none');
+
+  //   console.log(ctg);
+  //   jQuery.ajax({
+  //     url: "<?=base_url()?>Chairman/get_filtered_SOP",
+  //     data :'category='+ctg,
+  //     type : "POST",
+  //     success: function (data){
+  //       // notify();
+  //       $(".spinner-border").addClass('d-none');
+  //       $(".cardTableSOP").html(data);
+  //     }
+  //   })
+  // })
+
+ </script>

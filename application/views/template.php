@@ -328,7 +328,7 @@
                               <ul class="submenu-content opensubmegamenu">
                                 <li><a href="<?=site_url('Chairman/unit_qhse')?>">General</a></li>
                                 <li><a href="<?=site_url('Chairman/jobdesc_qhse')?>">Job Desc</a></li>
-                                <li><a href="<?=site_url('Chairman/sop_qhse')?>">SOP</a></li>
+                                <li><a href="<?=site_url('Chairman/sop_qhse/all')?>">SOP</a></li>
                                 <li><a href="<?=site_url('Chairman/certificate')?>">Sertifikat</a></li>
                               </ul>
                             </div>
@@ -411,7 +411,7 @@
                               <ul class="submenu-content opensubmegamenu">
                                 <li><a href="<?=site_url('Adm_Fin/unit_purchasing')?>">General</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/jobdesc_purchasing')?>">Job Desc</a></li>
-                                <li><a href="<?=site_url('Adm_Fin/vendor_purchasing')?>">Vendor</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/data_vendor_purchasing')?>">Vendor</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/purchasing_laporan_pembelian')?>">Laporan Pembelian</a></li>
                               </ul>
                             </div>

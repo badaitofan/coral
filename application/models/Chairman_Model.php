@@ -91,16 +91,42 @@ class Chairman_Model extends CI_Model
     #==== .END LEGAL ====
 
     #==== QHSE ====
-    // Get Personil QHSE Member
-    public function get_Personil_QHSE()
-    {
-        $this->db->select('*');
-        $this->db->where('personil_group',"QHSE");
-        $this->db->where('personil_email !=',"null");
-        $this->db->order_by('personil_code',"ASC");
-        $data = $this->db->get('tb_personil');
-        return $data->result_array();
-    }
+        // Get Personil QHSE Member
+        public function get_Personil_QHSE()
+        {
+            $this->db->select('*');
+            $this->db->where('personil_group',"QHSE");
+            $this->db->where('personil_email !=',"null");
+            $this->db->order_by('personil_code',"ASC");
+            $data = $this->db->get('tb_personil');
+            return $data->result_array();
+        }
+
+        // /Get All SOP Data
+        public function get_SOP($segmen)
+        {
+            if($segmen == "all"){
+                $this->db->select('*');
+                $this->db->order_by('sop_category',"ASC");
+                $data = $this->db->get('tb_sop');
+            }else{
+                $this->db->select('*');
+                $this->db->where('sop_category',$segmen);
+                $this->db->order_by('sop_category',"ASC");
+                $data = $this->db->get('tb_sop');                
+            }
+            return $data->result_array();
+        }
+        // /Get All SOP Data
+        public function get_SOP_filtered()
+        {
+            $this->db->select('*');
+            $this->db->where('sop_category',$category);
+            $this->db->order_by('sop_category',"ASC");
+            $data = $this->db->get('tb_sop');
+            return $data->result_array();
+        }
+
 
     #==== Secretary ====
         // Get Personil Secretary Member

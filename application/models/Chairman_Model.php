@@ -88,6 +88,15 @@ class Chairman_Model extends CI_Model
             return $data->result_array();
         }
 
+        // Get Goverment Regulation Data
+        public function get_Gov_Regulation()
+        {
+            $this->db->select('*');
+            $this->db->order_by('gov_reg_year',"ASC");
+            $data = $this->db->get('tb_gov_regulation');
+            return $data->result_array();
+        }
+
     #==== .END LEGAL ====
 
     #==== QHSE ====

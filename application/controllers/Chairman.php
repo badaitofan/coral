@@ -85,6 +85,16 @@ class Chairman extends CI_Controller {
 			$this->template->load('template','chairman/legal/legal_permit_view',$data);
 		}
 
+	// Load Page Peraturan Perusahaan
+		public function peraturan_pemerintah_legal()
+		{
+			$data = array(
+				'title' => 'Coral - Unit Kerja Corporate Legal',
+				'row'	=> $this->Chairman_Model->get_Gov_Regulation()
+			);
+			$this->template->load('template','chairman/legal/legal_gov_regulation_view',$data);
+		}
+
 	#=== .END LEGAL FUNCTIONS ====
 
 	#===== QHSE FUNCTIONS =====
@@ -121,7 +131,7 @@ class Chairman extends CI_Controller {
 			// $this->load->view('dashboard_view');
 		}
 
-		// Get Filtered Data SOP
+		// Get Filtered Data SOP == tidak dipakai
 		public function get_filtered_SOP()
 		{
 			$category = $this->input->post('category',TRUE);

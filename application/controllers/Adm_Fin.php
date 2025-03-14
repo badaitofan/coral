@@ -125,7 +125,6 @@ class Adm_Fin extends CI_Controller {
 				'row'	=> $this->Adm_Fin_Model->get_Personil_HRD()
 			);
 			$this->template->load('template','adm_fin/hrd/hrd_view',$data);
-			// $this->load->view('dashboard_view'); 
 		}
 		
 		// Get data Peraturan Perusahaan
@@ -136,7 +135,6 @@ class Adm_Fin extends CI_Controller {
 				'row_peraturan_peraturan'	=> $this->Adm_Fin_Model->get_Peraturan_Perusahaan_HRD()
 			);
 			$this->template->load('template','adm_fin/hrd/hrd_peraturan_perusahaan',$data);
-			// $this->load->view('dashboard_view'); 
 		}
 		
 		// Get data Pelamar
@@ -147,9 +145,18 @@ class Adm_Fin extends CI_Controller {
 				'row_pelamar'	=> $this->Adm_Fin_Model->get_Pelamar_HRD()
 			);
 			$this->template->load('template','adm_fin/hrd/hrd_data_pelamar',$data);
-			// $this->load->view('dashboard_view'); 
 		}
 
-	#=== .ENDPURCHASING HRD ===
+		// Get Jobdesk
+		public function jobdesc_hrd()
+		{
+			$data = array(
+				'title' => 'Coral - Jobdesk HRD',
+				'row_jd_hrd'=> $this->Adm_Fin_Model->get_jobdesc_hrd()//Get data jobdesc Unit HRD
+			);
+			$this->template->load('template','adm_fin/hrd/hrd_jobdesk_view',$data);
+		}
+
+	#=== .END HRD FUNCTIONS===
 	
 }

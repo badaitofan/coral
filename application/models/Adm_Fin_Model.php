@@ -141,5 +141,17 @@ class Adm_Fin_Model extends CI_Model
             $data = $this->db->get('tb_pelamar_hrd');
             return $data->result_array();
         }
+
+        // Get data Jobdesc ICT
+        public function get_jobdesc_hrd()
+        {
+            $this->db->select('*');
+            $this->db->from('tb_jobdesc');
+            $this->db->join('tb_contact_personil','tb_contact_personil.cp_email=tb_jobdesc.pic_email',"LEFT");
+            $this->db->where('jobdesc_unit',"HRD");
+            $data = $this->db->get();
+            return $data->result_array();
+        }
+
     #=== .END GENERAL HRD FUNCTIONS ===
 }

@@ -33,37 +33,39 @@ class Chairman_Model extends CI_Model
     public function get_jobdesc_ict()
     {
         $this->db->select('*');
+        $this->db->from('tb_jobdesc');
+        $this->db->join('tb_contact_personil','tb_contact_personil.cp_email=tb_jobdesc.pic_email',"LEFT");
         $this->db->where('jobdesc_unit',"ICT");
-        $data = $this->db->get('tb_jobdesc');
+        $data = $this->db->get();
         return $data->result_array();
     }
 
     // Get Personil ICT Member
-    public function get_Personil_ICT()
-    {
-        $this->db->select('*');
-        $this->db->where('personil_group',"ICT");
-        $this->db->where('personil_email !=',"null");
-        $this->db->order_by('personil_code',"ASC");
-        $data = $this->db->get('tb_personil');
-        return $data->result_array();
-    }
+        public function get_Personil_ICT()
+        {
+            $this->db->select('*');
+            $this->db->where('personil_group',"ICT");
+            $this->db->where('personil_email !=',"null");
+            $this->db->order_by('personil_code',"ASC");
+            $data = $this->db->get('tb_personil');
+            return $data->result_array();
+        }
 
     // Get data Helpdesk from database server 10.10.10.23
     // Aplication Asset BMG - ICT
-    public function get_asset_ict()
-    {
-        $this->db_assets->select('*');
-        $this->db_assets->from('asets');
-        $this->db_assets->join('barang','barang.id_barang=asets.id_barang','LEFT');
-        $this->db_assets->join('kategori_barang','kategori_barang.id_kategori=barang.id_kategori','LEFT');
-        $this->db_assets->join('lokasi_aset','lokasi_aset.id_lokasi=asets.id_lokasi','LEFT');
-        $this->db_assets->join('users','users.id_user=asets.id_user','LEFT');
-        $this->db_assets->join('dept','dept.id_dept=asets.id_dept','LEFT');
-        $this->db_assets->order_by('users.nama_user',"ASC");
-        $data = $this->db_assets->get();
-        return $data->result_array();
-    }
+        public function get_asset_ict()
+        {
+            $this->db_assets->select('*');
+            $this->db_assets->from('asets');
+            $this->db_assets->join('barang','barang.id_barang=asets.id_barang','LEFT');
+            $this->db_assets->join('kategori_barang','kategori_barang.id_kategori=barang.id_kategori','LEFT');
+            $this->db_assets->join('lokasi_aset','lokasi_aset.id_lokasi=asets.id_lokasi','LEFT');
+            $this->db_assets->join('users','users.id_user=asets.id_user','LEFT');
+            $this->db_assets->join('dept','dept.id_dept=asets.id_dept','LEFT');
+            $this->db_assets->order_by('users.nama_user',"ASC");
+            $data = $this->db_assets->get();
+            return $data->result_array();
+        }
 
     #==== LEGAL ========
         // Get Personil Legal Member

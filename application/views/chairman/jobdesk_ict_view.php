@@ -61,7 +61,7 @@
                   <tr> 
                     <td>
                       <div class="user-data">
-                        <div><img src="<?= base_url()?>assets/images/dashboard/avtar/2.jpg" alt="avatar"></div>
+                        <div><img src="<?= base_url('assets/images/user/').$dataJobdesc['cp_photo']?>" alt="avatar"></div>
                         <div> <a href="javascript:void(0)"> 
                             <h4><?= $dataJobdesc['pic_name']?></h4></a><span><?= $dataJobdesc['pic_email']?></span></div>
                       </div>

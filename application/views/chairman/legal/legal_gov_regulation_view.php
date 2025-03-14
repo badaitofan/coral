@@ -33,10 +33,10 @@
 <div class="container-fluid">
   <div class="page-title">
     <div class="row">
-      <div class="col-xl-4 col-sm-7 box-col-3">
+      <div class="col-xl-6 col-sm-7 box-col-3">
         <h3>Legal - Dokumen Peraturan Pemerintah</h3>
       </div>
-      <div class="col-5 d-none d-xl-block">
+      <div class="col-3 d-none d-xl-block">
       </div>
       <div class="col-xl-3 col-sm-5 box-col-4">
         <ol class="breadcrumb">
@@ -93,7 +93,7 @@
                       <div class="user-data">
                         
                         <div> <a href="javascript:void(0)"> 
-                            <h4><?= $dataReg['gov_reg_no']?></h4></a><span>- <?= $dataReg['gov_reg_year'] ?> -</span>
+                            <h4><?= $dataReg['gov_reg_no']?></h4></a>
                         </div>
                       </div>
                     </td>

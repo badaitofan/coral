@@ -379,12 +379,9 @@
                               <ul class="submenu-content opensubmegamenu">
                                 <li><a href="<?=site_url('Adm_Fin/akuntansi_general')?>">General</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/akuntansi_jobdesc')?>">Job Desc</a></li>
-                                <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan')?>">Lap. Keuangan</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_labarugi')?>">Lap. Laba Rugi</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_neraca')?>">Lap. Neraca</a></li>
-                                <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_spt_bulanan')?>">Lap. SPT Bulanan</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_audit_tahunan')?>">Lap. Audit Tahunan</a></li>
-                                <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_analisa_rasio')?>">Lap. Analisa Rasio</a></li>
                               </ul>
                             </div>
                           </div>
@@ -474,7 +471,7 @@
                         <use href="<?=base_url()?>assets/svg/icon-sprite.svg#fill-icons"></use>
                       </svg><span>Versi App.</span></a>
                   </li>
-                  <li class="sidebar-list"><i class="fa fa-thumb-tack">        </i><a class="sidebar-link sidebar-title link-nav" href="kanban.html">
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack">        </i><a class="sidebar-link sidebar-title link-nav" href="<?= site_url('Developer_Team')?>">
                     <svg class="stroke-icon">
                       <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-user"></use>
                     </svg>

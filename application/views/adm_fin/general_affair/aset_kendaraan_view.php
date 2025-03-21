@@ -60,8 +60,8 @@
       <div class="card">
         <div class="card-header pb-0 card-no-border">
           <div class="header-top">
-            <h4>Daftar Aset Kendaraan GA</h4>
-            <div class="dropdown icon-dropdown setting-menu">
+            <h4>Daftar Kendaraan Dinas</h4>
+            <!-- <div class="dropdown icon-dropdown setting-menu">
               <button class="btn dropdown-toggle" id="userdropdown60" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <svg>
                   <use href="../assets/svg/icon-sprite.svg#setting"> </use>
@@ -72,7 +72,7 @@
                 <a class="dropdown-item" href="#">Monthly</a>
                 <a class="dropdown-item" href="#">Yearly</a>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="card-body">
@@ -82,10 +82,9 @@
                 <tr>
                   <th>No</th>
                   <th>Nama Pengguna</th>
-                  <th>Nomor Rangka</th>
-                  <th>Nomor Mesin</th>
-                  <th>Silinder CC</th>
+                  <th>Lokasi</th>
                   <th>Tahun Pembuatan</th>
+                  <th>Silinder CC</th> <!-- tidak tampil -->
                   <th>Masa Berlaku STNK</th>
                   <th>Dokumen Kendaraan</th>
                 </tr>
@@ -102,14 +101,13 @@
                           <a href="javascript:void(0)">
                             <h4><?= isset($dataAsset['nama_pengguna']) ? $dataAsset['nama_pengguna'] : 'No Name' ?></h4>
                           </a>
-                          <span><?= isset($dataAsset['merk']) ? $dataAsset['merk'] : 'No Merk' ?> - <?= isset($dataAsset['no_polisi']) ? $dataAsset['no_polisi'] : 'No Plat Number' ?> - <?= isset($dataAsset['lokasi']) ? $dataAsset['lokasi'] : 'No Location' ?></span>
+                          <span><?= isset($dataAsset['merk']) ? $dataAsset['merk'] : 'No Merk' ?> - <?= isset($dataAsset['no_polisi']) ? $dataAsset['no_polisi'] : 'No Plat Number' ?> </span>
                         </div>
                       </div>
                     </td>
-                    <td><?= $dataAsset['no_rangka'] ?></td>
-                    <td><?= $dataAsset['no_mesin'] ?></td>
-                    <td><?= $dataAsset['silinder'] ?></td> 
+                    <td><?= $dataAsset['lokasi'] ?></td>
                     <td><?= $dataAsset['tahun_pembuatan'] ?></td>
+                    <td><?= $dataAsset['silinder'] ?></td> 
                     <td><?= $dataAsset['tgl_stnk'] ?></td>
                     <td>
                       <a href="<?= isset($dataAsset['dokumen_kendaraan_link']) ? $dataAsset['dokumen_kendaraan_link'] : '#' ?>" target="_blank">

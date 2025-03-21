@@ -89,15 +89,16 @@
                 {?>
                   <tr> 
                     <td><?= $no++ ?></td>
+                    <td><?= $dataReg['gov_reg_no']?></td>
                     <td>
                       <div class="user-data">
                         
-                        <div> <a href="javascript:void(0)"> 
-                            <h4><?= $dataReg['gov_reg_no']?></h4></a>
+                        <div> 
+                          <span style="font-size:10px"><?= $dataReg['gov_reg_type']?></span>
+                          <a href="javascript:void(0)"><h4><?= $dataReg['gov_reg_title']?></h4></a>
                         </div>
                       </div>
                     </td>
-                    <td><?= $dataReg['gov_reg_title']?></td>
                     <td>
                       <a href="<?= $dataReg['gov_reg_link']?>" target="_blank"><i data-feather="download-cloud"></i></a>
                     </td>

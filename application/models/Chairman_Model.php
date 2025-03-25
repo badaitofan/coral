@@ -5,14 +5,18 @@ class Chairman_Model extends CI_Model
 {
     // Penamaan DB selain Database Utama
     // Datbase Helpdesk
+    // Database Asset ICT
+    // Database IMS ICT
     private $db_helpdesk;
     private $db_assets;
+    private $db_ims_ict;
 
     public function __construct()
     {
         parent::__construct();
         $this->db_helpdesk = $this->load->database('helpdesk',TRUE);
         $this->db_assets = $this->load->database('asset_ict',TRUE);
+        $this->db_ims_ict = $this->load->database('ims_ict',TRUE);
     }
 
     // Get data Helpdesk from database server 31.220.22.191
@@ -64,6 +68,17 @@ class Chairman_Model extends CI_Model
             $this->db_assets->join('dept','dept.id_dept=asets.id_dept','LEFT');
             $this->db_assets->order_by('users.nama_user',"ASC");
             $data = $this->db_assets->get();
+            return $data->result_array();
+        }
+        
+        // get data ims ict dari server 10.10.10.23
+        //Get ict supplies dari tabel barang IMS
+        public function get_Detail_Supplies()
+        {
+            $this->db_ims_ict->select('*');
+            $this->db_ims_ict->join('tbl_jenis', 'tbl_jenis.id_jenis=tbl_barang.jenis','left');
+            $this->db_ims_ict->order_by('tbl_barang.id_barang',"ASC");
+            $data = $this->db_ims_ict->get('tbl_barang');
             return $data->result_array();
         }
 

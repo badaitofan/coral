@@ -31,6 +31,8 @@ class Chairman extends CI_Controller {
 			$this->template->load('template','chairman/jobdesk_ict_view',$data);
 			// $this->load->view('dashboard_view');
 		}
+		
+		// Get Asset ICT
 		public function asset_ict()
 		{
 			$data = array(
@@ -38,6 +40,16 @@ class Chairman extends CI_Controller {
 				'row'	=> $this->Chairman_Model->get_asset_ict()
 			);
 			$this->template->load('template','chairman/asset_ict_view',$data);
+		}
+
+		// Get supplies ICT
+		public function ict_supplies()
+		{
+			$data = array(
+				'title' => 'Coral - ICT Supplies',
+				'row'	=> $this->Chairman_Model->get_Detail_Supplies()
+			);
+			$this->template->load('template','chairman/ict_supplies_view',$data);
 		}
 
 		// Page Helpdesk ICT

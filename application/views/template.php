@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/vendors/animate.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/vendors/datatables.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/vendors/owlcarousel.css">
+    <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/vendors/prism.css">
     <!-- Plugins css Ends-->
     <!-- Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/vendors/bootstrap.css">
@@ -303,6 +304,7 @@
                                 <li><a href="<?=site_url('Chairman/unit_ict')?>">General</a></li>
                                 <li><a href="<?=site_url('Chairman/jobdesc_ict')?>">Job Desc</a></li>
                                 <li><a href="<?=site_url('Chairman/asset_ict')?>">Aset ICT</a></li>
+                                <li><a href="<?=site_url('Chairman/ict_supplies')?>">ICT Supplies</a></li>
                                 <li><a href="<?=site_url('Chairman/helpdesc_ict')?>">ICT Helpdesk</a></li>
                               </ul>
                             </div>
@@ -527,6 +529,7 @@
     <script src="<?=base_url()?>assets/js/slick/slick.min.js"></script>
     <script src="<?=base_url()?>assets/js/slick/slick.js"></script>
     <script src="<?=base_url()?>assets/js/header-slick.js"></script>
+    <script src="<?=base_url()?>assets/js/prism/prism.min.js"></script>
     <script src="<?=base_url()?>assets/js/chart/morris-chart/raphael.js"></script>
     <script src="<?=base_url()?>assets/js/chart/morris-chart/morris.js"> </script>
     <script src="<?=base_url()?>assets/js/chart/morris-chart/prettify.min.js"></script>

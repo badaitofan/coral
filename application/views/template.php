@@ -7,8 +7,8 @@
     <!-- <meta name="description" content="Zono admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Zono admin template, dashboard template, flat admin template, responsive admin template, web app"> -->
     <meta name="author" content="pixelstrap">
-    <link rel="icon" href="<?=base_url()?>assets/images/favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="<?=base_url()?>assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="<?=base_url()?>assets/images/logo/icon-portal.png" type="image/x-icon">
+    <link rel="shortcut icon" href="<?=base_url()?>assets/images/logo/icon-portal.png" type="image/x-icon">
     <title><?=$title?></title>
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -198,19 +198,19 @@
         <!-- Page Sidebar Start-->
         <div class="sidebar-wrapper" data-layout="stroke-svg">
           <div>
-            <div class="logo-wrapper"><a href="<?=site_url('Dashboard')?>"> <img class="img-fluid for-light" src="<?=base_url()?>assets/images/logo/logo-Coral.png" alt=""><img class="img-fluid for-dark" src="<?=base_url()?>assets/images/logo/logo-Coral-Dark.png" alt=""></a>
+            <div class="logo-wrapper"><a href="<?=site_url('Dashboard')?>"> <img class="img-fluid for-light" src="<?=base_url()?>assets/images/logo/logo-portal-dark.png" alt=""><img class="img-fluid for-dark" src="<?=base_url()?>assets/images/logo/logo-portal-light.png" alt=""></a>
               <div class="toggle-sidebar">
                 <svg class="sidebar-toggle"> 
                   <use href="<?=base_url()?>assets/svg/icon-sprite.svg#toggle-icon"></use>
                 </svg>
               </div>
             </div>
-            <div class="logo-icon-wrapper"><a href="index.html"><img class="img-fluid" src="<?=base_url()?>assets/images/logo/logo-icon.png" alt=""></a></div>
+            <div class="logo-icon-wrapper"><a href="index.html"><img class="img-fluid" src="<?=base_url()?>assets/images/logo/icon-portal.png" alt=""></a></div>
             <nav class="sidebar-main">
               <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
               <div id="sidebar-menu">
                 <ul class="sidebar-links" id="simple-bar">
-                  <li class="back-btn"><a href="index.html"><img class="img-fluid" src="<?=base_url()?>assets/images/logo/logo-icon.png" alt=""></a>
+                  <li class="back-btn"><a href="index.html"><img class="img-fluid" src="<?=base_url()?>assets/images/logo/icon-portal.png" alt=""></a>
                     <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
                   </li>
                   <li class="pin-title sidebar-main-title">
@@ -381,7 +381,7 @@
                               <ul class="submenu-content opensubmegamenu">
                                 <li><a href="<?=site_url('Adm_Fin/akuntansi_general')?>">General</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/akuntansi_jobdesc')?>">Job Desc</a></li>
-                                <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_labarugi')?>">Lap. Laba Rugi</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_labarugi/BMG')?>">Lap. Laba Rugi</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_neraca')?>">Lap. Neraca</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_audit_tahunan')?>">Lap. Audit Tahunan</a></li>
                               </ul>
@@ -465,8 +465,8 @@
                       <h6 class="lan-8">Applications</h6>
                     </div>
                   </li>
-                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="file-manager.html">
-                      <svg class="stroke-icon">
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="javascript:;">
+                      <svg class="stroke-icon rounded-pill badge-danger">
                         <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-icons"></use>
                       </svg>
                       <svg class="fill-icon">
@@ -550,7 +550,7 @@
     <script src="<?=base_url()?>assets/js/typeahead-search/handlebars.js"></script>
     <script src="<?=base_url()?>assets/js/typeahead-search/typeahead-custom.js"></script>
     <script src="<?=base_url()?>assets/js/owlcarousel/owl.carousel.js"></script> -->
-    <script src="<?=base_url()?>assets/js/owlcarousel/owl-custom.js"></script>
+    <!-- <script src="<?=base_url()?>assets/js/owlcarousel/owl-custom.js"></script> -->
     <script src="<?=base_url()?>assets/js/height-equal.js"></script>
     <script src="<?= base_url()?>assets/js/bookmark/jquery.validate.min.js"></script>
     <script src="<?= base_url()?>assets/js/bookmark/custom.js"></script>

@@ -85,7 +85,7 @@
                   <th>Tipe Supplier</th>
                   <th>Alamat</th>
                   <th>Kota</th></th>
-                  <th>Credit Term</th>
+               
                   <th>Status</th>
                 </tr>
               </thead>
@@ -108,7 +108,6 @@
                     <td><?= $dataAsset['tipe_supplier'] ?></td>
                     <td><?= $dataAsset['alamat'] ?></td>
                     <td><?= $dataAsset['kota'] ?></td> 
-                    <td><?= $dataAsset['credit_term'] ?></td>
                     <td><?= $dataAsset['status'] ?></td>
                   </tr>
                 <?php endforeach; ?>

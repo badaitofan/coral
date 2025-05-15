@@ -1,0 +1,147 @@
+array(2) { 
+    ["lokasi"]=> array(11) { 
+        ["adm1"]=> string(2) "21" 
+        ["adm2"]=> string(5) "21.71" 
+        ["adm3"]=> string(8) "21.71.02" 
+        ["adm4"]=> string(13) "21.71.02.1003" 
+        ["provinsi"]=> string(14) "Kepulauan Riau" 
+        ["kotkab"]=> string(10) "Kota Batam" 
+        ["kecamatan"]=> string(10) "Batu Ampar" 
+        ["desa"]=> string(10) "Batu Merah" 
+        ["lon"]=> float(104.0065910146) 
+        ["lat"]=> float(1.1751764548) 
+        ["timezone"]=> string(12) "Asia/Jakarta" 
+        }
+    ["data"]=> array(1) { 
+        [0]=> array(2) { 
+            ["lokasi"]=> array(12) { 
+                ["adm1"]=> string(2) "21" 
+                ["adm2"]=> string(5) "21.71" 
+                ["adm3"]=> string(8) "21.71.02" 
+                ["adm4"]=> string(13) "21.71.02.1003" 
+                ["provinsi"]=> string(14) "Kepulauan Riau" 
+                ["kotkab"]=> string(10) "Kota Batam" 
+                ["kecamatan"]=> string(10) "Batu Ampar" 
+                ["desa"]=> string(10) "Batu Merah" 
+                ["lon"]=> float(104.0065910146) 
+                ["lat"]=> float(1.1751764548) 
+                ["timezone"]=> string(5) "+0700" 
+                ["type"]=> string(4) "adm4" 
+                } 
+            ["cuaca"]=> array(3) { 
+                [0]=> array(3) { 
+                    [0]=> array(19) { 
+                        ["datetime"]=> string(20) "2025-05-08T09:00:00Z" 
+                        ["t"]=> int(29) 
+                        ["tcc"]=> int(86) 
+                        ["tp"]=> int(0) 
+                        ["weather"]=> int(2) 
+                        ["weather_desc"]=> string(13) "Cerah Berawan" 
+                        ["weather_desc_en"]=> string(13) "Partly Cloudy" 
+                        ["wd_deg"]=> int(262) 
+                        ["wd"]=> string(2) "SW" 
+                        ["wd_to"]=> string(2) "NE" 
+                        ["ws"]=> float(11.7) 
+                        ["hu"]=> int(77) 
+                        ["vs"]=> int(22999) 
+                        ["vs_text"]=> string(7) "> 10 km" 
+                        ["time_index"]=> string(3) "8-9" 
+                        ["analysis_date"]=> string(19) "2025-05-08T00:00:00" 
+                        ["image"]=> string(67) "https://api-apps.bmkg.go.id/storage/icon/cuaca/cerah berawan-am.svg" ["utc_datetime"]=> string(19) "2025-05-08 09:00:00" 
+                        ["local_datetime"]=> string(19) "2025-05-08 16:00:00" 
+                        } 
+                    [1]=> array(19) { 
+                        ["datetime"]=> string(20) "2025-05-08T12:00:00Z" 
+                        ["t"]=> int(28) ["tcc"]=> int(69) 
+                        ["tp"]=> int(0) 
+                        ["weather"]=> int(2) 
+                        ["weather_desc"]=> string(13) "Cerah Berawan" 
+                        ["weather_desc_en"]=> string(13) "Partly Cloudy" 
+                        ["wd_deg"]=> int(206) 
+                        ["wd"]=> string(1) "S" 
+                        ["wd_to"]=> string(1) "N" 
+                        ["ws"]=> float(4.3) 
+                        ["hu"]=> int(81) 
+                        ["vs"]=> int(20007) 
+                        ["vs_text"]=> string(7) "> 10 km" 
+                        ["time_index"]=> string(5) "11-12" 
+                        ["analysis_date"]=> string(19) "2025-05-08T00:00:00" 
+                        ["image"]=> string(67) "https://api-apps.bmkg.go.id/storage/icon/cuaca/cerah berawan-pm.svg" ["utc_datetime"]=> string(19) "2025-05-08 12:00:00" 
+                        ["local_datetime"]=> string(19) "2025-05-08 19:00:00" 
+                        } 
+                    [2]=> array(19) { 
+                        ["datetime"]=> string(20) "2025-05-08T15:00:00Z" 
+                        ["t"]=> int(28) ["tcc"]=> int(98) 
+                        ["tp"]=> int(0) ["weather"]=> int(3) 
+                        ["weather_desc"]=> string(7) "Berawan" 
+                        ["weather_desc_en"]=> string(13) "Mostly Cloudy" 
+                        ["wd_deg"]=> int(221) 
+                        ["wd"]=> string(1) "S" 
+                        ["wd_to"]=> string(1) "N" 
+                        ["ws"]=> float(5.5) 
+                        ["hu"]=> int(86) 
+                        ["vs"]=> int(20012) 
+                        ["vs_text"]=> string(7) "> 10 km" 
+                        ["time_index"]=> string(5) "14-15" 
+                        ["analysis_date"]=> string(19) "2025-05-08T00:00:00" 
+                        ["image"]=> string(61) "https://api-apps.bmkg.go.id/storage/icon/cuaca/berawan-pm.svg" 
+                        ["utc_datetime"]=> string(19) "2025-05-08 15:00:00" 
+                        ["local_datetime"]=> string(19) "2025-05-08 22:00:00" 
+                        } 
+                    } 
+                [1]=> array(8) { 
+                    [0]=> array(19) { 
+                        ["datetime"]=> string(20) "2025-05-08T18:00:00Z" ["t"]=> int(27) ["tcc"]=> int(100) ["tp"]=> float(2.7) ["weather"]=> int(61) ["weather_desc"]=> string(12) "Hujan Ringan" ["weather_desc_en"]=> string(10) "Light Rain" ["wd_deg"]=> int(171) ["wd"]=> string(2) "SE" ["wd_to"]=> string(2) "NW" ["ws"]=> float(3.2) ["hu"]=> int(88) ["vs"]=> int(12252) ["vs_text"]=> string(7) "> 10 km" ["time_index"]=> string(5) "17-18" ["analysis_date"]=> string(19) "2025-05-08T00:00:00" ["image"]=> string(66) "https://api-apps.bmkg.go.id/storage/icon/cuaca/hujan ringan-pm.svg" ["utc_datetime"]=> string(19) "2025-05-08 18:00:00" ["local_datetime"]=> string(19) "2025-05-09 01:00:00" 
+                    } 
+                    [1]=> array(19) { 
+                        ["datetime"]=> string(20) "2025-05-08T21:00:00Z" ["t"]=> int(25) ["tcc"]=> int(100) ["tp"]=> int(0) ["weather"]=> int(3) ["weather_desc"]=> string(7) "Berawan" ["weather_desc_en"]=> string(13) "Mostly Cloudy" ["wd_deg"]=> int(245) ["wd"]=> string(2) "SW" ["wd_to"]=> string(2) "NE" ["ws"]=> float(11.6) ["hu"]=> int(89) ["vs"]=> int(5991) ["vs_text"]=> string(6) "< 6 km" ["time_index"]=> string(5) "20-21" ["analysis_date"]=> string(19) "2025-05-08T00:00:00" ["image"]=> string(61) "https://api-apps.bmkg.go.id/storage/icon/cuaca/berawan-pm.svg" ["utc_datetime"]=> string(19) "2025-05-08 21:00:00" ["local_datetime"]=> string(19) "2025-05-09 04:00:00" 
+                    } 
+                    [2]=> array(19) { 
+                        ["datetime"]=> string(20) "2025-05-09T00:00:00Z" ["t"]=> int(28) ["tcc"]=> int(94) ["tp"]=> float(0.1) ["weather"]=> int(3) ["weather_desc"]=> string(7) "Berawan" ["weather_desc_en"]=> string(13) "Mostly Cloudy" ["wd_deg"]=> int(238) ["wd"]=> string(2) "SW" ["wd_to"]=> string(2) "NE" ["ws"]=> float(12.1) ["hu"]=> int(83) ["vs"]=> int(15480) ["vs_text"]=> string(7) "> 10 km" ["time_index"]=> string(5) "23-24" ["analysis_date"]=> string(19) "2025-05-08T00:00:00" ["image"]=> string(61) "https://api-apps.bmkg.go.id/storage/icon/cuaca/berawan-am.svg" ["utc_datetime"]=> string(19) "2025-05-09 00:00:00" ["local_datetime"]=> string(19) "2025-05-09 07:00:00" 
+                    } 
+                    [3]=> array(19) { 
+                        ["datetime"]=> string(20) "2025-05-09T03:00:00Z" ["t"]=> int(30) ["tcc"]=> int(80) ["tp"]=> float(0.1) ["weather"]=> int(2) ["weather_desc"]=> string(13) "Cerah Berawan" ["weather_desc_en"]=> string(13) "Partly Cloudy" ["wd_deg"]=> int(232) ["wd"]=> string(2) "SW" ["wd_to"]=> string(2) "NE" ["ws"]=> int(13) ["hu"]=> int(75) ["vs"]=> int(17473) ["vs_text"]=> string(7) "> 10 km" ["time_index"]=> string(5) "26-27" ["analysis_date"]=> string(19) "2025-05-08T00:00:00" ["image"]=> string(67) "https://api-apps.bmkg.go.id/storage/icon/cuaca/cerah berawan-am.svg" ["utc_datetime"]=> string(19) "2025-05-09 03:00:00" ["local_datetime"]=> string(19) "2025-05-09 10:00:00" 
+                    } 
+                    [4]=> array(19) { 
+                        ["datetime"]=> string(20) "2025-05-09T06:00:00Z" ["t"]=> int(31) ["tcc"]=> int(80) ["tp"]=> float(2.7) ["weather"]=> int(61) ["weather_desc"]=> string(12) "Hujan Ringan" ["weather_desc_en"]=> string(10) "Light Rain" ["wd_deg"]=> int(254) ["wd"]=> string(2) "SW" ["wd_to"]=> string(2) "NE" ["ws"]=> float(16.6) ["hu"]=> int(74) ["vs"]=> int(30652) ["vs_text"]=> string(7) "> 10 km" ["time_index"]=> string(5) "29-30" ["analysis_date"]=> string(19) "2025-05-08T00:00:00" ["image"]=> string(66) "https://api-apps.bmkg.go.id/storage/icon/cuaca/hujan ringan-am.svg" ["utc_datetime"]=> string(19) "2025-05-09 06:00:00" ["local_datetime"]=> string(19) "2025-05-09 13:00:00" 
+                    } 
+                    [5]=> array(19) { 
+                        ["datetime"]=> string(20) "2025-05-09T09:00:00Z" ["t"]=> int(29) ["tcc"]=> int(29) ["tp"]=> int(0) ["weather"]=> int(1) ["weather_desc"]=> string(5) "Cerah" ["weather_desc_en"]=> string(5) "Sunny" ["wd_deg"]=> int(241) ["wd"]=> string(2) "SW" ["wd_to"]=> string(2) "NE" ["ws"]=> float(10.3) ["hu"]=> int(75) ["vs"]=> int(19998) ["vs_text"]=> string(7) "> 10 km" ["time_index"]=> string(5) "32-33" ["analysis_date"]=> string(19) "2025-05-08T00:00:00" ["image"]=> string(59) "https://api-apps.bmkg.go.id/storage/icon/cuaca/cerah-am.svg" ["utc_datetime"]=> string(19) "2025-05-09 09:00:00" ["local_datetime"]=> string(19) "2025-05-09 16:00:00" 
+                    } 
+                    [6]=> array(19) { 
+                        ["datetime"]=> string(20) "2025-05-09T12:00:00Z" ["t"]=> int(28) ["tcc"]=> int(82) ["tp"]=> int(0) ["weather"]=> int(2) ["weather_desc"]=> string(13) "Cerah Berawan" ["weather_desc_en"]=> string(13) "Partly Cloudy" ["wd_deg"]=> int(252) ["wd"]=> string(2) "SW" ["wd_to"]=> string(2) "NE" ["ws"]=> float(7.2) ["hu"]=> int(83) ["vs"]=> int(19997) ["vs_text"]=> string(7) "> 10 km" ["time_index"]=> string(5) "35-36" ["analysis_date"]=> string(19) "2025-05-08T00:00:00" ["image"]=> string(67) "https://api-apps.bmkg.go.id/storage/icon/cuaca/cerah berawan-pm.svg" ["utc_datetime"]=> string(19) "2025-05-09 12:00:00" ["local_datetime"]=> string(19) "2025-05-09 19:00:00" 
+                    } 
+                    [7]=> array(19) { 
+                        ["datetime"]=> string(20) "2025-05-09T15:00:00Z" ["t"]=> int(28) ["tcc"]=> int(78) ["tp"]=> int(0) ["weather"]=> int(2) ["weather_desc"]=> string(13) "Cerah Berawan" ["weather_desc_en"]=> string(13) "Partly Cloudy" ["wd_deg"]=> int(148) ["wd"]=> string(2) "SE" ["wd_to"]=> string(2) "NW" ["ws"]=> float(8.7) ["hu"]=> int(87) ["vs"]=> int(19996) ["vs_text"]=> string(7) "> 10 km" ["time_index"]=> string(5) "38-39" ["analysis_date"]=> string(19) "2025-05-08T00:00:00" ["image"]=> string(67) "https://api-apps.bmkg.go.id/storage/icon/cuaca/cerah berawan-pm.svg" ["utc_datetime"]=> string(19) "2025-05-09 15:00:00" ["local_datetime"]=> string(19) "2025-05-09 22:00:00" 
+                    } 
+                } 
+                [2]=> array(8) { 
+                    [0]=> array(19) { 
+                        ["datetime"]=> string(20) "2025-05-09T18:00:00Z" ["t"]=> int(26) ["tcc"]=> int(100) ["tp"]=> int(0) ["weather"]=> int(3) ["weather_desc"]=> string(7) "Berawan" ["weather_desc_en"]=> string(13) "Mostly Cloudy" ["wd_deg"]=> int(207) ["wd"]=> string(1) "S" ["wd_to"]=> string(1) "N" ["ws"]=> float(3.4) ["hu"]=> int(90) ["vs"]=> int(20004) ["vs_text"]=> string(7) "> 10 km" ["time_index"]=> string(5) "41-42" ["analysis_date"]=> string(19) "2025-05-08T00:00:00" ["image"]=> string(61) "https://api-apps.bmkg.go.id/storage/icon/cuaca/berawan-pm.svg" ["utc_datetime"]=> string(19) "2025-05-09 18:00:00" ["local_datetime"]=> string(19) "2025-05-10 01:00:00" 
+                    } 
+                    [1]=> array(19) { 
+                        ["datetime"]=> string(20) "2025-05-09T21:00:00Z" ["t"]=> int(25) ["tcc"]=> int(100) ["tp"]=> float(0.1) ["weather"]=> int(3) ["weather_desc"]=> string(7) "Berawan" ["weather_desc_en"]=> string(13) "Mostly Cloudy" ["wd_deg"]=> int(228) ["wd"]=> string(2) "SW" ["wd_to"]=> string(2) "NE" ["ws"]=> float(6.2) ["hu"]=> int(89) ["vs"]=> int(20010) ["vs_text"]=> string(7) "> 10 km" ["time_index"]=> string(5) "44-45" ["analysis_date"]=> string(19) "2025-05-08T00:00:00" ["image"]=> string(61) "https://api-apps.bmkg.go.id/storage/icon/cuaca/berawan-pm.svg" ["utc_datetime"]=> string(19) "2025-05-09 21:00:00" ["local_datetime"]=> string(19) "2025-05-10 04:00:00" 
+                    } 
+                    [2]=> array(19) { 
+                        ["datetime"]=> string(20) "2025-05-10T00:00:00Z" ["t"]=> int(28) ["tcc"]=> int(97) ["tp"]=> int(2) ["weather"]=> int(61) ["weather_desc"]=> string(12) "Hujan Ringan" ["weather_desc_en"]=> string(10) "Light Rain" ["wd_deg"]=> int(187) ["wd"]=> string(1) "S" ["wd_to"]=> string(1) "N" ["ws"]=> float(7.6) ["hu"]=> int(84) ["vs"]=> int(20013) ["vs_text"]=> string(7) "> 10 km" ["time_index"]=> string(5) "47-48" ["analysis_date"]=> string(19) "2025-05-08T00:00:00" ["image"]=> string(66) "https://api-apps.bmkg.go.id/storage/icon/cuaca/hujan ringan-am.svg" ["utc_datetime"]=> string(19) "2025-05-10 00:00:00" ["local_datetime"]=> string(19) "2025-05-10 07:00:00" 
+                        } 
+                        [3]=> array(19) { 
+                            ["datetime"]=> string(20) "2025-05-10T03:00:00Z" ["t"]=> int(31) ["tcc"]=> int(87) ["tp"]=> int(2) ["weather"]=> int(61) ["weather_desc"]=> string(12) "Hujan Ringan" ["weather_desc_en"]=> string(10) "Light Rain" ["wd_deg"]=> int(246) ["wd"]=> string(2) "SW" ["wd_to"]=> string(2) "NE" ["ws"]=> float(11.5) ["hu"]=> int(75) ["vs"]=> int(14718) ["vs_text"]=> string(7) "> 10 km" ["time_index"]=> string(5) "50-51" ["analysis_date"]=> string(19) "2025-05-08T00:00:00" ["image"]=> string(66) "https://api-apps.bmkg.go.id/storage/icon/cuaca/hujan ringan-am.svg" ["utc_datetime"]=> string(19) "2025-05-10 03:00:00" ["local_datetime"]=> string(19) "2025-05-10 10:00:00" 
+                        } 
+                        [4]=> array(19) { 
+                            ["datetime"]=> string(20) "2025-05-10T06:00:00Z" ["t"]=> int(32) ["tcc"]=> int(95) ["tp"]=> float(0.1) ["weather"]=> int(3) ["weather_desc"]=> string(7) "Berawan" ["weather_desc_en"]=> string(13) "Mostly Cloudy" ["wd_deg"]=> int(246) ["wd"]=> string(2) "SW" ["wd_to"]=> string(2) "NE" ["ws"]=> float(11.5) ["hu"]=> int(75) ["vs"]=> int(14718) ["vs_text"]=> string(7) "> 10 km" ["time_index"]=> string(5) "53-54" ["analysis_date"]=> string(19) "2025-05-08T00:00:00" ["image"]=> string(61) "https://api-apps.bmkg.go.id/storage/icon/cuaca/berawan-am.svg" ["utc_datetime"]=> string(19) "2025-05-10 06:00:00" ["local_datetime"]=> string(19) "2025-05-10 13:00:00" 
+                        } 
+                        [5]=> array(19) { 
+                            ["datetime"]=> string(20) "2025-05-10T09:00:00Z" ["t"]=> int(30) ["tcc"]=> int(57) ["tp"]=> float(0.1) ["weather"]=> int(1) ["weather_desc"]=> string(5) "Cerah" ["weather_desc_en"]=> string(5) "Sunny" ["wd_deg"]=> int(220) ["wd"]=> string(1) "S" ["wd_to"]=> string(1) "N" ["ws"]=> float(7.8) ["hu"]=> int(76) ["vs"]=> int(19989) ["vs_text"]=> string(7) "> 10 km" ["time_index"]=> string(5) "56-57" ["analysis_date"]=> string(19) "2025-05-08T00:00:00" ["image"]=> string(59) "https://api-apps.bmkg.go.id/storage/icon/cuaca/cerah-am.svg" ["utc_datetime"]=> string(19) "2025-05-10 09:00:00" ["local_datetime"]=> string(19) "2025-05-10 16:00:00" 
+                        } 
+                        [6]=> array(19) { 
+                            ["datetime"]=> string(20) "2025-05-10T12:00:00Z" ["t"]=> int(28) ["tcc"]=> int(96) ["tp"]=> float(1.7) ["weather"]=> int(61) ["weather_desc"]=> string(12) "Hujan Ringan" ["weather_desc_en"]=> string(10) "Light Rain" ["wd_deg"]=> int(220) ["wd"]=> string(1) "S" ["wd_to"]=> string(1) "N" ["ws"]=> float(7.8) ["hu"]=> int(86) ["vs"]=> int(19989) ["vs_text"]=> string(7) "> 10 km" ["time_index"]=> string(5) "59-60" ["analysis_date"]=> string(19) "2025-05-08T00:00:00" ["image"]=> string(66) "https://api-apps.bmkg.go.id/storage/icon/cuaca/hujan ringan-pm.svg" ["utc_datetime"]=> string(19) "2025-05-10 12:00:00" ["local_datetime"]=> string(19) "2025-05-10 19:00:00" 
+                        } 
+                        [7]=> array(19) { 
+                            ["datetime"]=> string(20) "2025-05-10T15:00:00Z" ["t"]=> int(28) ["tcc"]=> int(94) ["tp"]=> float(1.7) ["weather"]=> int(61) ["weather_desc"]=> string(12) "Hujan Ringan" ["weather_desc_en"]=> string(10) "Light Rain" ["wd_deg"]=> int(245) ["wd"]=> string(2) "SW" ["wd_to"]=> string(2) "NE" ["ws"]=> float(9.3) ["hu"]=> int(89) ["vs"]=> int(20004) ["vs_text"]=> string(7) "> 10 km" ["time_index"]=> string(5) "62-63" ["analysis_date"]=> string(19) "2025-05-08T00:00:00" ["image"]=> string(66) "https://api-apps.bmkg.go.id/storage/icon/cuaca/hujan ringan-pm.svg" ["utc_datetime"]=> string(19) "2025-05-10 15:00:00" ["local_datetime"]=> string(19) "2025-05-10 22:00:00" 
+                        }
+                    } 
+                } 
+            } 
+    } 
+} 

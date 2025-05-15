@@ -1,3 +1,55 @@
+<style>
+  @keyframes slides {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .logos {
+    overflow: hidden;
+    padding: 30px 0px;
+    white-space: nowrap;
+    position: relative;
+    border-radius : 12px;
+    margin-bottom : 25px;
+    gap: 10px;
+  }
+
+  .logos:before, .logos:after {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 250px;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0), rgb(255, 255, 255));
+  }
+
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgb(255, 255, 255));
+  }
+
+  .logo_items {
+    display: inline-block;
+    animation: 10s slides infinite linear;
+  }
+
+  .logos:hover .logo_items {
+    animation-play-state: paused;
+  }
+
+  .logo_items img{
+    height: 100px;
+  }
+</style>
 <div class="container-fluid">
   <div class="page-title"> 
     <div class="row">
@@ -22,17 +74,55 @@
 </div>
 <!-- Container-fluid starts-->
 <div class="container-fluid default-dashboard"> 
+  
   <div class="row">
-    <div class="col-xl-9 box-col-7 proorder-md-1"> 
+    <div class="col-xl-12">
+      <div class="logos">
+        <div class="logo_items">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/bmg.png">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/bdp.png">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/pbs.png">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/esa.png">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/bs.png">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/bsj.png">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/bsm.png">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/sema.png">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/dwm.png">
+          
+        </div>
+
+        <div class="logo_items">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/bmg.png">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/bdp.png">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/pbs.png">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/esa.png">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/bs.png">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/bsj.png">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/bsm.png">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/sema.png">
+          <img src="<?= base_url()?>assets/images/slider/group-logo/dwm.png">
+          
+        </div>
+      </div>   
+    </div>
+
+    <div class="col-xl-9 box-col-7 proorder-md-1 "> 
       <div class="card">
         <div class="card-body premium-card">
           <div class="row premium-courses-card">
             <div class="col-md-7 premium-course">
               <h1 class="f-w-700 m-b-5">Corporate Portal</h1><p class="f-light f-w-400 f-14">Portal informasi dan pengetahuan untuk menciptakan kebersamaan yang kuat dalam lingkungan perusahaan dengan saling berkolaborasi. </p><a class="btn btn-square btn-primary f-w-700 m-t-5" href="#" disabled>Selamat Datang</a>
             </div>
-            <div class="col-md-5 premium-course-img"> 
-              <div class="premium-message"><img class="img-fluid" src="<?=base_url()?>assets/images/dashboard/massage.gif" alt="massage"></div>
-              <div class="premium-books"><img class="img-fluid" src="<?=base_url()?>assets/images/dashboard/books.gif" alt="books"></div>
+            <div class="col-md-5"> 
+              <!-- <div class="premium-message"><img class="img-fluid" src="<?=base_url()?>assets/images/dashboard/massage.gif" alt="massage"></div>
+              <div class="premium-books"><img class="img-fluid" src="<?=base_url()?>assets/images/dashboard/books.gif" alt="books"></div> -->
+              <div class="carousel slide" id="carouselExampleSlidesOnly" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active"><img class="d-block w-100" src="<?=base_url()?>assets/images/slider/pict-1.png" alt="drawing-room"></div>
+                  <div class="carousel-item"><img class="d-block w-100" src="<?=base_url()?>assets/images/slider/pict-2.png" alt="drawing-room"></div>
+                  <div class="carousel-item"><img class="d-block w-100" src="<?=base_url()?>assets/images/slider/pict-3.png" alt="drawing-room"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -43,7 +133,7 @@
       <div class="card">
         <div class="card-header custom-border-bottom">
           <div class="header-top"> 
-            <h4>Target Stats</h4>
+            <h4>Target Pendapatan Usaha</h4>
             <!-- <div class="dropdown icon-dropdown setting-menu">
               <button class="btn dropdown-toggle" id="userdropdown2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <svg>

@@ -300,7 +300,7 @@ lastOrdersChartEl.render();
 
 /*=======/Sales Stats Radial Chart/=======*/
 const salesStatsOption = {
-	series: [75], // data round
+	series: [15], // data round
 	chart: {
 		height: 370,
 		type: "radialBar",
@@ -363,7 +363,7 @@ const salesStatsOption = {
 			},
 		},
 	},
-	labels: ["New: 3.4k", "Returning: 3.2k"],
+	labels: ["ACHV: 17.5 B", "TGT: 114.7 B"],
 	colors: ["var(--theme-default)", "rgba(43, 94, 94, 0.1)"],
 	legend: {
 		show: true,

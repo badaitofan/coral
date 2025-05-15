@@ -15,7 +15,7 @@ class Adm_Fin extends CI_Controller {
 		public function keuangan_general()
 		{
 			$data = array(
-				'title' => 'Coral - Unit Kerja Keuangan',
+				'title' => 'Portal - Unit Kerja Keuangan',
 				'row'	=> $this->Adm_Fin_Model->get_Personil_Keuangan()
 			);
 			$this->template->load('template','adm_fin/keuangan/keuangan_view',$data);
@@ -25,7 +25,7 @@ class Adm_Fin extends CI_Controller {
 		public function keuangan_jobdesc()
 		{
 			$data = array(
-				'title' => 'Coral - Jobdesc Keuangan'
+				'title' => 'Portal - Jobdesc Keuangan'
 			);
 			$this->template->load('template','adm_fin/keuangan_jobdesc_view',$data);
 			// $this->load->view('dashboard_view');
@@ -38,13 +38,24 @@ class Adm_Fin extends CI_Controller {
 		public function akuntansi_general()
 		{
 			$data = array(
-				'title' => 'Coral - Unit Kerja Akuntansi',
+				'title' => 'Portal - Unit Kerja Akuntansi',
 				'row'	=> $this->Adm_Fin_Model->get_Personil_Accounting()
 			);
 			$this->template->load('template','adm_fin/accounting/accounting_view',$data);
 			// $this->load->view('dashboard_view');
 		}
 
+		// Show Report Akuntansi
+		public function akuntansi_laporan_labarugi()
+		{
+			$comp = $this->uri->segment(3);
+			// echo "<h1>".$comp."</h1>" ;
+			$data = array(
+				'title' => 'Portal - Unit Kerja Akuntansi',
+				'row'	=> $this->Adm_Fin_Model->get_Laporan_LabaRugi($comp)
+			);
+			$this->template->load('template','adm_fin/accounting/accounting_lb_view',$data);
+		}
 	#=== .END AKUNTANSI FUNCTIONS ===
 
 	#=== GENERAL AFFAIR FUNCTIONS ===
@@ -52,7 +63,7 @@ class Adm_Fin extends CI_Controller {
 		public function unit_ga()
 		{
 			$data = array(
-				'title' => 'Coral - Unit Kerja GA',
+				'title' => 'Portal - Unit Kerja GA',
 				'row'	=> $this->Adm_Fin_Model->get_Personil_GA()
 			);
 			$this->template->load('template','adm_fin/general_affair/ga_view',$data);
@@ -63,7 +74,7 @@ class Adm_Fin extends CI_Controller {
 		public function asset_atk_ga()
 		{
 			$data = array(
-				'title' => 'Coral - Aset ATK GA',
+				'title' => 'Portal - Aset ATK GA',
 				'row'	=> $this->Adm_Fin_Model->get_Aset_Atk()
 			);
 			$this->template->load('template','adm_fin/general_affair/aset_atk_ga_view',$data);
@@ -73,7 +84,7 @@ class Adm_Fin extends CI_Controller {
 		public function aset_kendaraan_ga()
 		{
 			$data = array(
-				'title' => 'Coral - Aset Kendaraan',
+				'title' => 'Portal - Aset Kendaraan',
 				'row'	=> $this->Adm_Fin_Model->getAsetDetail()
 			);
 			$this->template->load('template','adm_fin/general_affair/aset_kendaraan_view',$data);
@@ -83,7 +94,7 @@ class Adm_Fin extends CI_Controller {
 		public function aset_trailer_ga()
 		{
 			$data = array(
-				'title' => 'Coral - Aset Ekor Trailer',
+				'title' => 'Portal - Aset Ekor Trailer',
 				'row'	=> $this->Adm_Fin_Model->getAsetTrailerDetail()
 			);
 			$this->template->load('template','adm_fin/general_affair/aset_trailer_view',$data);
@@ -96,7 +107,7 @@ class Adm_Fin extends CI_Controller {
 		public function unit_purchasing()
 		{
 			$data = array(
-				'title' => 'Coral - Unit Kerja Purchasing',
+				'title' => 'Portal - Unit Kerja Purchasing',
 				'row'	=> $this->Adm_Fin_Model->get_Personil_Purchasing()
 			);
 			$this->template->load('template','adm_fin/purchasing/purchasing_view',$data);
@@ -107,7 +118,7 @@ class Adm_Fin extends CI_Controller {
 		public function data_vendor_purchasing()
 		{
 			$data = array(
-				'title' => 'Coral - Data Vendor',
+				'title' => 'Portal - Data Vendor',
 				'row'	=> $this->Adm_Fin_Model->getDataVendorDetail()
 			);
 			$this->template->load('template','adm_fin/purchasing/data_vendor_view',$data);
@@ -121,7 +132,7 @@ class Adm_Fin extends CI_Controller {
 		public function unit_hrd()
 		{
 			$data = array(
-				'title' => 'Coral - Unit Kerja HRD',
+				'title' => 'Portal - Unit Kerja HRD',
 				'row'	=> $this->Adm_Fin_Model->get_Personil_HRD()
 			);
 			$this->template->load('template','adm_fin/hrd/hrd_view',$data);
@@ -131,7 +142,7 @@ class Adm_Fin extends CI_Controller {
 		public function perautan_perusahaan_hrd()
 		{
 			$data = array(
-				'title' => 'Coral - Peraturan Perusahaan',
+				'title' => 'Portal - Peraturan Perusahaan',
 				'row_peraturan_peraturan'	=> $this->Adm_Fin_Model->get_Peraturan_Perusahaan_HRD()
 			);
 			$this->template->load('template','adm_fin/hrd/hrd_peraturan_perusahaan',$data);
@@ -141,7 +152,7 @@ class Adm_Fin extends CI_Controller {
 		public function data_pelamar_hrd()
 		{
 			$data = array(
-				'title' => 'Coral - Data Pelamar',
+				'title' => 'Portal - Data Pelamar',
 				'row_pelamar'	=> $this->Adm_Fin_Model->get_Pelamar_HRD()
 			);
 			$this->template->load('template','adm_fin/hrd/hrd_data_pelamar',$data);
@@ -151,7 +162,7 @@ class Adm_Fin extends CI_Controller {
 		public function jobdesc_hrd()
 		{
 			$data = array(
-				'title' => 'Coral - Jobdesk HRD',
+				'title' => 'Portal - Jobdesk HRD',
 				'row_jd_hrd'=> $this->Adm_Fin_Model->get_jobdesc_hrd()//Get data jobdesc Unit HRD
 			);
 			$this->template->load('template','adm_fin/hrd/hrd_jobdesk_view',$data);

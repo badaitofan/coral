@@ -39,6 +39,17 @@ class Adm_Fin_Model extends CI_Model
             $data = $this->db->get('tb_personil');
             return $data->result_array();
         }
+
+    // Get Laporan Laba Rugi
+    public function get_Laporan_LabaRugi($comp)
+    {
+
+        $this->db->select('*');
+        $this->db->where('acc_rep_group',"LR");
+        $this->db->where('acc_rep_company',$comp);
+        $data = $this->db->get('tb_accountancy_report');
+        return $data->result_array();
+    }
     #=== .END ACCOUNTING FUNCTIONS ===
 
     #=== GENERAL AFFAIR FUNCTIONS ===

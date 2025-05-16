@@ -9,7 +9,7 @@ class Weather_Model extends CI_Model{
         $latitude = '1.1623883012407488';
         $longitude = '104.0057488158572';
 		 //get JSON
-		//  $json = file_get_contents("https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=$api_key", false);
+		
 		 $json = file_get_contents("https://api.bmkg.go.id/publik/prakiraan-cuaca?adm4=21.71.02.1003", false);
 
 		 //decode JSON to array

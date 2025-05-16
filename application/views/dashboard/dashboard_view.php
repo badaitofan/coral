@@ -53,10 +53,10 @@
 <div class="container-fluid">
   <div class="page-title"> 
     <div class="row">
-      <div class="col-xl-4 col-sm-7 box-col-3">
+      <div class="col-xl-3 col-sm-7 box-col-3">
         <h3>Dashboard</h3>
       </div>
-      <div class="col-5 d-none d-xl-block">
+      <div class="col-6 d-none d-xl-block">
         
       </div>
       <div class="col-xl-3 col-sm-5 box-col-4">
@@ -77,7 +77,7 @@
   
   <div class="row">
     <div class="col-xl-12">
-      <div class="logos">
+      <div class="logos"  style="background-color:#48A6A7">
         <div class="logo_items">
           <img src="<?= base_url()?>assets/images/slider/group-logo/bmg.png">
           <img src="<?= base_url()?>assets/images/slider/group-logo/bdp.png">
@@ -111,7 +111,11 @@
         <div class="card-body premium-card">
           <div class="row premium-courses-card">
             <div class="col-md-7 premium-course">
-              <h1 class="f-w-700 m-b-5">Corporate Portal</h1><p class="f-light f-w-400 f-14">Portal informasi dan pengetahuan untuk menciptakan kebersamaan yang kuat dalam lingkungan perusahaan dengan saling berkolaborasi. </p><a class="btn btn-square btn-primary f-w-700 m-t-5" href="#" disabled>Selamat Datang</a>
+              <img class="img-fluid for-light" src="<?=base_url()?>/assets/images/coral.png" alt="" width="70%">
+              <img class="img-fluid for-dark" src="<?=base_url()?>/assets/images/coral-white.png" alt="" width="70%">
+              <!-- <h1>Corporate Portal</h1> -->
+              <p class="f-light f-w-400 f-16 m-t-5">Hai! Selamat datang di Portal Intranet kita! Semoga Anda menemukan semua yang Anda butuhkan di sini. </p><p class="f-light f-w-400 f-16">Portal informasi dan pengetahuan untuk menciptakan kebersamaan yang kuat dalam lingkungan perusahaan dengan saling berkolaborasi. </p>
+              <a  href="javascript:;" disabled>Bias Mandiri Group</a>
             </div>
             <div class="col-md-5"> 
               <!-- <div class="premium-message"><img class="img-fluid" src="<?=base_url()?>assets/images/dashboard/massage.gif" alt="massage"></div>

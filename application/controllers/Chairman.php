@@ -14,7 +14,7 @@ class Chairman extends CI_Controller {
 		public function unit_ict()
 		{
 			$data = array(
-				'title' => 'Coral - Unit Kerja ICT',
+				'title' => 'Portal - Unit Kerja ICT',
 				'row'	=> $this->Chairman_Model->get_Personil_ICT()
 			);
 			$this->template->load('template','chairman/ict_view',$data);
@@ -25,7 +25,7 @@ class Chairman extends CI_Controller {
 		public function jobdesc_ict()
 		{
 			$data = array(
-				'title' => 'Coral - Jobdesk ICT',
+				'title' => 'Portal - Jobdesk ICT',
 				'row_jd_ict'=> $this->Chairman_Model->get_jobdesc_ict()//Get data jobdesc Unit ICT
 			);
 			$this->template->load('template','chairman/jobdesk_ict_view',$data);
@@ -36,7 +36,7 @@ class Chairman extends CI_Controller {
 		public function asset_ict()
 		{
 			$data = array(
-				'title' => 'Coral - Asset ICT',
+				'title' => 'Portal - Asset ICT',
 				'row'	=> $this->Chairman_Model->get_asset_ict()
 			);
 			$this->template->load('template','chairman/asset_ict_view',$data);
@@ -46,7 +46,7 @@ class Chairman extends CI_Controller {
 		public function ict_supplies()
 		{
 			$data = array(
-				'title' => 'Coral - ICT Supplies',
+				'title' => 'Portal - ICT Supplies',
 				'row'	=> $this->Chairman_Model->get_Detail_Supplies()
 			);
 			$this->template->load('template','chairman/ict_supplies_view',$data);
@@ -56,7 +56,7 @@ class Chairman extends CI_Controller {
 		public function helpdesc_ict()
 		{
 			$data = array(
-				'title' => 'Coral - Helpdesk ICT',
+				'title' => 'Portal - Helpdesk ICT',
 				'row'	=> $this->Chairman_Model->get_helpdesc()
 			);
 			$this->template->load('template','chairman/helpdesc_ict_view',$data);
@@ -66,7 +66,7 @@ class Chairman extends CI_Controller {
 		public function helpdesc_ict_filter()
 		{
 			$data = array(
-				'title' => 'Coral - Helpdesk ICT',
+				'title' => 'Portal - Helpdesk ICT',
 				// 'row'	=> $this->Chairman_Model->get_helpdesc()
 			);
 			$this->template->load('template','chairman/helpdesc_ict_view_filter',$data);
@@ -78,7 +78,7 @@ class Chairman extends CI_Controller {
 		public function unit_legal()
 		{
 			$data = array(
-				'title' => 'Coral - Unit Kerja Corporate Legal',
+				'title' => 'Portal - Unit Kerja Corporate Legal',
 				'row'	=> $this->Chairman_Model->get_Personil_Legal()
 			);
 			$this->template->load('template','chairman/legal/legal_view',$data);
@@ -91,7 +91,7 @@ class Chairman extends CI_Controller {
 		public function perijinan_legal()
 		{
 			$data = array(
-				'title' => 'Coral - Unit Kerja Corporate Legal',
+				'title' => 'Portal - Unit Kerja Corporate Legal',
 				'row'	=> $this->Chairman_Model->get_Doc_Permit()
 			);
 			$this->template->load('template','chairman/legal/legal_permit_view',$data);
@@ -101,7 +101,7 @@ class Chairman extends CI_Controller {
 		public function peraturan_pemerintah_legal()
 		{
 			$data = array(
-				'title' => 'Coral - Unit Kerja Corporate Legal',
+				'title' => 'Portal - Unit Kerja Corporate Legal',
 				'row'	=> $this->Chairman_Model->get_Gov_Regulation()
 			);
 			$this->template->load('template','chairman/legal/legal_gov_regulation_view',$data);
@@ -114,7 +114,7 @@ class Chairman extends CI_Controller {
 		public function unit_qhse()
 		{
 			$data = array(
-				'title' => 'Coral - Unit Kerja QHSE',
+				'title' => 'Portal - Unit Kerja QHSE',
 				'row'	=> $this->Chairman_Model->get_Personil_QHSE()
 			);
 			$this->template->load('template','chairman/qhse/qhse_view',$data);
@@ -126,7 +126,7 @@ class Chairman extends CI_Controller {
 		{
 			$segmen = $this->uri->segment(3);
 			$data = array(
-				'title' => 'Coral - SOP QHSE',
+				'title' => 'Portal - SOP QHSE',
 				'row'	=> $this->Chairman_Model->get_SOP($segmen)
 			);
 			$this->template->load('template','chairman/qhse/qhse_sop_view',$data);
@@ -136,7 +136,7 @@ class Chairman extends CI_Controller {
 		public function sop_qhse_K3L()
 		{
 			$data = array(
-				'title' => 'Coral - SOP QHSE',
+				'title' => 'Portal - SOP QHSE',
 				'row'	=> $this->Chairman_Model->get_SOP_K3L()
 			);
 			$this->template->load('template','chairman/qhse/qhse_sop_k3l_view',$data);
@@ -177,7 +177,7 @@ class Chairman extends CI_Controller {
 		public function unit_secretary()
 		{
 			$data = array(
-				'title' => 'Coral - Unit Kerja Corporate Secretary',
+				'title' => 'Portal - Unit Kerja Corporate Secretary',
 				'row'	=> $this->Chairman_Model->get_Personil_Secretary()
 			);
 			$this->template->load('template','chairman/secretary/secretary_view',$data);

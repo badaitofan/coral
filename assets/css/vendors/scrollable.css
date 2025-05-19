@@ -9,7 +9,7 @@
   position: relative;
   border: 1px solid #f4f4f4;
   overflow: auto;
-  height: 300px;
+  height: 500px;
 }
 .scroll-demo .horz-scroll-content {
   width: 1600px;

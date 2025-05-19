@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/vendors/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/vendors/scrollbar.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/vendors/animate.css">
+    <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/vendors/scrollable.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/vendors/datatables.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/vendors/owlcarousel.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>assets/css/vendors/prism.css">
@@ -301,7 +302,7 @@
                                 <h5>ICT</h5>
                               </div>
                               <ul class="submenu-content opensubmegamenu">
-                                <li><a href="<?=site_url('Chairman/unit_ict')?>">Struktur & Karyawan</a></li>
+                                <li><a href="<?=site_url('Chairman/unit_ict')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
                                 <li><a href="<?=site_url('Chairman/jobdesc_ict')?>">Job Desc</a></li>
                                 <li><a href="<?=site_url('Chairman/asset_ict')?>">Aset ICT</a></li>
                                 <li><a href="<?=site_url('Chairman/ict_supplies')?>">ICT Supplies</a></li>
@@ -315,7 +316,7 @@
                                 <h5> Corp. Legal</h5>
                               </div>
                               <ul class="submenu-content opensubmegamenu">
-                                <li><a href="<?=site_url('Chairman/unit_legal')?>">Struktur & Karyawan</a></li>
+                                <li><a href="<?=site_url('Chairman/unit_legal')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
                                 <li><a href="<?=site_url('Chairman/jobdesc_legal')?>">Job Desc</a></li>
                                 <li><a href="<?=site_url('Chairman/perijinan_legal')?>">Daftar Perijinan</a></li>
                                 <li><a href="<?=site_url('Chairman/peraturan_pemerintah_legal')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Peraturan Pemerintah">Peraturan Pemerintah</a></li>
@@ -328,7 +329,7 @@
                                 <h5>QHSE</h5>
                               </div>
                               <ul class="submenu-content opensubmegamenu">
-                                <li><a href="<?=site_url('Chairman/unit_qhse')?>">Struktur & Karyawan</a></li>
+                                <li><a href="<?=site_url('Chairman/unit_qhse')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
                                 <li><a href="<?=site_url('Chairman/jobdesc_qhse')?>">Job Desc</a></li>
                                 <li><a href="<?=site_url('Chairman/sop_qhse/all')?>">SOP</a></li>
                                 <li><a href="<?=site_url('Chairman/certificate')?>">Sertifikat</a></li>
@@ -341,7 +342,7 @@
                                 <h5>Corp. Secretary</h5>
                               </div>
                               <ul class="submenu-content opensubmegamenu">
-                                <li><a href="<?=site_url('Chairman/unit_secretary')?>">Struktur & Karyawan</a></li>
+                                <li><a href="<?=site_url('Chairman/unit_secretary')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
                                 <li><a href="<?=site_url('Chairman/jobdesc_secretary')?>">Job Desc</a></li>
                               </ul>
                             </div>
@@ -368,7 +369,7 @@
                                 <h5>Keuangan</h5>
                               </div>
                               <ul class="submenu-content opensubmegamenu">
-                                <li><a href="<?=site_url('Adm_Fin/keuangan_general')?>">Struktur & Karyawan</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/keuangan_general')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/keuangan_jobdesc')?>">Job Desc</a></li>
                               </ul>
                             </div>
@@ -379,7 +380,7 @@
                                 <h5>Akuntansi</h5>
                               </div>
                               <ul class="submenu-content opensubmegamenu">
-                                <li><a href="<?=site_url('Adm_Fin/akuntansi_general')?>">Struktur & Karyawan</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/akuntansi_general')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/akuntansi_jobdesc')?>">Job Desc</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_labarugi/BMG')?>">Lap. Laba Rugi</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_neraca')?>">Lap. Neraca</a></li>
@@ -393,7 +394,7 @@
                                 <h5> General Affr.</h5>
                               </div>
                               <ul class="submenu-content opensubmegamenu">
-                              <li><a href="<?=site_url('Adm_Fin/unit_ga')?>">Struktur & Karyawan</a></li>
+                              <li><a href="<?=site_url('Adm_Fin/unit_ga')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/jobdesc_ga')?>">Job Desc</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/aset_kendaraan_ga')?>">Asset Kendaraan</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/aset_trailer_ga')?>">Asset Ekor Trailer</a></li>
@@ -408,7 +409,7 @@
                                 <h5> Purchasing</h5>
                               </div>
                               <ul class="submenu-content opensubmegamenu">
-                                <li><a href="<?=site_url('Adm_Fin/unit_purchasing')?>">Struktur & Karyawan</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/unit_purchasing')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/jobdesc_purchasing')?>">Job Desc</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/data_vendor_purchasing')?>">Vendor</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/purchasing_laporan_pembelian')?>">Laporan Pembelian</a></li>
@@ -421,7 +422,7 @@
                                 <h5>HRD</h5>
                               </div>
                               <ul class="submenu-content opensubmegamenu">
-                                <li><a href="<?=site_url('Adm_Fin/unit_hrd')?>">Struktur & Karyawan</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/unit_hrd')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/jobdesc_hrd')?>">Job Desc</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/perautan_perusahaan_hrd')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Peraturan Perusahaan">Peraturan Perusahaan</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/sk_perusahaan_hrd')?>">SK Perusahaan</a></li>
@@ -439,45 +440,76 @@
                   <!-- .end Direktorat Admin & Keuangan -->
 
                   <!-- Direktorat BDP -->
-                  <li class="mega-menu sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="javascript:;">
+                  <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+                  <svg class="stroke-icon">
+                      <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-others"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="<?=base_url()?>assets/svg/icon-sprite.svg#fill-others"></use>
+                    </svg><span>BDP</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="<?=site_url('BDP_Group/struktur')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
+                      
+                      <li><a class="submenu-title" href="javascript:;">Pemanduan
+                          <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>
+                        <ul class="submenu-content opensubmegamenu">
+                          <li><a href="javascript:;">Job Desc</a></li>
+                          <li><a href="javascript:;">Laporan Keuangan</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="submenu-title" href="javascript:;">Layup
+                          <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>
+                        <ul class="submenu-content opensubmegamenu">
+                          <li><a href="javascript:;">Job Desc</a></li>
+                          <li><a href="javascript:;">Lap. Keuangan</a></li>
+                          <li><a href="javascript:;">Lap. Kapal Masuk</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <!-- <li class="mega-menu sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="javascript:;">
                     <svg class="stroke-icon">
                       <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-others"></use>
                     </svg>
                     <svg class="fill-icon">
                       <use href="<?=base_url()?>assets/svg/icon-sprite.svg#fill-others"></use>
                     </svg><span>Dir. BDP</span></a>
-                    <div class="mega-menu-container menu-content">
-                      <div class="container-fluid">
-                        <div class="row">
-                          <div class="col mega-box">
-                            <div class="link-section">
-                              <div class="submenu-title">
-                                <h5>Pemanduan</h5>
+                    <ul class="sidebar-menu">
+                      <li><a href="javascript:;">Struktur & Karyawan</a></li>
+
+                      <div class="mega-menu-container menu-content">
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col mega-box">
+                              <div class="link-section">
+                                <div class="submenu-title">
+                                  <h5>Pemanduan</h5>
+                                </div>
+                                <ul class="submenu-content opensubmegamenu">
+                                  <li><a href="javascript:;">Job Desc</a></li>
+                                </ul>
                               </div>
-                              <ul class="submenu-content opensubmegamenu">
-                                <li><a href="javascript:;">Struktur & Karyawan</a></li>
-                                <li><a href="javascript:;">Job Desc</a></li>
-                              </ul>
                             </div>
                           </div>
-                        </div>
-                        <div class="row">
-                          <div class="col mega-box">
-                            <div class="link-section">
-                              <div class="submenu-title">
-                                <h5>Layup</h5>
+                          <div class="row">
+                            <div class="col mega-box">
+                              <div class="link-section">
+                                <div class="submenu-title">
+                                  <h5>Layup</h5>
+                                </div>
+                                <ul class="submenu-content opensubmegamenu">
+                                  <li><a href="javascript:;">Struktur & Karyawan</a></li>
+                                  <li><a href="javascript:;">Job Desc</a></li>
+                                  <li><a href="javascript:;">Daftar Kapal Layup</a></li>
+                                </ul>
                               </div>
-                              <ul class="submenu-content opensubmegamenu">
-                                <li><a href="javascript:;">Struktur & Karyawan</a></li>
-                                <li><a href="javascript:;">Job Desc</a></li>
-                                <li><a href="javascript:;">Daftar Kapal Layup</a></li>
-                              </ul>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </li>
+                    </ul>
+                  </li> -->
                   <!-- .end Direktorat BDP -->
 
                    <!-- Direktorat BSG -->
@@ -590,6 +622,7 @@
     <script src="<?=base_url()?>assets/js/slick/slick.min.js"></script>
     <script src="<?=base_url()?>assets/js/slick/slick.js"></script>
     <script src="<?=base_url()?>assets/js/header-slick.js"></script>
+    <script src="<?=base_url()?>assets/js/scrollable/scrollable-custom.js"></script>
     <script src="<?=base_url()?>assets/js/prism/prism.min.js"></script>
     <script src="<?=base_url()?>assets/js/chart/morris-chart/raphael.js"></script>
     <script src="<?=base_url()?>assets/js/chart/morris-chart/morris.js"> </script>

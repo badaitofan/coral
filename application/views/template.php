@@ -446,7 +446,7 @@
                     </svg>
                     <svg class="fill-icon">
                       <use href="<?=base_url()?>assets/svg/icon-sprite.svg#fill-others"></use>
-                    </svg><span>BDP</span></a>
+                    </svg><span>Dir. BDP Group </span></a>
                     <ul class="sidebar-submenu">
                       <li><a href="<?=site_url('BDP_Group/struktur')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
                       
@@ -520,36 +520,25 @@
                     <svg class="fill-icon">
                       <use href="<?=base_url()?>assets/svg/icon-sprite.svg#fill-others"></use>
                     </svg><span>Dir. BS Group</span></a>
-                    <div class="mega-menu-container menu-content">
-                      <div class="container-fluid">
-                        <div class="row">
-                          <div class="col mega-box">
-                            <div class="link-section">
-                              <div class="submenu-title">
-                                <h5>PBS</h5>
-                              </div>
-                              <ul class="submenu-content opensubmegamenu">
-                                <li><a href="javascript:;">Struktur & Karyawan</a></li>
-                                <li><a href="javascript:;">Job Desc</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col mega-box">
-                            <div class="link-section">
-                              <div class="submenu-title">
-                                <h5>BSJ</h5>
-                              </div>
-                              <ul class="submenu-content opensubmegamenu">
-                                <li><a href="javascript:;">Struktur & Karyawan</a></li>
-                                <li><a href="javascript:;">Job Desc</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <ul class="sidebar-submenu">
+                      <li><a href="<?=site_url('BS_Group/struktur')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
+                      
+                      <!-- <li><a class="submenu-title" href="javascript:;">Pemanduan
+                          <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>
+                        <ul class="submenu-content opensubmegamenu">
+                          <li><a href="javascript:;">Job Desc</a></li>
+                          <li><a href="javascript:;">Laporan Keuangan</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="submenu-title" href="javascript:;">Layup
+                          <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>
+                        <ul class="submenu-content opensubmegamenu">
+                          <li><a href="javascript:;">Job Desc</a></li>
+                          <li><a href="javascript:;">Lap. Keuangan</a></li>
+                          <li><a href="javascript:;">Lap. Kapal Masuk</a></li>
+                        </ul>
+                      </li> -->
+                    </ul>
                   </li>
                   <!-- .end Direktorat BSG -->
                   

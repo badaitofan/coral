@@ -1,8 +1,8 @@
     <div class="container-fluid">
-        <div class="page-title bg-info for-light">
+        <div class="page-title for-light"  style="background-color:#55AD9B">
             <div class="row">
                 <div class="col-xl-4 col-sm-7 box-col-3">
-                    <h3>BDP - Struktur & Karyawan</h3>
+                    <h3>BSG - Struktur & Karyawan</h3>
                 </div>
                 <div class="col-5 d-none d-xl-block">
                     
@@ -13,16 +13,16 @@
                         <svg class="stroke-icon">
                             <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-home"></use>
                         </svg></a></li>
-                    <li class="breadcrumb-item">Dir. BDP Group</li>
+                    <li class="breadcrumb-item">Dir. BS Group</li>
                     <li class="breadcrumb-item active">Struktur</li>
                     </ol>
                 </div>
             </div>
         </div>
-        <div class="page-title bg-info for-dark">
+        <div class="page-title for-dark" style="background-color:#55AD9B">
             <div class="row">
                 <div class="col-xl-4 col-sm-7 box-col-3">
-                    <h3>BDP - Struktur & Karyawan</h3>
+                    <h3>BSG - Struktur & Karyawan</h3>
                 </div>
                 <div class="col-5 d-none d-xl-block">
                     
@@ -33,7 +33,7 @@
                         <svg class="stroke-icon">
                             <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-home"></use>
                         </svg></a></li>
-                    <li class="breadcrumb-item">Dir. BDP Group</li>
+                    <li class="breadcrumb-item">Dir. BS Group</li>
                     <li class="breadcrumb-item active">Struktur</li>
                     </ol>
                 </div>
@@ -46,11 +46,11 @@
         <div class="col-xl-8 box-col-7 proorder-md-1">
             <div class="card">
                 <div class="card-header pb-0">
-                <h4>Struktur Organisasi - Direktorat BDP Group</h4><span>periode RKAP 2025</span>
+                <h4>Struktur Organisasi - Direktorat BS Group</h4><span>periode RKAP 2025</span>
                 </div>
                 <div class="card-body">
                     <div class="row">
-                    <img class="img-thumbnail" src="<?= base_url()?>assets/images/struktur/direktorat-bdp.png" itemprop="thumbnail" alt="Image description">
+                    <img class="img-thumbnail" src="<?= base_url()?>assets/images/struktur/direktorat-bsg.png" itemprop="thumbnail" alt="Image description">
                     </div>
                 </div>
             </div>
@@ -60,10 +60,7 @@
                 <div class="card-header">
                     <div class="header-top">
                         <h4>Personil</h4>
-                        <div class="d-flex align-items-center justify-content-center latest-sales-btn">
-                            <button class="btn btn-square btn-outline-primary btn-sm btn-pilot" type="button" title="btn btn-square btn-outline-primary btn-sm">Pemanduan</button>
-                            <button class="btn btn-square btn-outline-primary btn-sm btn-layup" type="button" title="btn btn-square btn-outline-primary btn-sm">Layup</button>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="card-body">
@@ -86,7 +83,7 @@
     </div>
     <!-- Container-fluid Ends-->
 
-    <script src="<?=base_url()?>assets/js/jquery-3.6.0.min.js"></script>
+    <!-- <script src="<?=base_url()?>assets/js/jquery-3.6.0.min.js"></script>
     <script>
         $(document).on("click",".btn-pilot",function(){
             var group = "PEMANDUAN";
@@ -111,4 +108,4 @@
                 }
             })
         })
-    </script>
+    </script> -->

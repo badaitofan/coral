@@ -449,19 +449,19 @@
                     </svg><span>Dir. BDP Group </span></a>
                     <ul class="sidebar-submenu">
                       <li><a href="<?=site_url('BDP_Group/struktur')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
-                      
+                      <li><a href="<?=site_url('BS_Group/lap_LR')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Laporan Laba Rugi</a></li>
                       <li><a class="submenu-title" href="javascript:;">Pemanduan
                           <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>
                         <ul class="submenu-content opensubmegamenu">
                           <li><a href="javascript:;">Job Desc</a></li>
-                          <li><a href="javascript:;">Laporan Keuangan</a></li>
+                          <!-- <li><a href="javascript:;">Laporan Laba Rugi</a></li> -->
                         </ul>
                       </li>
                       <li><a class="submenu-title" href="javascript:;">Layup
                           <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>
                         <ul class="submenu-content opensubmegamenu">
                           <li><a href="javascript:;">Job Desc</a></li>
-                          <li><a href="javascript:;">Lap. Keuangan</a></li>
+                          <!-- <li><a href="javascript:;">Lap. Keuangan</a></li> -->
                           <li><a href="javascript:;">Lap. Kapal Masuk</a></li>
                         </ul>
                       </li>
@@ -522,6 +522,7 @@
                     </svg><span>Dir. BS Group</span></a>
                     <ul class="sidebar-submenu">
                       <li><a href="<?=site_url('BS_Group/struktur')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
+                      <li><a href="<?=site_url('BS_Group/laporan_labarugi/BSG')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Laporan Laba Rugi</a></li>
                       
                       <!-- <li><a class="submenu-title" href="javascript:;">Pemanduan
                           <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>

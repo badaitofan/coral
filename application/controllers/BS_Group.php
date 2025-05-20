@@ -7,7 +7,7 @@ class BS_Group extends CI_Controller {
 	{
 		parent::__construct();
 		// cek_nologin();
-		// $this->load->model('Chairman_Model');
+		$this->load->model('BSG_Model');
 	}
 
     public function struktur()
@@ -20,6 +20,16 @@ class BS_Group extends CI_Controller {
         // $this->load->view('dashboard_view');
     }
 
+    // LabaRugi
+    public function laporan_labarugi()
+    {
+        $comp = $this->uri->segment(3);
+        $data = array(
+            'title' => 'Portal - Laporan Laba Rugi BS Group',
+            'row'	=> $this->BSG_Model->get_Laporan_LabaRugi($comp)
+        );
+        $this->template->load('template','bsg/laporan_lb_view',$data);
+    }
     // public function getPersonil()
     // {
     //     $group = $this->input->post('group');

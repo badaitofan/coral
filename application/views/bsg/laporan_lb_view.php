@@ -79,6 +79,8 @@
                       </li>
                       <li><a href="<?= site_url('BS_Group/laporan_labarugi/BS')?>" class="catg" data-category="HRD"><span class="title"> BS</span></a></li>
                       <li><a href="<?= site_url('BS_Group/laporan_labarugi/ESA')?>" class="catg" data-category="Quality"><span class="title"> ESA</span></a></li>
+                      <li><a href="<?= site_url('BS_Group/laporan_labarugi/BSJ')?>" class="catg" data-category="Quality"><span class="title"> BSJ</span></a></li>
+                      <li><a href="<?= site_url('BS_Group/laporan_labarugi/BSM')?>" class="catg" data-category="Quality"><span class="title"> BSM</span></a></li>
                                                                                   
                     </ul>
                   </div>
@@ -94,7 +96,7 @@
       <div class="card ">
         <div class="card-header card-no-header">
           <div class="header-top">
-            <h4 class="mb-0">Daftar Laporan Laba-Rugi</h4>
+            <h4 class="mb-0">Daftar Laporan Laba-Rugi <?=$comp?></h4>
             <!-- <div class="dropdown icon-dropdown setting-menu ms-2">
               <div class="spinner-border" role="status">
                 <span class="visually-hidden">Loading...</span>

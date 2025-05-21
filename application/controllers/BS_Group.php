@@ -26,7 +26,8 @@ class BS_Group extends CI_Controller {
         $comp = $this->uri->segment(3);
         $data = array(
             'title' => 'Portal - Laporan Laba Rugi BS Group',
-            'row'	=> $this->BSG_Model->get_Laporan_LabaRugi($comp)
+            'row'	=> $this->BSG_Model->get_Laporan_LabaRugi($comp),
+            'comp'  => $comp
         );
         $this->template->load('template','bsg/laporan_lb_view',$data);
     }

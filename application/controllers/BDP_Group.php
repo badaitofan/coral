@@ -7,7 +7,7 @@ class BDP_Group extends CI_Controller {
 	{
 		parent::__construct();
 		// cek_nologin();
-		// $this->load->model('Chairman_Model');
+		$this->load->model('BDP_Model');
 	}
 
     public function struktur()
@@ -52,4 +52,16 @@ class BDP_Group extends CI_Controller {
 
     }
 
+
+     // LabaRugi
+     public function laporan_labarugi()
+     {
+         $comp = $this->uri->segment(3);
+         $data = array(
+             'title' => 'Portal - Laporan Laba Rugi BDP Group',
+             'row'	=> $this->BDP_Model->get_Laporan_LabaRugi($comp),
+             'comp' => $comp
+         );
+         $this->template->load('template','bdp/laporan_lb_view',$data);
+     }
 }

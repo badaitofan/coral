@@ -33,8 +33,7 @@
 <div class="container-fluid">
   <div class="page-title">
     <div class="row">
-      <div class="col-xl-6 col-sm-7 box-col-3">
-        <h3>Akuntansi - Laporan Laba Rugi</h3>
+      <div class="col-xl-6 col-sm-7 box-col-3"><h3>Laporan Laba Rugi BDP Group</h3>
       </div>
       <div class="col-3 d-none d-xl-block">
       </div>
@@ -44,7 +43,7 @@
               <svg class="stroke-icon">
                 <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-home"></use>
               </svg></a></li>
-          <li class="breadcrumb-item">Acct</li>
+          <li class="breadcrumb-item">BDP</li>
           <li class="breadcrumb-item active">Lap. Laba Rugi</li>
         </ol>
       </div>
@@ -75,10 +74,9 @@
                       </li>
                       <li class="nav-item"><span class="main-title"> Kategori</span></li>
                       <li>                  
-                        <a href="<?= site_url('Adm_Fin/akuntansi_laporan_labarugi/BMG')?>" class="example-popover" data-category="K3L"><span class="title"> BMG</span></a>
+                        <a href="<?= site_url('BDP_Group/laporan_labarugi/PILOTAGE')?>" class="example-popover" data-category="K3L"><span class="title"> Pemanduan</span></a>
                       </li>
-                      <li><a href="<?= site_url('Adm_Fin/akuntansi_laporan_labarugi/BDP')?>" class="catg" data-category="HRD"><span class="title"> BDP</span></a></li>
-                      <li><a href="<?= site_url('Adm_Fin/akuntansi_laporan_labarugi/BSG')?>" class="catg" data-category="Quality"><span class="title"> BSG</span></a></li>
+                      <li><a href="<?= site_url('BDP_Group/laporan_labarugi/LAYUP')?>" class="catg" data-category="HRD"><span class="title"> Layup</span></a></li>
                                                                                   
                     </ul>
                   </div>
@@ -94,7 +92,7 @@
       <div class="card ">
         <div class="card-header card-no-header">
           <div class="header-top">
-            <h4 class="mb-0">Daftar Laporan Laba-Rugi <?= $comp ?></h4>
+            <h4 class="mb-0">Daftar Laporan Laba-Rugi <?= $comp?></h4>
             <!-- <div class="dropdown icon-dropdown setting-menu ms-2">
               <div class="spinner-border" role="status">
                 <span class="visually-hidden">Loading...</span>

@@ -52,7 +52,8 @@ class Adm_Fin extends CI_Controller {
 			// echo "<h1>".$comp."</h1>" ;
 			$data = array(
 				'title' => 'Portal - Unit Kerja Akuntansi',
-				'row'	=> $this->Adm_Fin_Model->get_Laporan_LabaRugi($comp)
+				'row'	=> $this->Adm_Fin_Model->get_Laporan_LabaRugi($comp),
+				'comp' => $comp
 			);
 			$this->template->load('template','adm_fin/accounting/accounting_lb_view',$data);
 		}

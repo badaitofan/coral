@@ -383,8 +383,8 @@
                                 <li><a href="<?=site_url('Adm_Fin/akuntansi_general')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/akuntansi_jobdesc')?>">Job Desc</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_labarugi/BMG')?>">Lap. Laba Rugi</a></li>
-                                <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_neraca')?>">Lap. Neraca</a></li>
-                                <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_audit_tahunan')?>">Lap. Audit Tahunan</a></li>
+                                <!-- <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_neraca')?>">Lap. Neraca</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/akuntansi_laporan_audit_tahunan')?>">Lap. Audit Tahunan</a></li> -->
                               </ul>
                             </div>
                           </div>

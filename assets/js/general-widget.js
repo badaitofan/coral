@@ -63,7 +63,7 @@ const salesStatsOption = {
 			},
 		},
 	},
-	labels: ["New: 2.4k", "Returning: 3.2k"],
+	labels: ["TEST: 2.4k", "Returning: 3.2k"],
 	colors: ["var(--theme-default)", "rgba(43, 94, 94, 0.1)"],
 	legend: {
 		show: true,

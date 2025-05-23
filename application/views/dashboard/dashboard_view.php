@@ -135,19 +135,25 @@
     <!-- target Stats -->
     <div class="col-xl-3 col-md-6 proorder-md-3 box-col-6">
       <div class="card">
-        <div class="card-header custom-border-bottom">
+        <div class="card-header pb-0">
+          <h4>Target Pendapatan Usaha</h4>
+          <p class="f-m-light mt-1">Data April 2025. </p>
+        </div>
+        <!--<div class="card-header custom-border-bottom">
+          
           <div class="header-top"> 
             <h4>Target Pendapatan Usaha</h4>
-            <!-- <div class="dropdown icon-dropdown setting-menu">
+            <p class="f-m-light mt-1">April 2025. </p>
+             <div class="dropdown icon-dropdown setting-menu">
               <button class="btn dropdown-toggle" id="userdropdown2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <svg>
                   <use href="<?=base_url()?>assets/svg/icon-sprite.svg#setting"> </use>
                 </svg>
               </button>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdown2"><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly </a><a class="dropdown-item" href="#">Yearly </a></div>
-            </div> -->
-          </div>
-        </div>
+            </div>
+          </div> 
+        </div>-->
         <div class="card-body pt-0"> 
           <div id="salesStatsRadialChart"> </div>
         </div>

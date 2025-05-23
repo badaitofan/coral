@@ -24,6 +24,17 @@ class Adm_Fin_Model extends CI_Model
             $data = $this->db->get('tb_personil');
             return $data->result_array();
         }
+
+    // Get Job Desc
+        public function get_jobdesc_keu()
+        {
+            $this->db->select('*');
+            $this->db->from('tb_jobdesc');
+            $this->db->join('tb_contact_personil','tb_contact_personil.cp_email=tb_jobdesc.pic_email',"LEFT");
+            $this->db->where('jobdesc_unit',"KEU");
+            $data = $this->db->get();
+            return $data->result_array();
+        }
     #=== .END KEUANGAN FUNCTIONS ===
 
     #=== ACCOUNTING FUNCTIONS ===
@@ -50,6 +61,18 @@ class Adm_Fin_Model extends CI_Model
         $data = $this->db->get('tb_accountancy_report');
         return $data->result_array();
     }
+
+    // Get Job Desc
+    public function get_jobdesc_acct()
+    {
+        $this->db->select('*');
+        $this->db->from('tb_jobdesc');
+        $this->db->join('tb_contact_personil','tb_contact_personil.cp_email=tb_jobdesc.pic_email',"LEFT");
+        $this->db->where('jobdesc_unit',"ACCT");
+        $data = $this->db->get();
+        return $data->result_array();
+    }
+
     #=== .END ACCOUNTING FUNCTIONS ===
 
     #=== GENERAL AFFAIR FUNCTIONS ===
@@ -153,7 +176,7 @@ class Adm_Fin_Model extends CI_Model
             return $data->result_array();
         }
 
-        // Get data Jobdesc ICT
+        // Get data Jobdesc HRD
         public function get_jobdesc_hrd()
         {
             $this->db->select('*');

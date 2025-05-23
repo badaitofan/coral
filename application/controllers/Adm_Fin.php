@@ -25,9 +25,10 @@ class Adm_Fin extends CI_Controller {
 		public function keuangan_jobdesc()
 		{
 			$data = array(
-				'title' => 'Portal - Jobdesc Keuangan'
+				'title' => 'Portal - Jobdesc Keuangan',
+				'row_jd_keu'=> $this->Adm_Fin_Model->get_jobdesc_keu()//Get data jobdesc Unit Keuangan
 			);
-			$this->template->load('template','adm_fin/keuangan_jobdesc_view',$data);
+			$this->template->load('template','adm_fin/keuangan/keuangan_jobdesk_view',$data);
 			// $this->load->view('dashboard_view');
 		}
 
@@ -56,6 +57,16 @@ class Adm_Fin extends CI_Controller {
 				'comp' => $comp
 			);
 			$this->template->load('template','adm_fin/accounting/accounting_lb_view',$data);
+		}
+
+		// Get Jobdesk
+		public function akuntansi_jobdesc()
+		{
+			$data = array(
+				'title' => 'Portal - Jobdesk Accounting',
+				'row_jd_acct'=> $this->Adm_Fin_Model->get_jobdesc_acct()//Get data jobdesc Unit ACCOunting
+			);
+			$this->template->load('template','adm_fin/accounting/accounting_jobdesk_view',$data);
 		}
 	#=== .END AKUNTANSI FUNCTIONS ===
 

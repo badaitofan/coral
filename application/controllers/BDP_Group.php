@@ -64,4 +64,17 @@ class BDP_Group extends CI_Controller {
          );
          $this->template->load('template','bdp/laporan_lb_view',$data);
      }
+
+    //  Get Kapal Layup
+     // LabaRugi
+     public function kapal_layup()
+     {
+         $data = array(
+             'title' => 'Portal - Laporan Kapal Layup',
+             'row'	=> $this->BDP_Model->get_laporan_layup(),
+             'agent' => $this->BDP_Model->get_laporan_agent()
+         );
+         $this->template->load('template','bdp/laporan_layup_view',$data);
+     }
+
 }

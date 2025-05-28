@@ -460,7 +460,7 @@
                         <ul class="submenu-content opensubmegamenu">
                           <li><a href="javascript:;">Job Desc</a></li>
                           <!-- <li><a href="javascript:;">Lap. Keuangan</a></li> -->
-                          <li><a href="javascript:;">Lap. Kapal Masuk</a></li>
+                          <li><a href="<?= site_url ('BDP_Group/kapal_layup')?>">Lap. Kapal Layup</a></li>
                         </ul>
                       </li>
                     </ul>

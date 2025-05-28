@@ -9,6 +9,7 @@ class Dashboard extends CI_Controller
 		parent::__construct();
 		// cek_nologin();
 		$this->load->model('Dashboard_Model');
+		$this->load->model('Currency_Model');
 		$this->load->model('Weather_Model');
 	}
 
@@ -35,7 +36,8 @@ class Dashboard extends CI_Controller
 		$data = array(
 			'title' => 'Corporate Portal',
 			'rowTelp'	=> $this->Dashboard_Model->get_Ext_List(),
-			'cuaca'		=> $this->Weather_Model->get()
+			'cuaca'		=> $this->Weather_Model->get(),
+			// 'currency'	=> $this->Currency_Model->get()
 		);
 		$this->template->load('template','dashboard/dashboard_view',$data);
 		// $this->load->view('dashboard_view');

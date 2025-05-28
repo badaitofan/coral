@@ -146,32 +146,30 @@
         </div>
       </div>
     </div> -->
-    <!-- Weather Block -->
     <div class="col-xl-6 proorders-xl-2">
       <div class="card">
         <div class="card-body selling-card">
           <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-4">
               <div class="sale-card">
                 <div class="sale-date">
-                  <h4><?= $cuaca["lokasi"]["desa"].", ".$cuaca["lokasi"]["kecamatan"]?></h4><a href="order-history.html"></a>
-                </div>
-                <span class="f-w-700 f-14 pb-4"><?= htmlspecialchars($cuaca["lokasi"]["kotkab"] ?? "N/A").", ".htmlspecialchars($cuaca["lokasi"]["provinsi"] ?? "N/A")?></span>
-                <p class="f-w-700 f-14 pb-4"><?= htmlspecialchars($cuaca["lokasi"]["timezone"] ?? "N/A") ?></p>
+                  <h4>Total Sale</h4><a href="order-history.html"></a>
+                </div><span class="f-w-700 f-14 pb-4">Jan 1,2024 - Jun 30,2022</span>
                 
               </div>
             </div>
-            <div class="col-sm-4 sale-card d-flex">
+            <div class="col-sm-8 sale-card d-flex">
               <div class="flex-grow-1 align-self-center ">
-                
-                <h4>????????</h4>
+                <h4>$654.85K</h4>
+
               </div>
               <div  >
-                <?php  //foreach ($cuaca["current"]["weather_icons"] as $key => $value) {
-                  //echo "<img class='img-wrap' src='".isset($value)?$value:"N/A"."' alt='drawing-room'>";
+                <?php  foreach ($cuaca["current"]["weather_icons"] as $key => $value) {
+                  echo "<img class='img-wrap' src='".isset($value)?$value:"N/A"."' alt='drawing-room'>";
                   // echo "<img src='".$value."' alt='icon-cuaca'></div>";
-                //}
+                }
                 ?>
+                <!-- <img class="img-wrap w-25" src="<?=base_url()?>assets/images/slider/pict-1.png" alt="drawing-room"> -->
               </div>
               
             </div>
@@ -181,8 +179,7 @@
       </div>
     </div>
 
-    <!-- Currency Block -->
-    <!-- <div class="col-xl-6 proorders-xl-3">
+    <div class="col-xl-6 proorders-xl-3">
       <div class="card"> 
         <div class="card-header pb-0"> 
           <div class="header-top"> 
@@ -212,11 +209,10 @@
           </div>
         </div>
       </div>
-    </div> -->
-
+    </div>
     <?php //echo $cuaca["location"]["region"];
     // echo "<img src='".$cuaca["current"]["weather_icons"]."'/>" ;
-    // echo var_dump($cuaca); 
+    // echo var_dump($currency); 
     // foreach ($cuaca["current"]["weather_icons"] as $key => $value) {
     //    echo "<img src='".$value."' height='100px'/>" ;
     // }

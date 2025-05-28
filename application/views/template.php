@@ -4,8 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta name="description" content="Zono admin is super flexible, powerful, clean &amp; modern responsive bootstrap 5 admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, Zono admin template, dashboard template, flat admin template, responsive admin template, web app"> -->
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="<?=base_url()?>assets/images/logo/icon-portal.png" type="image/x-icon">
     <link rel="shortcut icon" href="<?=base_url()?>assets/images/logo/icon-portal.png" type="image/x-icon">
@@ -572,7 +570,15 @@
         </div>
         <!-- Page Sidebar Ends-->
         <div class="page-body">
-          <?= $contents ?>
+          <?php  
+            if (!empty($this->session->userdata('user_id'))) {
+              $sesi = "<input class='form-control form-control-sm' type='hidden' value='1' id='sesi' disabled>";
+            } else {
+              $sesi = "<input class='form-control form-control-sm' type='hidden' value='0' id='sesi' disabled>";
+            }
+            echo $sesi;
+            echo $contents; 
+          ?>
           
         </div>
         <!-- footer start-->
@@ -628,13 +634,6 @@
     <script src="<?=base_url()?>assets/js/datatable/datatables/datatable.custom1.js"></script>
     <script src="<?=base_url()?>assets/js/owlcarousel/owl.carousel.js"></script>
     <script src="<?=base_url()?>assets/js/owlcarousel/owl-custom.js"></script>
-    <!-- <script src="<?=base_url()?>assets/js/typeahead/handlebars.js"></script>
-    <script src="<?=base_url()?>assets/js/typeahead/typeahead.bundle.js"></script>
-    <script src="<?=base_url()?>assets/js/typeahead/typeahead.custom.js"></script>
-    <script src="<?=base_url()?>assets/js/typeahead-search/handlebars.js"></script>
-    <script src="<?=base_url()?>assets/js/typeahead-search/typeahead-custom.js"></script>
-    <script src="<?=base_url()?>assets/js/owlcarousel/owl.carousel.js"></script> -->
-    <!-- <script src="<?=base_url()?>assets/js/owlcarousel/owl-custom.js"></script> -->
     <script src="<?=base_url()?>assets/js/height-equal.js"></script>
     <script src="<?= base_url()?>assets/js/bookmark/jquery.validate.min.js"></script>
     <script src="<?= base_url()?>assets/js/bookmark/custom.js"></script>

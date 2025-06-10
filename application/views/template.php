@@ -152,6 +152,49 @@
                   </div>
                 </div>
               </li>
+              <li class="onhover-dropdown"> 
+                <div class="message position-relative">
+                  <svg>
+                    <use href="<?=base_url()?>assets/svg/icon-sprite.svg#Message"></use>
+                  </svg><span class="rounded-pill badge-danger"></span>
+                </div>
+                <div class="onhover-show-div message-dropdown">
+                  <h6 class="f-18 mb-0 dropdown-title">Jadwal Meeting </h6>
+                  <ul>
+                    <li>
+                      <div class="d-flex align-items-start">
+                        <div class="message-img bg-light-primary"><img src="<?=base_url()?>assets/images/user/3.jpg" alt=""></div>
+                        <div class="flex-grow-1">
+                          <h5><a href="letter-box.html">Emay Walter</a></h5>
+                          <p>Do you want to go see movie?</p>
+                        </div>
+                        <div class="notification-right"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex align-items-start">
+                        <div class="message-img bg-light-primary"><img src="<?=base_url()?>assets/images/user/6.jpg" alt=""></div>
+                        <div class="flex-grow-1">
+                          <h5> <a href="letter-box.html">Jason Borne</a></h5>
+                          <p>Thank you for rating us.</p>
+                        </div>
+                        <div class="notification-right"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="d-flex align-items-start"> 
+                        <div class="message-img bg-light-primary"><img src="<?=base_url()?>assets/images/user/10.jpg" alt=""></div>
+                        <div class="flex-grow-1">
+                          <h5> <a href="letter-box.html">Sarah Loren</a></h5>
+                          <p>What`s the project report update?</p>
+                        </div>
+                        <div class="notification-right"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></div>
+                      </div>
+                    </li>
+                    <li> <a class="f-w-700" href="private-chat.html">Check all</a></li>
+                  </ul>
+                </div>
+              </li>
               <li>
                 <div class="mode">
                   <svg class="for-dark">
@@ -423,10 +466,10 @@
                                 <li><a href="<?=site_url('Adm_Fin/unit_hrd')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/jobdesc_hrd')?>">Job Desc</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/perautan_perusahaan_hrd')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Peraturan Perusahaan">Peraturan Perusahaan</a></li>
-                                <li><a href="<?=site_url('Adm_Fin/sk_perusahaan_hrd')?>">SK Perusahaan</a></li>
+                                <!-- <li><a href="<?=site_url('Adm_Fin/sk_perusahaan_hrd')?>">SK Perusahaan</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/data_karyawan_hrd')?>">Data Karyawan</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/jabatan_fungsional_hrd')?>">Jabatan Fungsional</a></li>
-                                <li><a href="<?=site_url('Adm_Fin/bpjs_karyawan_hrd')?>">BPJS Karyawan</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/bpjs_karyawan_hrd')?>">BPJS Karyawan</a></li> -->
                                 <li><a href="<?=site_url('Adm_Fin/data_pelamar_hrd')?>">Data Pelamar</a></li>
                               </ul>
                             </div>
@@ -463,9 +506,15 @@
                           <li><a href="<?= site_url ('BDP_Group/kapal_layup')?>">Lap. Kapal Layup</a></li>
                         </ul>
                       </li>
+                      <li><a class="submenu-title" href="javascript:;">Marketing
+                          <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>
+                        <ul class="submenu-content opensubmegamenu">
+                          <li><a href="javascript:;">Laporan ??</a></li>
+                          <!-- <li><a href="javascript:;">Lap. Keuangan</a></li> -->
+                        </ul>
+                      </li>
                     </ul>
                   </li>
-
                   <!-- <li class="mega-menu sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="javascript:;">
                     <svg class="stroke-icon">
                       <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-others"></use>
@@ -509,7 +558,6 @@
                     </ul>
                   </li> -->
                   <!-- .end Direktorat BDP -->
-
                    <!-- Direktorat BSG -->
                   <li class="mega-menu sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="javascript:;">
                     <svg class="stroke-icon">
@@ -521,7 +569,13 @@
                     <ul class="sidebar-submenu">
                       <li><a href="<?=site_url('BS_Group/struktur')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
                       <li><a href="<?=site_url('BS_Group/laporan_labarugi/BSG')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Laporan Laba Rugi</a></li>
-                      
+                      <li><a class="submenu-title" href="javascript:;">Marketing
+                          <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>
+                        <ul class="submenu-content opensubmegamenu">
+                          <li><a href="javascript:;">Laporan ??</a></li>
+                          <!-- <li><a href="javascript:;">Lap. Keuangan</a></li> -->
+                        </ul>
+                      </li>
                       <!-- <li><a class="submenu-title" href="javascript:;">Pemanduan
                           <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>
                         <ul class="submenu-content opensubmegamenu">
@@ -539,12 +593,24 @@
                       </li> -->
                     </ul>
                   </li>
-                  <!-- .end Direktorat BSG -->
-                  
+                  <!-- .end Direktorat BSG -->                 
                   <li class="sidebar-main-title">
                     <div>
                       <h6 class="lan-8">Applications</h6>
                     </div>
+                  </li>
+                  <li class="mega-menu sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="javascript:;">
+                    <svg class="stroke-icon">
+                      <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-others"></use>
+                    </svg>
+                    <svg class="fill-icon">
+                      <use href="<?=base_url()?>assets/svg/icon-sprite.svg#fill-others"></use>
+                    </svg><span>App. Perusahaan</span></a>
+                    <ul class="sidebar-submenu">
+                      <li><a href="http://156.67.208.165/safiv3/" target="_blank">SAFI</a></li>
+                      <li><a href="https://apps.biasmandirigroup.id/ict-helpdesk/" target="_blank">ICT Helpdesk</a></li>
+                      <li><a href="<?php echo site_url('ims'); ?>" target="_blank">IMS BMG</a></li>  
+                    </ul>
                   </li>
                   <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="javascript:;">
                       <svg class="stroke-icon rounded-pill badge-danger">
@@ -571,7 +637,7 @@
         <!-- Page Sidebar Ends-->
         <div class="page-body">
           <?php  
-            if (!empty($this->session->userdata('user_id'))) {
+            if (!empty($this->session->userdata('auth_seq'))) {
               $sesi = "<input class='form-control form-control-sm' type='hidden' value='1' id='sesi' disabled>";
             } else {
               $sesi = "<input class='form-control form-control-sm' type='hidden' value='0' id='sesi' disabled>";

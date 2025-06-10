@@ -82,9 +82,110 @@
   </div>
 </div>
 <!-- Container-fluid starts-->
+<div class="container-fluid general-widget">
+  <div class="row">
+    <div class="col-xl-6 proorders-xl-1">
+      <div class="card">
+        <div class="card-body selling-card">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="sale-card">
+                <div class="sale-date">
+                  <h4>Total Sale</h4><a href="order-history.html"><span class="txt-primary f-w-700">(See all sales)</span></a>
+                </div><span class="f-w-700 f-14 pb-4">Jan 1,2024 - Jun 30,2022</span>
+                <div class="sale-data">
+                  <ul> 
+                    <li>
+                      <h4>$654.85K</h4>
+                      <div class="sale-value">
+                        <svg>
+                          <use href="<?=base_url()?>assets/svg/icon-sprite.svg#drop-menu"> </use>
+                        </svg>
+                        <div class="sales-value"><span class="txt-danger">95% </span><span>6 month before </span></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Currency Box -->
+    <!-- <div class="col-xl-6 proorders-xl-2">
+      <div class="card"> 
+        <div class="card-header pb-0"> 
+          <div class="header-top"> 
+            <h4>Summary USD</h4>
+            <div class="dropdown icon-dropdown setting-menu">
+              <button class="btn dropdown-toggle" id="userdropdown32" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <svg> 
+                  <use href="<?=base_url()?>assets/svg/icon-sprite.svg#setting"> </use>
+                </svg>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdown32"><a class="dropdown-item" href="#">Weekly</a><a class="dropdown-item" href="#">Monthly</a><a class="dropdown-item" href="#">Yearly </a></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body pt-0 summary-card"><span class="f-w-700 f-14"><?= date("d/m/Y H:i:s",$currency["timestamp"]) ?></span>
+          <div class="summary-progressbar">
+            <ul> 
+              <li>
+                <div>
+                  <h5><?= sprintf("%.2f",$currency["quotes"]["USDIDR"])?></h5><span>IDR</span>
+                </div>
+                <div class="progress-showcase">
+                  <div class="progress sm-progress-bar progress-border-secondary">
+                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"> </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div> 
+                  <h5><?= sprintf("%.2f",$currency["quotes"]["USDSGD"])?></h5><span>SGD </span>
+                </div>
+                <div>
+                  <div class="progress sm-progress-bar progress-border-secondary">
+                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"> </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h5><?= sprintf("%.2f",$currency["quotes"]["USDGBP"])?></h5><span>GBP </span>
+                </div>
+                <div>
+                  <div class="progress-showcase"> 
+                    <div class="progress sm-progress-bar progress-border-secondary">
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"> </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div>
+                <h5><?= sprintf("%.2f",$currency["quotes"]["USDMYR"])?></h5><span>MYR</span>
+                </div>
+                <div>
+                  <div class="progress sm-progress-bar progress-border-secondary">
+                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 65%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"> </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</div>
 <div class="container-fluid default-dashboard"> 
   <div class="row">
-    <div class="col-xl-12 proorders-xl-1">
+    <div class="col-xl-12 proorder-md-1">
       <div class="logos"  style="background-color:#48A6A7">
         <div class="logo_items">
           <img src="<?= base_url()?>assets/images/slider/group-logo/bmg.png">
@@ -147,31 +248,40 @@
       </div>
     </div> -->
     <!-- Weather Block -->
-    <div class="col-xl-6 proorders-xl-2">
+    <!-- <div class="col-xl-6 col-md-6 proorder-md-5">
       <div class="card">
         <div class="card-body selling-card">
           <div class="row">
             <div class="col-sm-8">
               <div class="sale-card">
                 <div class="sale-date">
-                  <h4><?= $cuaca["lokasi"]["desa"].", ".$cuaca["lokasi"]["kecamatan"]?></h4><a href="order-history.html"></a>
+                  <h4><?= $bmkg["lokasi"]["desa"].", ".$bmkg["lokasi"]["kecamatan"]?></h4><a href="order-history.html"></a>
                 </div>
-                <span class="f-w-700 f-14 pb-4"><?= htmlspecialchars($cuaca["lokasi"]["kotkab"] ?? "N/A").", ".htmlspecialchars($cuaca["lokasi"]["provinsi"] ?? "N/A")?></span>
-                <p class="f-w-700 f-14 pb-4"><?= htmlspecialchars($cuaca["lokasi"]["timezone"] ?? "N/A") ?></p>
-                
+                <span class="f-w-700 f-14"><?= htmlspecialchars($bmkg["lokasi"]["kotkab"] ?? "N/A").", ".htmlspecialchars($bmkg["lokasi"]["provinsi"] ?? "N/A")?></span>
+                <div class="row">
+                  <div class="col-sm-4"><span class="f-w-700 f-14"><?=$cuaca["current"]["wind_speed"]." kmph"?> </span><smalll  class="f-m-light mt-1">Wind Speed</smalll></div>
+                  <div class="col-sm-4">
+                    <span class="f-w-700 f-14"><?= $cuaca["current"]["humidity"]?> % </span><smalll  class="f-m-light mt-1">Humidity</smalll>
+                  </div>
+                  <div class="col-sm-4"></div>
+                </div>
               </div>
             </div>
             <div class="col-sm-4 sale-card d-flex">
               <div class="flex-grow-1 align-self-center ">
                 
-                <h4>????????</h4>
+              <?= "<h4>".$cuaca["current"]["temperature"]."°C </h4>"?>
               </div>
-              <div  >
-                <?php  //foreach ($cuaca["current"]["weather_icons"] as $key => $value) {
-                  //echo "<img class='img-wrap' src='".isset($value)?$value:"N/A"."' alt='drawing-room'>";
-                  // echo "<img src='".$value."' alt='icon-cuaca'></div>";
-                //}
-                ?>
+              <div class="avatar-showcase">
+                <div class="avatars">
+                  <div class="avatar" >
+                    <?php  foreach ($cuaca["current"]["weather_icons"] as $key => $value) {
+                      // echo "<img class='img-wrap' src='".isset($value)?$value:"N/A"."' alt='drawing-room'>";
+                      echo "<img class='img-70 rounded-circle'  src='".$value."' alt='icon-cuaca'></div>";
+                    }
+                    ?>
+                  </div>
+                </div>
               </div>
               
             </div>
@@ -179,10 +289,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Currency Block -->
-    <!-- <div class="col-xl-6 proorders-xl-3">
+    <!-- <div class="col-xl-6 col-md-12 box-col-12 proorder-md-4">
       <div class="card"> 
         <div class="card-header pb-0"> 
           <div class="header-top"> 
@@ -223,9 +333,7 @@
     ?>
   </div>
   
-  <div class="row">
-
-    
+  <div class="row">   
 
     <div class="col-xl-9 box-col-7 proorder-md-1 "> 
       <div class="card">
@@ -253,6 +361,83 @@
         </div>
       </div>
     </div>
+
+    <!-- Box Meeting Schedule -->
+    <!-- <div class="col-xl-3 box-col-5 col-md-6 proorder-md-2">
+      <div class="card"> 
+        <div class="card-header pb-0"> 
+          <div class="header-top"> 
+            <h4>Jadwal Meeting</h4>
+            <div class="dropdown icon-dropdown setting-menu"> 
+              <button class="btn dropdown-toggle" id="userdropdown1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <svg>
+                  <use href="<?= base_url()?>assets/svg/icon-sprite.svg#setting"></use>
+                </svg>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userdropdown1"><a class="dropdown-item" href="#">Weekly </a><a class="dropdown-item" href="#">Monthly </a><a class="dropdown-item" href="#">Yearly </a></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="activity-day">
+            <h6>Hari Ini</h6>
+          </div>
+          <div class="recent-activity-card">
+            <ul>
+              <li class="activity-removed"> 
+                <div class="recent-activity-data">
+                  <div class="activity-name"><span>
+                      <svg>
+                        <use href="<?= base_url()?>assets/svg/icon-sprite.svg#Chat"> </use>
+                      </svg></span><a href="letter-box.html">Nick Mark mentioned Sara</a></div>
+                  <div class="view-btn"><a href="#!">View
+                      <svg>
+                        <use href="<?= base_url()?>assets/svg/icon-sprite.svg#Arrow-Right-2"></use>
+                      </svg></a></div>
+                </div>
+              </li>
+              <li>
+                <div class="recent-activity-data">
+                  <div class="activity-name"> 
+                    <span>
+                      <svg>
+                        <use href="<?= base_url()?>assets/svg/icon-sprite.svg#Download"> </use>
+                      </svg>
+                    </span>
+                    <a href="letter-box.html">The Post name was removed...</a></div>
+                  <div class="view-btn">
+                    <a href="#!">View
+                      <svg>
+                        <use href="<?= base_url()?>assets/svg/icon-sprite.svg#Arrow-Right-2"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="recent-activity-data">
+                  <div class="activity-name">
+                    <span> 
+                      <svg> 
+                        <use href="<?= base_url()?>assets/svg/icon-sprite.svg#Swap"> </use>
+                      </svg>
+                    </span>
+                    <a href="letter-box.html">Patrick Sullivan published... </a>
+                  </div>
+                  <div class="view-btn">
+                    <a href="#!">View 
+                      <svg>
+                        <use href="<?= base_url()?>assets/svg/icon-sprite.svg#Arrow-Right-2"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> -->
     <!-- target Stats -->
     <div class="col-xl-3 col-md-6 proorder-md-3 box-col-6">
       <div class="card">

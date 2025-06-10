@@ -1,5 +1,5 @@
     <div class="container-fluid">
-        <div class="page-title bg-info for-light">
+        <div class="page-title for-light" style="background:rgba(43,94,94,.1);">
             <div class="row">
                 <div class="col-xl-4 col-sm-7 box-col-3">
                     <h3>BDP - Struktur & Karyawan</h3>
@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <div class="page-title bg-info for-dark">
+        <div class="page-title for-dark" style="background:rgba(43,94,94,.1);">
             <div class="row">
                 <div class="col-xl-4 col-sm-7 box-col-3">
                     <h3>BDP - Struktur & Karyawan</h3>

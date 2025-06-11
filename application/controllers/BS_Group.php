@@ -55,4 +55,14 @@ class BS_Group extends CI_Controller {
 
     // }
 
+    // Shipping Cleareance
+    public function shipping_clearance()
+    {
+        $data = array(
+            'title' => 'Portal - Shipping Clearance',
+            // 'row'	=> $this->BSG_Model->get_Laporan_LabaRugi($comp),
+            // 'comp'  => $comp
+        );
+        $this->template->load('template','bsg/shipping_clearance_view',$data);
+    }
 }

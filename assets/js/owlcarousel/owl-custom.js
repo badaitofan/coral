@@ -8,60 +8,60 @@
     init: function () {
       var owl = $("#owl-carousel-13");
       owl.owlCarousel({
-        items: 5,
-        loop: true,
-        margin: 10,
-        autoplay: true,
-        autoplayTimeout: 1000,
-        autoplayHoverPause: true,
-        nav: false,
-        responsive: {
-          320: {
-            items: 1,
-            mergeFit: true,
-          },
-          768: {
-            items: 2,
-            mergeFit: true,
-          },
-          992: {
-            items: 3,
-            mergeFit: true,
-          },
-        },
-      }),
-      $("#owl-carousel-dashboard").owlCarousel({
-        loop: true,
-        margin: 10,
-        items: 1,
-        nav: false,
-        // responsive: {
-        //   320: {
-        //     items: 1,
-        //   },
-        //   576: {
-        //     items: 2,
-        //   },
-        //   768: {
-        //     items: 3,
-        //   },
-        //   992: {
-        //     items: 4,
-        //   },
-        // },
-      }),
-        $(".play").on("click", function () {
-          owl.trigger("play.owl.autoplay", [1000]);
-        }),
-        $(".stop").on("click", function () {
-          owl.trigger("stop.owl.autoplay");
-        }),
-        $("#owl-carousel-14").owlCarousel({
-          items: 1,
-          margin: 10,
-          autoHeight: true,
-          nav: false,
-        });
+				items: 5,
+				loop: true,
+				margin: 10,
+				autoplay: true,
+				autoplayTimeout: 1000,
+				autoplayHoverPause: true,
+				nav: false,
+				responsive: {
+					320: {
+						items: 1,
+						mergeFit: true,
+					},
+					768: {
+						items: 2,
+						mergeFit: true,
+					},
+					992: {
+						items: 6,
+						mergeFit: true,
+					},
+				},
+			}),
+				$("#owl-carousel-dashboard").owlCarousel({
+					loop: true,
+					margin: 10,
+					items: 1,
+					nav: false,
+					// responsive: {
+					//   320: {
+					//     items: 1,
+					//   },
+					//   576: {
+					//     items: 2,
+					//   },
+					//   768: {
+					//     items: 3,
+					//   },
+					//   992: {
+					//     items: 4,
+					//   },
+					// },
+				}),
+				$(".play").on("click", function () {
+					owl.trigger("play.owl.autoplay", [1000]);
+				}),
+				$(".stop").on("click", function () {
+					owl.trigger("stop.owl.autoplay");
+				}),
+				$("#owl-carousel-14").owlCarousel({
+					items: 1,
+					margin: 10,
+					autoHeight: true,
+					nav: false,
+				});
       var owl = $("#owl-carousel-15");
       owl.owlCarousel({
         loop: true,

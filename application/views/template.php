@@ -569,6 +569,13 @@
                     <ul class="sidebar-submenu">
                       <li><a href="<?=site_url('BS_Group/struktur')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
                       <li><a href="<?=site_url('BS_Group/laporan_labarugi/BSG')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Laporan Laba Rugi</a></li>
+                      <li><a class="submenu-title" href="javascript:;">Prosedur
+                          <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>
+                        <ul class="submenu-content opensubmegamenu">
+                          <li><a href="<?= site_url('BS_Group/shipping_clearance')?>">Shipping Clearance</a></li>
+                          <!-- <li><a href="javascript:;">Lap. Keuangan</a></li> -->
+                        </ul>
+                      </li>
                       <li><a class="submenu-title" href="javascript:;">Marketing
                           <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>
                         <ul class="submenu-content opensubmegamenu">
@@ -686,6 +693,8 @@
     <script src="<?=base_url()?>assets/js/header-slick.js"></script>
     <script src="<?=base_url()?>assets/js/scrollable/scrollable-custom.js"></script>
     <script src="<?=base_url()?>assets/js/prism/prism.min.js"></script>
+    <script src="<?=base_url()?>assets/js/clipboard/clipboard.min.js"></script>
+    <script src="<?=base_url()?>assets/js/custom-card/custom-card.js"></script>
     <script src="<?=base_url()?>assets/js/chart/morris-chart/raphael.js"></script>
     <script src="<?=base_url()?>assets/js/chart/morris-chart/morris.js"> </script>
     <script src="<?=base_url()?>assets/js/chart/morris-chart/prettify.min.js"></script>

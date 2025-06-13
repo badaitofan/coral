@@ -7,8 +7,9 @@
   var owl_carousel_custom = {
     init: function () {
       var owl = $("#owl-carousel-13");
+      var owlb = $("#owl-carousel-13-b");
       owl.owlCarousel({
-				items: 5,
+				items: 6,
 				loop: true,
 				margin: 10,
 				autoplay: true,
@@ -30,6 +31,29 @@
 					},
 				},
 			}),
+				owlb.owlCarousel({
+					items: 6,
+					loop: true,
+					margin: 10,
+					autoplay: true,
+					autoplayTimeout: 1000,
+					autoplayHoverPause: true,
+					nav: false,
+					responsive: {
+						320: {
+							items: 1,
+							mergeFit: true,
+						},
+						768: {
+							items: 2,
+							mergeFit: true,
+						},
+						992: {
+							items: 8,
+							mergeFit: true,
+						},
+					},
+				}),
 				$("#owl-carousel-dashboard").owlCarousel({
 					loop: true,
 					margin: 10,

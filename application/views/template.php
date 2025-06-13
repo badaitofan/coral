@@ -573,6 +573,8 @@
                           <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>
                         <ul class="submenu-content opensubmegamenu">
                           <li><a href="<?= site_url('BS_Group/shipping_clearance')?>">Shipping Clearance</a></li>
+                          <li><a href="<?= site_url('BS_Group/crew_formality')?>">Crew Formality</a></li>
+                          <li><a href="<?= site_url('BS_Group/customs_formality')?>">Customs Formality</a></li>
                           <!-- <li><a href="javascript:;">Lap. Keuangan</a></li> -->
                         </ul>
                       </li>

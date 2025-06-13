@@ -65,4 +65,24 @@ class BS_Group extends CI_Controller {
         );
         $this->template->load('template','bsg/shipping_clearance_view',$data);
     }
+    // Crew Formality
+    public function crew_formality()
+    {
+        $data = array(
+            'title' => 'Portal - Crew Formality',
+            // 'row'	=> $this->BSG_Model->get_Laporan_LabaRugi($comp),
+            // 'comp'  => $comp
+        );
+        $this->template->load('template','bsg/crew_formality_view',$data);
+    }
+    // Customs formality
+    public function customs_formality()
+    {
+        $data = array(
+            'title' => 'Portal - Customs Formality',
+            // 'row'	=> $this->BSG_Model->get_Laporan_LabaRugi($comp),
+            // 'comp'  => $comp
+        );
+        $this->template->load('template','bsg/customs_formality_view',$data);
+    }
 }

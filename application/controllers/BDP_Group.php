@@ -90,4 +90,15 @@ class BDP_Group extends CI_Controller {
         $this->template->load('template','bdp/mkt/contract_view',$data);
     }
 
+    // Get Quotation
+    public function mkt_bdp_quotation()
+    {
+        $data = array(
+            'title' => 'Portal - Marketing BDP',
+            'row'	=> $this->BDP_Model->get_mkt_quotation(),
+            // 'comp'  => $comp
+        );
+        $this->template->load('template','bdp/mkt/quotation_view',$data);
+    }
+
 }

@@ -510,6 +510,7 @@
                           <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>
                         <ul class="submenu-content opensubmegamenu">
                         <li><a href="<?= site_url('BDP_Group/mkt_bdp_contract')?>">Kontrak</a></li>
+                        <li><a href="<?= site_url('BDP_Group/mkt_bdp_quotation')?>">Quotation</a></li>
                           <!-- <li><a href="javascript:;">Lap. Keuangan</a></li> -->
                         </ul>
                       </li>
@@ -582,7 +583,7 @@
                           <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>
                         <ul class="submenu-content opensubmegamenu">
                           <li><a href="<?= site_url('BS_Group/mkt_bsg_contract')?>">Kontrak</a></li>
-                          <li><a href="javascript:;">Quotation</a></li>
+                          <li><a href="<?= site_url('BS_Group/mkt_bsg_quotation')?>">Quotation</a></li>
                         </ul>
                       </li>
                       <!-- <li><a class="submenu-title" href="javascript:;">Pemanduan

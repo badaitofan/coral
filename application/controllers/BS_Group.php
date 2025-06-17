@@ -90,12 +90,24 @@ class BS_Group extends CI_Controller {
     public function mkt_bsg_contract()
     {
         $data = array(
-            'title' => 'Portal - BSG Marketing BSG',
+            'title' => 'Portal - Marketing BSG',
             'row'	=> $this->BSG_Model->get_mkt_contract(),
             // 'comp'  => $comp
         );
         $this->template->load('template','bsg/mkt/contract_view',$data);
     }
+
+     // Get Quotation
+     public function mkt_bsg_quotation()
+     {
+         $data = array(
+             'title' => 'Portal - Marketing BSG',
+             'row'	=> $this->BSG_Model->get_mkt_quotation(),
+             // 'comp'  => $comp
+         );
+         $this->template->load('template','bsg/mkt/quotation_view',$data);
+     }
+ 
 
 
 }

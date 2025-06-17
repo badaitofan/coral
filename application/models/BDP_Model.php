@@ -33,7 +33,6 @@ class BDP_Model extends CI_Model
         return $data->result_array();
     }
 
-
 // MARKETING
     // Get Contract
     public function get_mkt_contract()
@@ -42,6 +41,17 @@ class BDP_Model extends CI_Model
         $this->db->where('contract_owner_group',"BDP");
         $this->db->order_by('contract_seq',"DESC");
         $data = $this->db->get('tb_contract');
+        return $data->result_array();
+    }
+
+    // Get Quotation
+    public function get_mkt_quotation()
+    {
+        $this->db->select('*');
+        $this->db->where('quote_owner_group',"BDP");
+        $this->db->join('tb_company','tb_quotation.quote_owner=tb_company.company_code','LEFT');
+        $this->db->order_by('quote_seq',"DESC");
+        $data = $this->db->get('tb_quotation');
         return $data->result_array();
     }
 

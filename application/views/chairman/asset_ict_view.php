@@ -115,10 +115,20 @@
                     </td>
                     <td></td>
                     <td class="text-muted"><?= $dataAsset['spesifikasi'] ?></td>
+                    <!--test untuk download serah terima -->
                     <td>
-                      <a href="javascript:void(0)" target="_blank"><i data-feather="download-cloud"></i></a>
-                    </td>
-                    
+                      <a href="javascript:void(0)" class="download-form"
+                        data-nama="<?= $dataAsset['nama_user'] ?>"
+                        data-jabatan=""
+                        data-unit="<?= $dataAsset['nama_lokasi'] ?>"
+                        data-nip="23082102"
+                        data-jenis="<?= $dataAsset['nama_barang'] ?>"
+                        data-id="<?= $dataAsset['kode_aset'] ?>"
+                        data-spesifikasi="<?= $dataAsset['spesifikasi'] ?>"
+                        data-serial="<?= $dataAsset['sn'] ?>">
+                        <i data-feather="download-cloud"></i>
+                      </a>
+                    </td>                 
                   </tr>
                 <?php } ?>
               </tbody>
@@ -131,3 +141,147 @@
   </div>
 </div>
 <!-- Container-fluid Ends-->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.download-form').forEach(function (el) {
+    el.addEventListener('click', function () {
+      const d = el.dataset;
+      const today = new Date().toLocaleDateString('id-ID');
+
+      const win = window.open('', '_blank');
+      win.document.write(`
+        <html>
+        <head>
+          <title>Formulir Serah Terima Aset</title>
+          <style>
+            body {
+              font-family: Arial, sans-serif;
+              margin: 50px;
+              font-size: 14px;
+              color: #000;
+            }
+            .header {
+              text-align: center;
+              margin-bottom: 10px;
+            }
+            .header h2 {
+              margin: 0;
+            }
+            .header .subtitle {
+              margin-top: 4px;
+              font-size: 13px;
+            }
+            hr {
+              border: 1px solid #444;
+              margin-top: 10px;
+              margin-bottom: 20px;
+            }
+            table.asset-detail {
+              width: 100%;
+              border-collapse: collapse;
+              margin-bottom: 20px;
+              font-size: 14px;
+            }
+            table.asset-detail td {
+              padding: 6px 10px;
+            }
+            .label {
+              width: 30%;
+              font-weight: bold;
+              vertical-align: top;
+            }
+            .section-title {
+              font-weight: bold;
+              margin: 15px 0 5px;
+            }
+            ul {
+              padding-left: 20px;
+              margin-top: 5px;
+            }
+            .signatures {
+              width: 100%;
+              text-align: center;
+              margin-top: 60px;
+            }
+            .signatures td {
+              vertical-align: bottom;
+              height: 100px;
+            }
+            .signatures .ttd-title {
+              font-weight: bold;
+              margin-bottom: 30px;
+            }
+            .signature-line {
+              border-top: 1px solid #000;
+              width: 180px;
+              margin: 0 auto 5px;
+            }
+            .signature-block {
+              margin-top: 60px;
+              text-align: center;
+            }
+            .footer {
+              font-size: 10px;
+              text-align: center;
+              margin-top: 60px;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="header">
+            <h2>Formulir Serah Terima Aset</h2>
+            <div class="subtitle">Tanggal: ${today} | Nomor Formulir: ${d.id}</div>
+          </div>
+          <hr>
+
+          <table class="asset-detail">
+            <tr><td class="label">Kode Aset</td><td>: ${d.id}</td></tr>
+            <tr><td class="label">Nama Barang</td><td>: ${d.jenis}</td></tr>
+            <tr><td class="label">Serial Number / Mac Address</td><td>: ${d.serial}</td></tr>
+            <tr><td class="label">Kategori Barang</td><td>: Smartphone</td></tr>
+            <tr><td class="label">Spesifikasi</td><td>: ${d.spesifikasi}</td></tr>
+            <tr><td class="label">Lokasi Penempatan Barang</td><td>: ${d.unit}</td></tr>
+          </table>
+
+          <div class="section-title">Instruksi Penyerahan:</div>
+          <ul>
+            <li>Penyerahan Asset ICT harus berdasarkan Asset Request pada ICT Helpdesk, atau instruksi dari department HRD untuk kebutuhan karyawan baru atau serah-terima jabatan</li>
+          </ul>
+
+          <div class="section-title">Instruksi Pengembalian:</div>
+          <ul>
+            <li>Penerima bertanggung jawab atas kehilangan Asset ICT selama masa bekerja.</li>
+            <li>Jika terjadi kehilangan, penerima wajib mengganti Asset ICT tersebut sesuai dengan spesifikasi data pada formulir serah terima.</li>
+          </ul>
+
+          <table class="signatures">
+            <tr>
+              <td>
+                <div class="ttd-title">Penerima</div>
+                <div class="signature-line"></div>
+                ${d.nama}<br>${d.jabatan}
+              </td>
+              <td>
+                <div class="ttd-title">Dibuat Oleh</div>
+                <div class="signature-line"></div>
+                Alvin Debiyan Melstin<br>IT Staff Technician
+              </td>
+            </tr>
+          </table>
+
+          <div class="signature-block">
+            <div class="ttd-title">Mengetahui</div>
+            <div class="signature-line"></div>
+            Tofan Wahyu Bakti<br>IT Support Manager
+          </div>
+
+        
+        </body>
+       
+        </html>
+      `);
+      win.document.close();
+    });
+  });
+});
+</script>

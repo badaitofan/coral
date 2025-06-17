@@ -1,0 +1,119 @@
+<style>
+  .default-dashboard2 .last-orders-table thead tr
+    {
+      border-bottom:1px solid #f5f5f5
+    }
+  .default-dashboard2 .last-orders-table thead tr:first-child th
+    {
+      padding-left:0!important
+    }
+  .default-dashboard2 .last-orders-table thead tr:last-child th
+    {
+    padding-right:0!important
+    }
+  .default-dashboard2 .last-orders-table thead tr th
+    {color:#848789;padding:0 5px 11px}
+    .default-dashboard2 .last-orders-table thead tr th:first-child{padding-left:0}
+    .default-dashboard2 .last-orders-table thead tr th:first-child:after{display:none}
+    .default-dashboard2 .last-orders-table tbody tr:last-child td{border-bottom:none!important;padding-right:0!important}
+    .default-dashboard2 .last-orders-table tbody tr:hover td h4{color:var(--theme-default)}
+    .default-dashboard2 .last-orders-table tbody tr:last-child{border-bottom:none}
+    .default-dashboard2 .last-orders-table tbody tr:last-child td{padding-bottom:0}
+    .default-dashboard2 .last-orders-table tbody tr td{padding:18px 5px}
+    .default-dashboard2 .last-orders-table tbody tr td:first-child{padding-left:0!important}
+    .default-dashboard2 .last-orders-table tbody tr td:last-child{padding-right:0!important}
+    .default-dashboard2 .last-orders-table tbody tr td .user-data{align-items:center;display:flex;gap:9px}
+    .default-dashboard2 .last-orders-table tbody tr td .user-data img{border-radius:100%;height:42px;width:42px}
+    .default-dashboard2 .last-orders-table tbody tr td .user-data span{color:#848789}
+    .default-dashboard2 .last-orders-table tbody tr td a h4{font-size:14px;font-weight:600}
+    .default-dashboard2 .last-orders-table tbody tr td .drop-menu{background-color:#f5f5f5;border-radius:0;color:#1f2f3e;line-height:.7;padding:3px 5px}
+    .default-dashboard2 .last-orders-table tbody tr td:nth-child(2){color:#848789}
+</style>
+
+<div class="container-fluid">
+  <div class="page-title">
+    <div class="row">
+      <div class="col-xl-6 col-sm-7 box-col-3">
+        <h3>Marketing BSG - Dokumen Kontrak</h3>
+      </div>
+      <div class="col-3 d-none d-xl-block">
+      </div>
+      <div class="col-xl-3 col-sm-5 box-col-4">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">
+              <svg class="stroke-icon">
+                <use href="<?=base_url()?>assets/svg/icon-sprite.svg#stroke-home"></use>
+              </svg></a></li>
+          <li class="breadcrumb-item">Marketing</li>
+          <li class="breadcrumb-item active">Kontrak</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Container-fluid starts-->
+<div class="container-fluid default-dashboard2">
+  <div class="row">              
+    <!-- Complex headers (rowspan and colspan) Starts-->
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header pb-0 card-no-border">
+          <div class="header-top">
+            <h4>Daftar Dokumen Kontrak Marketing</h4>
+            
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive"> 
+            <table class="last-orders-table table" id="last-orders">
+              <thead>
+                <tr>
+                  <th style="width:30px">No</th>
+                  <th>Nomor Kontrak</th>
+                  <th>Judul / Client</th>
+                  <th>Tgl</th>
+                  <th>Test</th> <!-- Kolom yg Hilang -->
+                  <!-- <th>Status </th> -->
+                  <th>Opt</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php $no=1; foreach ($row as $data)               
+                { if ($data['contract_status'] == "ACTIVE"){
+                  $status = " <span class='badge rounded-pill badge-secondary font-light'>ONGOING</span>";
+                }else{
+                  $status = " <span class='badge rounded-pill badge-success font-light'>FINISHED</span>";
+                }
+                  ?>
+                  <tr> 
+                    <td><?= $no++ ?></td>
+                    <td><?= $data['contract_no']?></td>
+                    <td>
+                      <div class="user-data">
+                        
+                        <div> 
+                        <?= $status ?><span style="font-size:10px;margin-left:2px" ><?= $data['contract_client']?></span>
+                          <a href="javascript:void(0)"><h4><?= $data['contract_title']?></h4></a>
+                        </div>
+                      </div>
+                    </td>
+                    <td><?= $data['contract_date']?></td>
+                    <td></td>
+                    <!-- <td><?= $data['contract_status']?></td> -->
+                    <td>
+                      <a href="<?= $data['contract_link']?>" target="_blank"><i data-feather="download-cloud"></i></a>
+                    </td>
+                    <td></td>
+                    
+                  </tr>
+                <?php } ?>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Complex headers (rowspan and colspan) Ends-->
+  </div>
+</div>
+<!-- Container-fluid Ends-->

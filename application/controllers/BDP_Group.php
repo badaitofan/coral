@@ -77,4 +77,17 @@ class BDP_Group extends CI_Controller {
          $this->template->load('template','bdp/laporan_layup_view',$data);
      }
 
+
+// MARKETING
+    // Get Contract
+    public function mkt_bdp_contract()
+    {
+        $data = array(
+            'title' => 'Portal - Marketing BDP',
+            'row'	=> $this->BDP_Model->get_mkt_contract(),
+            // 'comp'  => $comp
+        );
+        $this->template->load('template','bdp/mkt/contract_view',$data);
+    }
+
 }

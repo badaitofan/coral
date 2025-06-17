@@ -54,7 +54,7 @@ class BS_Group extends CI_Controller {
     //     }
 
     // }
-
+// PROSEDUR
     // Shipping Cleareance
     public function shipping_clearance()
     {
@@ -85,4 +85,17 @@ class BS_Group extends CI_Controller {
         );
         $this->template->load('template','bsg/customs_formality_view',$data);
     }
+// MARKETING
+    // Get Contract
+    public function mkt_bsg_contract()
+    {
+        $data = array(
+            'title' => 'Portal - BSG Marketing BSG',
+            'row'	=> $this->BSG_Model->get_mkt_contract(),
+            // 'comp'  => $comp
+        );
+        $this->template->load('template','bsg/mkt/contract_view',$data);
+    }
+
+
 }

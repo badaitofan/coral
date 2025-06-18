@@ -443,7 +443,7 @@
       <div class="card">
         <div class="card-header pb-0">
           <h4>Target Pendapatan Usaha</h4>
-          <p class="f-m-light mt-1">Data April 2025. </p>
+          <p class="f-m-light mt-1">Data Mei 2025. </p>
         </div>
         <!--<div class="card-header custom-border-bottom">
           

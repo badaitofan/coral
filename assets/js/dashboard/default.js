@@ -300,7 +300,7 @@ lastOrdersChartEl.render();
 
 /*=======/Sales Stats Radial Chart/=======*/
 const salesStatsOption = {
-	series: [23], // data round // persentase yang ditampilkan di frontend
+	series: [27], // data round // persentase yang ditampilkan di frontend
 	chart: {
 		height: 370,
 		type: "radialBar",
@@ -363,7 +363,7 @@ const salesStatsOption = {
 			},
 		},
 	},
-	labels: ["ACHV: 25.8 B", "TGT: 114.7 B"],
+	labels: ["ACHV: 31.1 B", "TGT: 114.7 B"],
 	colors: ["var(--theme-default)", "rgba(43, 94, 94, 0.1)"],
 	legend: {
 		show: true,

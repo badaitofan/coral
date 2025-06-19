@@ -20,6 +20,16 @@ class BDP_Group extends CI_Controller {
         // $this->load->view('dashboard_view');
     }
 
+    // Get Jobdesk
+		public function jobdesc_bdp()
+		{
+			$data = array(
+				'title' => 'Portal - Jobdesk BSG',
+				'row_jd_bdp'=> $this->BDP_Model->get_jobdesc_bdp()//Get data jobdesc Unit BDP
+			);
+			$this->template->load('template','bdp/jobdesc_bdp_view',$data);
+		}
+
     public function getPersonil()
     {
         $group = $this->input->post('group');

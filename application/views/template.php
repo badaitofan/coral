@@ -491,6 +491,7 @@
                     </svg><span>Dir. BDP Group </span></a>
                     <ul class="sidebar-submenu">
                       <li><a href="<?=site_url('BDP_Group/struktur')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
+                      <li><a href="<?=site_url('BDP_Group/jobdesc_bdp')?>">Job Desc</a></li>
                       <li><a href="<?=site_url('BDP_Group/laporan_labarugi/BDP')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Laporan Laba Rugi</a></li>
                       <li><a class="submenu-title" href="javascript:;">Pemanduan
                           <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>

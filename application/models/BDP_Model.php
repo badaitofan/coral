@@ -4,6 +4,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class BDP_Model extends CI_Model
 {
 
+    // Get Job Desc
+    public function get_jobdesc_bdp()
+    {
+        $this->db->select('*');
+        $this->db->from('tb_jobdesc');
+        $this->db->join('tb_contact_personil','tb_contact_personil.cp_email=tb_jobdesc.pic_email',"LEFT");
+        $this->db->where('jobdesc_unit',"BDP");
+        $data = $this->db->get();
+        return $data->result_array();
+    }
+
     // Get Laporan Laba Rugi
     public function get_Laporan_LabaRugi($comp)
     {

@@ -98,6 +98,18 @@ class Adm_Fin_Model extends CI_Model
             return $data->result_array();
         }
 
+     // Get Job Desc
+        public function get_jobdesc_ga()
+        {
+            $this->db->select('*');
+            $this->db->from('tb_jobdesc');
+            $this->db->join('tb_contact_personil','tb_contact_personil.cp_email=tb_jobdesc.pic_email',"LEFT");
+            $this->db->where('jobdesc_unit',"GA");
+            $data = $this->db->get();
+            return $data->result_array();
+        }
+
+
     //Get asset ATK dari tabel barang IMS
         public function get_Aset_Atk()
         {
@@ -145,7 +157,16 @@ class Adm_Fin_Model extends CI_Model
             return $data->result_array();
         }
 
-
+        // Get Job Desc
+        public function get_jobdesc_purchasing()
+        {
+            $this->db->select('*');
+            $this->db->from('tb_jobdesc');
+            $this->db->join('tb_contact_personil','tb_contact_personil.cp_email=tb_jobdesc.pic_email',"LEFT");
+            $this->db->where('jobdesc_unit',"PURCHASING");
+            $data = $this->db->get();
+            return $data->result_array();
+        }
 
         // Get Data Vendor
         public function getDataVendorDetail()

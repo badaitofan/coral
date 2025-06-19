@@ -95,6 +95,16 @@ class Adm_Fin extends CI_Controller {
 		}
 
 		// Get Jobdesk
+		public function jobdesc_ga()
+		{
+			$data = array(
+				'title' => 'Portal - Jobdesk Accounting',
+				'row_jd_ga'=> $this->Adm_Fin_Model->get_jobdesc_ga()//Get data jobdesc Unit GA
+			);
+			$this->template->load('template','adm_fin/general_affair/ga_jobdesk_view',$data);
+		}
+
+		// Get Jobdesk
 		public function asset_atk_ga()
 		{
 			$data = array(
@@ -124,7 +134,7 @@ class Adm_Fin extends CI_Controller {
 			$this->template->load('template','adm_fin/general_affair/aset_trailer_view',$data);
 		}
 
-	#=== .ENDGENERAL AFFAIR FUNCTIONS ===
+	#=== .END GENERAL AFFAIR FUNCTIONS ===
 	
 	#=== PURCHASING FUNCTIONS ===
 		// Get General
@@ -136,6 +146,16 @@ class Adm_Fin extends CI_Controller {
 			);
 			$this->template->load('template','adm_fin/purchasing/purchasing_view',$data);
 			// $this->load->view('dashboard_view');
+		}
+
+		// Get Jobdesk
+		public function jobdesc_purchasing()
+		{
+			$data = array(
+				'title' => 'Portal - Jobdesk Accounting',
+				'row_jd_purc'=> $this->Adm_Fin_Model->get_jobdesc_purchasing()//Get data jobdesc Unit Purchasing
+			);
+			$this->template->load('template','adm_fin/purchasing/purchasing_jobdesk_view',$data);
 		}
 
 		//Get Data Vendor

@@ -412,6 +412,7 @@
                               <ul class="submenu-content opensubmegamenu">
                                 <li><a href="<?=site_url('Adm_Fin/keuangan_general')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
                                 <li><a href="<?=site_url('Adm_Fin/keuangan_jobdesc')?>">Job Desc</a></li>
+                                <li><a href="<?=site_url('Adm_Fin/keuangan_kebijakan')?>">Kebijakan</a></li>
                               </ul>
                             </div>
                           </div>

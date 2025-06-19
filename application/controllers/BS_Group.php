@@ -31,6 +31,17 @@ class BS_Group extends CI_Controller {
         );
         $this->template->load('template','bsg/laporan_lb_view',$data);
     }
+
+    // Get Jobdesk
+		public function jobdesc_bsg()
+		{
+			$data = array(
+				'title' => 'Portal - Jobdesk BSG',
+				'row_jd_bsg'=> $this->BSG_Model->get_jobdesc_bsg()//Get data jobdesc Unit BSG
+			);
+			$this->template->load('template','bsg/jobdesc_bsg_view',$data);
+		}
+
     // public function getPersonil()
     // {
     //     $group = $this->input->post('group');

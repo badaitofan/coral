@@ -15,6 +15,17 @@ class BSG_Model extends CI_Model
         return $data->result_array();
     }
 
+    // Get Job Desc
+    public function get_jobdesc_bsg()
+    {
+        $this->db->select('*');
+        $this->db->from('tb_jobdesc');
+        $this->db->join('tb_contact_personil','tb_contact_personil.cp_email=tb_jobdesc.pic_email',"LEFT");
+        $this->db->where('jobdesc_unit',"BSG");
+        $data = $this->db->get();
+        return $data->result_array();
+    }
+
 // MARKETING
     // Get Contract
     public function get_mkt_contract()

@@ -570,6 +570,7 @@
                     </svg><span>Dir. BS Group</span></a>
                     <ul class="sidebar-submenu">
                       <li><a href="<?=site_url('BS_Group/struktur')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
+                      <li><a href="<?=site_url('BS_Group/jobdesc_bsg')?>">Job Desc</a></li>
                       <li><a href="<?=site_url('BS_Group/laporan_labarugi/BSG')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Laporan Laba Rugi</a></li>
                       <li><a class="submenu-title" href="javascript:;">Prosedur
                           <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>

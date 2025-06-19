@@ -68,6 +68,18 @@ class Adm_Fin extends CI_Controller {
 			);
 			$this->template->load('template','adm_fin/accounting/accounting_jobdesk_view',$data);
 		}
+
+		// Show Report Audit Internal
+		public function akuntansi_audit_internal()
+		{
+			// echo "<h1>".$comp."</h1>" ;
+			$data = array(
+				'title' => 'Portal - Unit Kerja Akuntansi',
+				'row'	=> $this->Adm_Fin_Model->get_Laporan_Audit_Internal(),
+				// 'comp' => $comp
+			);
+			$this->template->load('template','adm_fin/accounting/accounting_ai_view',$data);
+		}
 	#=== .END AKUNTANSI FUNCTIONS ===
 
 	#=== GENERAL AFFAIR FUNCTIONS ===

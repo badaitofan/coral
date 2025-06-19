@@ -62,6 +62,17 @@ class Adm_Fin_Model extends CI_Model
         return $data->result_array();
     }
 
+    // Get Laporan Audit Internal
+    public function get_Laporan_Audit_Internal()
+    {
+
+        $this->db->select('*');
+        $this->db->where('acc_rep_group',"LAI");
+        // $this->db->where('acc_rep_company',$comp);
+        $data = $this->db->get('tb_accountancy_report');
+        return $data->result_array();
+    }
+
     // Get Job Desc
     public function get_jobdesc_acct()
     {

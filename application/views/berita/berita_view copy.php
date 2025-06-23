@@ -4,8 +4,7 @@
   <div class="page-title">
     <div class="row">
       <div class="col-xl-4 col-sm-7 box-col-3">
-        <h3>Berita <?= bin2hex(random_bytes(10 / 2))?></h3>
-        <!-- <h3>Berita</h3> -->
+        <h3>Berita <?= $random_id = random_string('alnum', 10); ?></h3>
       </div>
       <div class="col-5 d-none d-xl-block">
       </div>
@@ -27,29 +26,48 @@
   <div class="row learning-block">
     <div class="col-xxl-9 col-xl-8 box-col-8">
       <div class="row">
-        <?php foreach ($row_news as $data) {?>
-          <div class="col-xl-12">
-            <div class="card">
-              <div class="blog-box blog-list row">
-                <div class="col-sm-5"><a href="<?= site_url('Berita/berita_/').$data['news_id']?>"><img class="img-fluid sm-100-w" src="<?= base_url()?>assets/images/blog/<?= $data['news_picture']?>" alt=""></a></div>
-                <div class="col-sm-7">
-                  <div class="blog-details">
-                    <div class="blog-date"><span><?= date("d",strtotime($data['news_date'])) ?></span> <?= date("F Y",strtotime($data['news_date'])) ?></div>
-                    <a href="<?= site_url('Berita/berita_/').$data['news_id']?>"><h3><?= $data['news_title']?> </h3></a>
-                    <div class="blog-bottom-content">
-                      <ul class="blog-social">
-                        <li>oleh: <?= $data['news_author']?></li>
-                        <li><a href="<?= site_url('Berita/berita_/').$data['news_id']?>" class="btn btn-outline-primary btn-sm btn-like" >15 Suka <i class="fa fa-thumbs-o-up"></i></a></li>
-                      </ul>
-                      <hr>
-                      <p><?= mb_strimwidth($data['news_content'],0,250," ... ")?></p> 
-                    </div>
+        <div class="col-xl-12">
+          <div class="card">
+            <div class="blog-box blog-list row">
+              <div class="col-sm-5"><a href="javascript:;"><img class="img-fluid sm-100-w" src="<?= base_url()?>assets/images/slider/mariana-golder.png" alt=""></a></div>
+              <div class="col-sm-7">
+                <div class="blog-details">
+                  <div class="blog-date"><span>05</span> January 2024</div>
+                  <a href="javascript:;"><h3>Sample News </h3></a>
+                  <div class="blog-bottom-content">
+                    <ul class="blog-social">
+                      <li>oleh: Paige Turner</li>
+                      <li><a href="javascript:;" class="btn btn-outline-primary btn-sm btn-like" >15 Suka <i class="fa fa-thumbs-o-up"></i></a></li>
+                    </ul>
+                    <hr>
+                    <p class="mt-0">Java is an object-oriented programming language. Sun Microsystems first released Java in the year 1995. It is popularly used for developing Java applications in data centers, laptops, cell phones, game consoles, and scientific supercomputers. There are multiple websites and applications which will not work if Java is not installed.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        <?php } ?>
+        </div>
+        <div class="col-xl-12">
+          <div class="card">
+            <div class="blog-box blog-list row">
+              <div class="col-sm-5"><a href="javascript:;"><img class="img-fluid sm-100-w" src="<?= base_url()?>assets/images/slider/mariana-golder.png" alt=""></a></div>
+              <div class="col-sm-7">
+                <div class="blog-details">
+                  <div class="blog-date"><span>10</span> March 2024</div>
+                  <a href="javascript:;"><h3>Sample News </h3></a>
+                  <div class="blog-bottom-content">
+                    <ul class="blog-social">
+                      <li>oleh: Petey Cruiser</li>
+                      <li><a href="javascript:;" class="btn btn-outline-primary btn-sm btn-like" >34 Suka <i class="fa fa-thumbs-o-up"></i></a> </li>
+                    </ul>
+                    <hr>
+                    <p class="mt-0">Web development is the work involved in developing a website for the Internet or an intranet (a private network).Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services, and many more such applications and websites are being created every day.</p>                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- Filter Widget -->

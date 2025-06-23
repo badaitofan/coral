@@ -84,7 +84,7 @@
 <!-- Container-fluid starts-->
 <div class="container-fluid general-widget">
   <div class="row">
-    <div class="col-xl-6 proorders-xl-1">
+    <!-- <div class="col-xl-6 proorders-xl-1">
       <div class="card">
         <div class="card-body selling-card">
           <div class="row">
@@ -114,7 +114,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- Currency Box -->
     <!-- <div class="col-xl-6 proorders-xl-2">
       <div class="card"> 
@@ -470,8 +470,8 @@
     <div class="col-xl-6 col-12">
       <div class="card height-equal">
         <div class="card-header pb-0">
-          <h4>Berita Internal</h4>
-          <p class="f-m-light mt-1">Berita atau informasi internal terkait  perusahaan hingga kreatifitas karyawan. </p>
+          <h4>Berita</h4>
+          <!-- <p class="f-m-light mt-1">Berita atau informasi internal terkait  perusahaan hingga kreatifitas karyawan. </p> -->
         </div>
         <div class="card-body">
           <div class="carousel carousel-dark slide" id="carouselExampleDark" data-bs-ride="carousel">
@@ -481,13 +481,50 @@
               <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="10000"><img class="d-block w-100" src="<?=base_url()?>assets/images/slider/mariana-golder.png" alt="drawing-room">
+            
+            <?php 
+            $this->db->select('*');
+            $this->db->order_by('news_date',"DESC");
+            $this->db->where('news_status',"publish");
+            $this->db->limit(1);
+            $query = $this->db->get('tb_news')->result();
+
+            foreach ($query as  $value) {
+              echo "<div class='carousel-item active' data-bs-interval='10000'><img class='d-block w-100' src='".base_url()."assets/images/blog/".$value->news_picture."' alt='drawing-room'>
+                 <div class='carousel-caption d-none d-md-block carousel-opacity'>
+                   <h3>".$value->news_title."</h3>
+                   <p>".mb_strimwidth($value->news_content,0,100," ... ")."</p>
+                   <a class='btn btn-square btn-primary f-w-700 m-t-5' href='".site_url('Berita/berita_/').$value->news_id."' disabled>Baca..</a>
+                 </div>
+               </div>";
+
+              $this->db->select('*');
+              $this->db->order_by('news_date',"DESC");
+              $this->db->where('news_status',"publish");
+              $this->db->where('news_id !=',$value->news_id);
+              $query2 = $this->db->get('tb_news')->result();
+
+              foreach ($query2 as $result) {
+                echo "<div class='carousel-item' data-bs-interval='10000'><img class='d-block w-100' src='".base_url()."assets/images/blog/".$result->news_picture."' alt='drawing-room'>
+                <div class='carousel-caption d-none d-md-block carousel-opacity'>
+                  <h3>".$result->news_title."</h3>
+                  <p>".mb_strimwidth($result->news_content,0,100," ... ")."</p>
+                  <a class='btn btn-square btn-primary f-w-700 m-t-5' href='".site_url('Berita/berita_/').$result->news_id."' disabled>Baca..</a>
+                </div>
+              </div>";
+              }
+
+            }
+            
+            ?>
+              <!-- <div class="carousel-item active" data-bs-interval="10000"><img class="d-block w-100" src="<?=base_url()?>assets/images/slider/mariana-golder.png" alt="drawing-room">
                 <div class="carousel-caption d-none d-md-block carousel-opacity">
                   <h3>We decorate our homes </h3>
                   <p>If you have been dreaming about bringing your living room together, our designers are here to help. Come see what we can do for your space.</p>
                   <a class="btn btn-square btn-primary f-w-700 m-t-5" href="#" disabled>Baca..</a>
                 </div>
               </div>
+              
               <div class="carousel-item" data-bs-interval="2000"><img class="d-block w-100" src="<?=base_url()?>assets/images/slider/3.jpg" alt="drawing-room">
                 <div class="carousel-caption d-none d-md-block carousel-opacity">
                   <h3>This couch is a great topic of conversation.</h3>
@@ -499,7 +536,7 @@
                   <h3>Sometimes all you really need to unwind is a comfortable couch.</h3>
                   <p>A house you can create with your friends is a great place. </p>
                 </div>
-              </div>
+              </div> -->
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>

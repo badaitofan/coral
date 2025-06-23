@@ -496,14 +496,14 @@
                       <li><a class="submenu-title" href="javascript:;">Pemanduan
                           <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>
                         <ul class="submenu-content opensubmegamenu">
-                          <li><a href="javascript:;">Job Desc</a></li>
+                          <li ><a href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Kosong !">Job Desc</a></li>
                           <!-- <li><a href="javascript:;">Laporan Laba Rugi</a></li> -->
                         </ul>
                       </li>
                       <li><a class="submenu-title" href="javascript:;">Layup
                           <h5 class="sub-arrow"><i class="fa fa-angle-right"></i></h5></a>
                         <ul class="submenu-content opensubmegamenu">
-                          <li><a href="javascript:;">Job Desc</a></li>
+                          <li><a href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Kosong !">Job Desc</a></li>
                           <!-- <li><a href="javascript:;">Lap. Keuangan</a></li> -->
                           <li><a href="<?= site_url ('BDP_Group/kapal_layup')?>">Lap. Kapal Layup</a></li>
                         </ul>

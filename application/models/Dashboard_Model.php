@@ -13,6 +13,16 @@ class Dashboard_Model extends CI_Model
         return $data->result_array();
     }
 
+    // Get News 
+    public function get_News()
+    {
+        $this->db->select('*');
+        $this->db->order_by('news_date',"DESC");
+        $this->db->where('news_status',"publish");
+        $data = $this->db->get('tb_news');
+        return $data->result_array();;
+    }
+
     //fungsi untuk cetak session
     public function get($user_email = null)
     {

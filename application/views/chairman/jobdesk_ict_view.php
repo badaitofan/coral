@@ -30,7 +30,7 @@
   <div class="row">
     <div class="col-xl-12 col-md-12 box-col-12">
       <div class="card">
-        <div class="card-header card-no-border">
+        <div class="card-header card-no-border bg-info">
           <div class="header-top">
             <h4>Daftar File Job Description Personel ICT </h4>
             <div class="dropdown icon-dropdown setting-menu">

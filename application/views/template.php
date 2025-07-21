@@ -94,9 +94,11 @@
                   <svg> 
                     <use href="<?=base_url()?>assets/svg/icon-sprite.svg#Bell"></use>
                   </svg>
+                  <span class="rounded-pill badge-warning"></span>
+                  <input type="hidden" id="ipaddress" value="<?= $this->input->ip_address(); ?>">
                 </div>
                 <div class="onhover-show-div notification-dropdown"> 
-                  <h6 class="f-18 mb-0 dropdown-title">Notifications</h6>
+                  <h6 class="f-18 mb-0 dropdown-title">Pengunjung</h6>
                   <div class="notification-card"> 
                     <ul>
                       <li> 
@@ -218,7 +220,7 @@
                 <ul class="profile-dropdown onhover-show-div">
                   <li><a href="javascript:void(0)"><i data-feather="settings"></i><span>Version</span></a></li>
                   <li><a href="javascript:void(0)"><i data-feather="user"></i><span>Developers </span></a></li>
-                  <li><a href="<?= site_url('Auth')?>"> <i data-feather="log-in"></i><span>Log In</span></a></li>
+                  <li><a href="http://10.10.10.23/coral-admin/"> <i data-feather="log-in"></i><span>Log In</span></a></li>
                 </ul>
               </li>
             </ul>
@@ -358,7 +360,8 @@
                               </div>
                               <ul class="submenu-content opensubmegamenu">
                                 <li><a href="<?=site_url('Chairman/unit_legal')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
-                                <li><a href="<?=site_url('Chairman/jobdesc_legal')?>">Job Desc</a></li>
+                                <!-- <li><a href="<?=site_url('Chairman/jobdesc_legal')?>">Job Desc</a></li> -->
+                                <li><a href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Kosong !">Job Desc</a></li>
                                 <li><a href="<?=site_url('Chairman/perijinan_legal')?>">Daftar Perijinan</a></li>
                                 <li><a href="<?=site_url('Chairman/peraturan_pemerintah_legal')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Peraturan Pemerintah">Peraturan Pemerintah</a></li>
                               </ul>
@@ -371,9 +374,11 @@
                               </div>
                               <ul class="submenu-content opensubmegamenu">
                                 <li><a href="<?=site_url('Chairman/unit_qhse')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
-                                <li><a href="<?=site_url('Chairman/jobdesc_qhse')?>">Job Desc</a></li>
+                                <li><a href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Kosong !">Job Desc</a></li>
+                                <!-- <li><a href="<?=site_url('Chairman/jobdesc_qhse')?>">Job Desc</a></li> -->
                                 <li><a href="<?=site_url('Chairman/sop_qhse/all')?>">SOP</a></li>
-                                <li><a href="<?=site_url('Chairman/certificate')?>">Sertifikat</a></li>
+                                <li><a href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Kosong !">Sertifikat</a></li>
+                                <!-- <li><a href="<?=site_url('Chairman/certificate')?>">Sertifikat</a></li> -->
                               </ul>
                             </div>
                           </div>
@@ -384,7 +389,7 @@
                               </div>
                               <ul class="submenu-content opensubmegamenu">
                                 <li><a href="<?=site_url('Chairman/unit_secretary')?>" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Struktur & Karyawan">Struktur & Karyawan</a></li>
-                                <li><a href="<?=site_url('Chairman/jobdesc_secretary')?>">Job Desc</a></li>
+                                <li><a href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Kosong !">Job Desc</a></li>
                               </ul>
                             </div>
                           </div>
@@ -587,6 +592,7 @@
                         <ul class="submenu-content opensubmegamenu">
                           <li><a href="<?= site_url('BS_Group/mkt_bsg_contract')?>">Kontrak</a></li>
                           <li><a href="<?= site_url('BS_Group/mkt_bsg_quotation')?>">Quotation</a></li>
+                          <li><a href="javascript:;" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Kosong !">File Kebutuhan Tender</a></li>
                         </ul>
                       </li>
                       <!-- <li><a class="submenu-title" href="javascript:;">Pemanduan
@@ -623,6 +629,7 @@
                       <li><a href="http://156.67.208.165/safiv3/" target="_blank">SAFI</a></li>
                       <li><a href="https://apps.biasmandirigroup.id/ict-helpdesk/" target="_blank">ICT Helpdesk</a></li>
                       <li><a href="<?php echo site_url('ims'); ?>" target="_blank">IMS BMG</a></li>  
+                      <li><a href="https://ictbiascloud.quickconnect.to/d/s/12FckWT1PW9czJB9Yt5PRixdypiCfsCk/7Kcn32GLmtZN5WYFh-kRk98qvELUlsua-E7JgCYP_Eww" target="_blank">Download Software</a></li>
                     </ul>
                   </li>
                   <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav" href="javascript:;">
@@ -729,6 +736,20 @@
     <!-- <script src="<?=base_url()?>assets/js/theme-customizer/customizer.js"></script> -->
     <!-- Plugin used-->
      <script>
+      $(document).ready(function(){
+        var ip = $("#ipaddress").val();
+        // console.log(ip);
+
+        jQuery.ajax({
+          url: "<?= base_url()?>Dashboard/save_Visitor",
+          data: 'ipaddr='+ip,
+          type: "POST",
+          success:function(data){
+            console.log(data);
+          }
+        })
+      })
+
       $(function(){
         var url = window.location;
         // console.log(url);
@@ -758,6 +779,7 @@
           console.log(e.ip);
           // console.log(e.country);
       });
+
      </script>
   </body>
 </html>

@@ -34,4 +34,10 @@ class Dashboard_Model extends CI_Model
         $data = $this->db->get();
         return $data;
     }
+
+    public function get_data_with_row_number() {
+        $query = $this->db->query("SELECT * FROM tb_news"); // Perhatikan penggunaan array untuk parameter
+    
+        return $query->result_array();
+    }
 }

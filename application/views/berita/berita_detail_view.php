@@ -118,7 +118,7 @@ object-fit:cover;
                 <div class='blog-box blog-grid text-center'><a href='".site_url('Berita/berita_/').$value['news_id']."'><img class='img-fluid top-radius-blog' src='".base_url ()."assets/images/blog/".$value['news_picture']."' alt=''></a>
                     <div class='blog-details-main'>
                         <ul class='blog-social'>
-                            <li>".date("d",strtotime($value['news_date']))."</li>
+                            <li>".date("d-M-y",strtotime($value['news_date']))."</li>
                             <li>by: ".$value['news_author']."</li>
                             <li>".$value['news_like']." Suka</li>
                         </ul>

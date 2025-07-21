@@ -258,26 +258,26 @@ document.addEventListener('DOMContentLoaded', function () {
             <tr>
               <td>
                 <div class="ttd-title">Penerima</div>
+                <br></br>
                 <div class="signature-line"></div>
                 ${d.nama}<br>${d.jabatan}
               </td>
               <td>
                 <div class="ttd-title">Dibuat Oleh</div>
+                <br></br>
                 <div class="signature-line"></div>
                 Alvin Debiyan Melstin<br>IT Staff Technician
               </td>
             </tr>
           </table>
-
           <div class="signature-block">
             <div class="ttd-title">Mengetahui</div>
+            <br></br>
+             <br></br>
             <div class="signature-line"></div>
             Tofan Wahyu Bakti<br>IT Support Manager
           </div>
-
-        
         </body>
-       
         </html>
       `);
       win.document.close();

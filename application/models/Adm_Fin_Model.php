@@ -172,7 +172,7 @@ class Adm_Fin_Model extends CI_Model
         public function getDataVendorDetail()
         {
             $this->db->select('*');
-            $this->db->order_by('tb_vendor_purchasing.kd_supplier',"ASC");
+            $this->db->order_by('tb_vendor_purchasing.id_vendor',"ASC");
             $data = $this->db->get('tb_vendor_purchasing');
             return $data->result_array();
         }

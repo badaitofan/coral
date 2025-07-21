@@ -438,12 +438,13 @@
         </div>
       </div>
     </div> -->
+
     <!-- target Stats -->
     <div class="col-xl-3 col-md-6 proorder-md-3 box-col-6">
       <div class="card">
-        <div class="card-header pb-0">
+        <div class="card-header pb-0 bg-danger">
           <h4>Target Pendapatan Usaha</h4>
-          <p class="f-m-light mt-1">Data Mei 2025. </p>
+          <p class="f-m-light mt-1 font-light">Data Mei 2025. </p>
         </div>
         <!--<div class="card-header custom-border-bottom">
           
@@ -466,6 +467,150 @@
       </div>
     </div>
     <!-- .end target Stats -->
+
+    <!-- Phone Ext List -->
+    <div class="col-xl-6 col-md-12 box-col-12 proorder-md-4">
+      <div class="card">
+        <div class="card-header pb-0 card-no-border bg-info">
+          <h4>Daftar Telp. Ext. </h4>       
+          <p class="f-m-light mt-1 font-dark for-light">Update Data Juli 2025. </p>
+          <p class="f-m-light mt-1 font-light for-dark">Update Data Juli 2025. </p>    
+        </div>
+        <div class="card-body"> 
+          <div class="table-responsive custom-scrollbar user-datatable theme-scrollbar">
+            <table class="display custom-scrollbar" id="basic-12">
+              <!-- test tombol print -->
+           <button type="button" class="btn btn-light mt-2" onclick="autoPrintTelp()">🖨️ Cetak</button>
+              <thead>
+                <tr>
+                  <th>Name </th>
+                  <th>Group</th>
+                  <th>Floor</th>
+                  <th>Ext. No.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($rowTelp as $dataTelp) { ?>
+                  <tr <?= $dataTelp['telp_status'] == "Digital" ? "class='text-success'" : null ?>>
+                    <td><img class="img-fluid table-avtar" src="<?=base_url()?>assets/images/user/1.jpg" alt=""><?= $dataTelp['telp_name'] ?></td>
+                    <td><?= $dataTelp['telp_group'] ?></td>
+                    <td><?= $dataTelp['telp_floor'] ?></td>
+                    <td><?= $dataTelp['telp_number'] ?></td>
+                  </tr>
+                <?php }?>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>     
+    </div>
+
+   <!-- test script -->
+<script>
+function autoPrintTelp() {
+  const dataTelp = <?php echo json_encode($rowTelp); ?>;
+
+  // kondisi group lantai terus group lg test dulu
+  const grouped = {};
+  dataTelp.forEach(item => {
+    const floorKey = item.telp_floor;
+    if (!grouped[floorKey]) grouped[floorKey] = {};
+    const groupKey = item.telp_group;
+    if (!grouped[floorKey][groupKey]) grouped[floorKey][groupKey] = [];
+    grouped[floorKey][groupKey].push(item);
+  });
+
+  const sortedFloors = Object.keys(grouped).sort();
+  let tablesHTML = '';
+
+  sortedFloors.forEach(floor => {
+    tablesHTML += `
+      <div style="width:100%; border-bottom: 3px solid black; margin: 10px 0;">
+        <h4 style="margin:5px 0;">${floor}</h4>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; justify-content:left; gap:10px; margin-bottom:20px;">
+    `;
+
+    const groups = grouped[floor];
+    const sortedGroups = Object.keys(groups).sort();
+
+    sortedGroups.forEach(group => {
+      const rows = groups[group].map(item => `
+        <tr ${item.telp_status == "Digital" ? "style='color:green;'" : ""}>
+          <td style="border:1px solid #000; padding:4px;">${item.telp_name}</td>
+          <td style="border:1px solid #000; padding:4px; text-align:center;">${item.telp_number}</td>
+        </tr>
+      `).join('');
+
+      tablesHTML += `
+        <div style="flex:0 0 32%; -webkit-print-color-adjust: exact;">
+          <table style="width:100%; border-collapse:collapse; font-size:9px;">
+            <thead>
+              <tr>
+                <th colspan="2" style="background:#007bff; color:Black; font-weight:bold; text-align:left; padding:4px; border:1px solid black;">${group}</th>
+              </tr>
+              <tr>
+                <th style="border:1px solid #000; padding:3px;">Name</th>
+                <th style="border:1px solid #000; padding:3px;">Ext</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${rows}
+            </tbody>
+          </table>
+        </div>
+      `;
+    });
+
+    tablesHTML += `</div>`;
+  });
+
+  const today = new Date();
+  const tglUpdate = today.toLocaleDateString('id-ID', { day:'2-digit', month:'short', year:'numeric' });
+
+  const printWindow = window.open('', '_blank', 'width=900,height=650');
+  printWindow.document.write(`
+    <html>
+      <head>
+        <title>No.EXT</title>
+        <style>
+          @page { size: A4 portrait; margin: 10mm; }
+          body { font-family: Arial, sans-serif; margin: 0; font-size: 9px; -webkit-print-color-adjust: exact; }
+          .header { display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid black; margin-bottom: 20px; padding-bottom:5px; }
+          .header img { width: 70px; }
+          .header-center { flex-grow: 1; text-align: center; }
+          .header-center h2 { margin: 0; font-size: 14px; font-weight: bold; }
+          .header-center p { margin: 2px 0 0 0; font-size: 10px; }
+          .header-right { text-align: right; font-size: 9px; }
+          table { border-collapse: collapse; width: 100%; }
+          th { background-color: #0aff16ff !important; color: Black; font-weight: bold; border:1px solid black; }
+          td { border:1px solid black; }
+          tr { page-break-inside: avoid; }
+          div { break-inside: avoid; }
+        </style>
+      </head>
+      <body onload="window.print();">
+        <div class="header">
+          <div><img src="assets/images/logo/icon-portal.png" alt="Logo"></div>
+          <div class="header-center">
+            <h1>BIAS MANDIRI GROUP</h1>
+            <h2>Daftar No Extention</h2>
+          </div>
+          <div class="header-right">
+            ${today.toLocaleDateString()}<br>${today.toLocaleTimeString()}
+          </div>
+        </div>
+
+        ${tablesHTML}
+        Note : Warna Hijau Adalah Line Digital.
+      </body>
+    </html>
+  `);
+  printWindow.document.close();
+}
+</script>
+    <!-- .end Phone Ext List -->
+
     <!-- Informasi internal -->
     <div class="col-xl-6 col-12">
       <div class="card height-equal">
@@ -545,39 +690,7 @@
       </div>
     </div>
     <!-- .end Informasi internal -->
-    <div class="col-xl-6 col-md-12 box-col-12 proorder-md-4">
-      <div class="card">
-        <div class="card-header pb-0 card-no-border">
-          <h4>Daftar Telp. Ext.</h4>
-        </div>
-        <div class="card-body"> 
-          <div class="table-responsive custom-scrollbar user-datatable theme-scrollbar">
-            <table class="display custom-scrollbar" id="basic-12">
-              <thead>
-                <tr>
-                  <th>Name </th>
-                  <th>Group</th>
-                  <th>Floor</th>
-                  <th>Ext. No.</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php foreach ($rowTelp as $dataTelp) { ?>
-                  <tr <?= $dataTelp['telp_status'] == "Digital" ? "class='text-success'" : null ?>>
-                    <td><img class="img-fluid table-avtar" src="<?=base_url()?>assets/images/user/1.jpg" alt=""><?= $dataTelp['telp_name'] ?></td>
-                    <td><?= $dataTelp['telp_group'] ?></td>
-                    <td><?= $dataTelp['telp_floor'] ?></td>
-                    <td><?= $dataTelp['telp_number'] ?></td>
-                  </tr>
-                <?php }?>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-     
-    </div>
+    
   </div>
 </div>
 <!-- Container-fluid Ends-->

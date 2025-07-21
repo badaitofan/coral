@@ -37,6 +37,7 @@ class Dashboard extends CI_Controller
 			'title' => 'Corporate Portal',
 			'rowTelp'	=> $this->Dashboard_Model->get_Ext_List(),
 			'row_news'  => $this->Dashboard_Model->get_News(),
+			'rows'		=> $this->Dashboard_Model->get_data_with_row_number(),
 			// 'cuaca'		=> $this->Weather_Model->get(),
 			// 'bmkg'		=> $this->Weather_Model->bmkg(),
 			// 'currency'	=> $this->Currency_Model->get(),

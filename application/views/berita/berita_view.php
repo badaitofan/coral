@@ -4,8 +4,8 @@
   <div class="page-title">
     <div class="row">
       <div class="col-xl-4 col-sm-7 box-col-3">
-        <h3>Berita <?= bin2hex(random_bytes(10 / 2))?></h3>
-        <!-- <h3>Berita</h3> -->
+        <!-- <h3>Berita <?= bin2hex(random_bytes(10 / 2))?></h3> -->
+        <h3>Berita</h3>
       </div>
       <div class="col-5 d-none d-xl-block">
       </div>

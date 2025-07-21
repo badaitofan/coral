@@ -81,11 +81,11 @@
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Nama Supplier</th>
-                  <th>Tipe Supplier</th>
-                  <th>Alamat</th>
-                  <th>Kota</th></th>
-               
+                  <th>Nama Vendor</th>
+                  <th>No Telepon</th>
+                  <th>Npwp</th>
+                  <th>Mata Uang</th>
+                  <th>Term Payment</th>
                   <th>Status</th>
                 </tr>
               </thead>
@@ -99,15 +99,16 @@
                       <div class="user-data">
                         <div>
                           <a href="javascript:void(0)">
-                            <h4><?= isset($dataAsset['nama_supplier']) ? $dataAsset['nama_supplier'] : 'No Name' ?></h4>
+                            <h4><?= isset($dataAsset['nama_supplier']) ? $dataAsset['nama_supplier'] : 'nama' ?></h4>
                           </a>
-                          <span><?= isset($dataAsset['kd_supplier']) ? $dataAsset['kd_supplier'] : 'No Merk' ?></span>
+                          <span><?= isset($dataAsset['alamat']) ? $dataAsset['alamat'] : 'alamat' ?></span>
                         </div>
                       </div>
                     </td>
-                    <td><?= $dataAsset['tipe_supplier'] ?></td>
-                    <td><?= $dataAsset['alamat'] ?></td>
-                    <td><?= $dataAsset['kota'] ?></td> 
+                      <td><?= $dataAsset['no_tlp'] ?></td>
+                    <td><?= $dataAsset['npwp'] ?></td>
+                    <td><?= $dataAsset['mata_uang'] ?></td>
+                    <td><?= $dataAsset['term_payment'] ?></td>
                     <td><?= $dataAsset['status'] ?></td>
                   </tr>
                 <?php endforeach; ?>

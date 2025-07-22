@@ -20,7 +20,7 @@ class Dashboard_Model extends CI_Model
         $this->db->order_by('news_date',"DESC");
         $this->db->where('news_status',"publish");
         $data = $this->db->get('tb_news');
-        return $data->result_array();;
+        return $data->result_array();
     }
 
     //fungsi untuk cetak session
@@ -39,5 +39,15 @@ class Dashboard_Model extends CI_Model
         $query = $this->db->query("SELECT * FROM tb_news"); // Perhatikan penggunaan array untuk parameter
     
         return $query->result_array();
+    }
+
+    public function get_data_visitor($tgl)
+    {
+        $this->db->select('*');
+        $this->db->like('visit_date',$tgl);
+        $this->db->order_by('visit_date',"DESC");
+        $this->db->limit(5);
+        $data = $this->db->get('tb_visitor');
+        return $data->result_array();
     }
 }

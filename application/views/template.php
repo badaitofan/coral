@@ -96,60 +96,74 @@
                   </svg>
                   <span class="rounded-pill badge-warning"></span>
                   <input type="hidden" id="ipaddress" value="<?= $this->input->ip_address(); ?>">
+                  <?php 
+                    $ipaddress = $this->input->ip_address();
+                    $today      = gmdate("Y-m-d H:i:s", time() + 60 * 60 * 7);
+                    $tgl      = gmdate("Y-m-d", time() + 60 * 60 * 7);
+                    $this->db->select('*');
+                    $this->db->where('ip_address',$ipaddress);
+                    $this->db->like('visit_date',$tgl);
+                    $this->db->order_by('seq_id',"DESC");
+                    $this->db->limit(1);
+                    $cek = $this->db->get('tb_visitor');
+                    if($cek->num_rows() > 0){
+                      
+                      foreach ($cek->result() as $value) {
+                        $dari = date_create($value->visit_date); 
+                        $awal = date_create();
+                        $diff =  date_diff($dari,$awal);
+                        echo "<input type='hidden' id='durasi' value='".$diff->i."'>";
+                      }
+                    }else{
+                      echo "<input type='hidden' id='durasi' value='11'>";
+                    }
+                  ?>
                 </div>
                 <div class="onhover-show-div notification-dropdown"> 
                   <h6 class="f-18 mb-0 dropdown-title">Pengunjung</h6>
                   <div class="notification-card"> 
                     <ul>
+                      <?php
+                      $tgl      = gmdate("Y-m-d", time() + 60 * 60 * 7);
+                      $this->db->select('*');
+                      $this->db->like('visit_date',$tgl);
+                      $this->db->order_by('visit_date',"DESC");
+                      $this->db->limit(5);
+                      $row_visitor = $this->db->get('tb_visitor')->result_array();
+                      // return $row_visitor->;
+                      
+                      foreach ($row_visitor as $dtVisitor) {  $ipnum = explode(".",$dtVisitor['ip_address']); 
+                        if($ipnum[0] == "172"){
+                          $hsl = "LAN";
+                          $img = "<img src='".base_url('assets/images/avtar/rj45.png')."' alt='avatar'>";
+                        }  else{
+                          $hsl = "WIFI";
+                          $img = "<img src='".base_url('assets/images/avtar/wifi.png')."' alt='avatar'>";
+                        }
+                      ?>
+
+                        <li> 
+                          <div class="user-notification">
+                            <div><?= $img ?></div>
+                            <!-- <div><img src="<?=base_url()?>assets/images/avtar/2.jpg" alt="avatar"></div> -->
+                            <div class="user-description"><a href="letter-box.html">
+                                <h4>Pengunjung dari <?= $hsl; ?>.</h4></a><span><?= date("d-M H:m A",strtotime($dtVisitor['visit_date'])) ?></span></div>
+                          </div>
+                          <!-- <div class="notification-btn">
+                            <button class="btn btn-pill btn-primary" type="button" title="btn btn-pill btn-primary">Accpet</button>
+                            <button class="btn btn-pill btn-secondary" type="button" title="btn btn-pill btn-primary">Decline</button>
+                          </div>
+                          <div class="show-btn"><a href="index.html"> <span>Show</span></a></div> -->
+                        </li>
+                      <?php }?>
+                      
                       <li> 
-                        <div class="user-notification">
-                          <div><img src="<?=base_url()?>assets/images/avtar/2.jpg" alt="avatar"></div>
-                          <div class="user-description"><a href="letter-box.html">
-                              <h4>You have new finical page design.</h4></a><span>Today 11:45pm</span></div>
-                        </div>
-                        <div class="notification-btn">
-                          <button class="btn btn-pill btn-primary" type="button" title="btn btn-pill btn-primary">Accpet</button>
-                          <button class="btn btn-pill btn-secondary" type="button" title="btn btn-pill btn-primary">Decline</button>
-                        </div>
-                        <div class="show-btn"><a href="index.html"> <span>Show</span></a></div>
-                      </li>
-                      <li>
-                        <div class="user-notification">
-                          <div><img src="<?=base_url()?>assets/images/avtar/17.jpg" alt="avatar"></div>
-                          <div class="user-description"><a href="letter-box.html">
-                              <h4>Congrats! you all task for today.</h4></a><span>Today 01:05pm</span></div>
-                        </div>
-                        <div class="notification-btn">
-                          <button class="btn btn-pill btn-primary" type="button" title="btn btn-pill btn-primary">Accpet</button>
-                          <button class="btn btn-pill btn-secondary" type="button" title="btn btn-pill btn-primary">Decline</button>
-                        </div>
-                        <div class="show-btn"><a href="index.html"> <span>Show</span></a></div>
-                      </li>
-                      <li> 
-                        <div class="user-notification">
-                          <div> <img src="<?=base_url()?>assets/images/avtar/18.jpg" alt="avatar"></div>
-                          <div class="user-description"><a href="letter-box.html">
-                              <h4>You have new in landing page design.</h4></a><span>Today 06:55pm</span></div>
-                        </div>
-                        <div class="notification-btn">
-                          <button class="btn btn-pill btn-primary" type="button" title="btn btn-pill btn-primary">Accpet</button>
-                          <button class="btn btn-pill btn-secondary" type="button" title="btn btn-pill btn-primary">Decline</button>
-                        </div>
-                        <div class="show-btn"><a href="index.html"> <span>Show</span></a></div>
-                      </li>
-                      <li>
-                        <div class="user-notification">
-                          <div><img src="<?=base_url()?>assets/images/avtar/19.jpg" alt="avatar"></div>
-                          <div class="user-description"><a href="letter-box.html">
-                              <h4>Congrats! you all task for today.</h4></a><span>Today 06:55pm</span></div>
-                        </div>
-                        <div class="notification-btn">
-                          <button class="btn btn-pill btn-primary" type="button" title="btn btn-pill btn-primary">Accpet</button>
-                          <button class="btn btn-pill btn-secondary" type="button" title="btn btn-pill btn-primary">Decline</button>
-                        </div>
-                        <div class="show-btn"> <a href="index.html"> <span>Show</span></a></div>
-                      </li>
-                      <li> <a class="f-w-700" href="letter-box.html">Check all </a></li>
+                        <a class="f-w-700" href="javascript:;">
+                        <?php 
+                        $tgl      = gmdate("Y-m-d", time() + 60 * 60 * 7); 
+                        $this->db->like('visit_date',$tgl); 
+                        echo $this->db->count_all_results('tb_visitor');
+                        ?> Hari ini.</a></li>
                     </ul>
                   </div>
                 </div>
@@ -736,18 +750,21 @@
     <!-- <script src="<?=base_url()?>assets/js/theme-customizer/customizer.js"></script> -->
     <!-- Plugin used-->
      <script>
-      $(document).ready(function(){
+      $(window).on('load',function(){
         var ip = $("#ipaddress").val();
+        var durasi = $("#durasi").val();
         // console.log(ip);
+       if(durasi >= 10){
+         jQuery.ajax({
+           url: "<?= base_url()?>Dashboard/save_Visitor",
+           data: 'ipaddr='+ip,
+           type: "POST",
+           success:function(data){
+             // console.log(data);
+           }
+         })
+       }
 
-        jQuery.ajax({
-          url: "<?= base_url()?>Dashboard/save_Visitor",
-          data: 'ipaddr='+ip,
-          type: "POST",
-          success:function(data){
-            console.log(data);
-          }
-        })
       })
 
       $(function(){
